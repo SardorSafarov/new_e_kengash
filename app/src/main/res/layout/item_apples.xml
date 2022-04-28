@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_padding_8"
+    android:background="@drawable/bg_search"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_padding_8">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/application"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:text="Ariza"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_size_12" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="Ko‘rib chiqilmoqda"
+            android:textColor="@color/pink"
+            android:textSize="@dimen/text_size_12" />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_padding_4"
+        android:lineSpacingExtra="@dimen/margin_padding_4"
+        android:text="Bunaqa bo‘lganda qanday ish tutamiz?"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="@dimen/text_size_14" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_padding_4"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="N% 1234567"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_12" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="N% 1234567"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_12" />
+    </FrameLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,9 +1,16 @@
 <resources>
     <string name="app_name">E-kengash</string>
     <string name="home">Home</string>
-    <string name="appeals">Appeals</string>
+    <string name="appeals">Murojatlar</string>
     <string name="chat">Chat</string>
     <string name="more">More</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="e_kengash_naxborot_portali">E-Kengash \nAxborot portali</string>
+    <string name="news">News</string>
+    <string name="jonli_nefirlar">Jonli\nEfirlar</string>
+    <string name="virtual_nqabulxona">Virtual\nQabulxona</string>
+    <string name="qabulga_nyozilish">Qabulga\nyozilish</string>
+    <string name="murojaat_nyuborish">Murojaat\nYuborish</string>
+    <string name="malumotlar_bo_ylab_izlash">Malumotlar bo\'ylab izlash</string>
 </resources>
