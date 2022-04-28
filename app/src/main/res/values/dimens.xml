@@ -5,11 +5,12 @@
     <dimen name="margin_padding_16">16dp</dimen>
     <dimen name="text_size_16">16dp</dimen>
     <dimen name="margin_padding_12">12dp</dimen>
-    <dimen name="text_size_18">18dp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
     <dimen name="margin_padding_4">4dp</dimen>
     <dimen name="text_size_12">12sp</dimen>
     <dimen name="text_size_10">10sp</dimen>
     <dimen name="radius_6">6dp</dimen>
     <dimen name="margin_padding_6">6dp</dimen>
     <dimen name="text_size_14">14sp</dimen>
+    <dimen name="margin_padding_50">50dp</dimen>
 </resources>

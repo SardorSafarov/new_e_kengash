@@ -3,11 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/bg_et.xml" value="0.203" />
         <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/bg_search.xml" value="0.203" />
+        <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_about_program.xml" value="0.203" />
+        <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_acceptance.xml" value="0.203" />
         <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_appleas.xml" value="0.171" />
         <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_apply.xml" value="0.203" />
+        <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_articles.xml" value="0.203" />
+        <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_baseline_keyboard_arrow_down.xml" value="0.244" />
         <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_chat.xml" value="0.171" />
         <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_clock.xml" value="0.203" />
+        <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_comissin.xml" value="0.203" />
+        <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_council.xml" value="0.203" />
+        <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_discussion.xml" value="0.203" />
+        <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_document.xml" value="0.203" />
+        <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_event.xml" value="0.203" />
+        <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_exit.xml" value="0.203" />
+        <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_faq.xml" value="0.203" />
         <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_home_menu.xml" value="0.171" />
         <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_live_video.xml" value="0.203" />
         <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_more.xml" value="0.171" />
@@ -15,7 +27,12 @@
         <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_notification.xml" value="0.171" />
         <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_notification_dot.xml" value="0.171" />
         <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_photo.xml" value="0.203" />
+        <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_profil.xml" value="0.203" />
+        <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_right_arrow.xml" value="0.203" />
+        <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_secretariat.xml" value="0.203" />
+        <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_setting.xml" value="0.203" />
         <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_wifi.xml" value="0.203" />
+        <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/ic_youth.xml" value="0.203" />
         <entry key="..\:/Ekengash/app/src/main/res/drawable-v24/service_bg.xml" value="0.171" />
         <entry key="..\:/Ekengash/app/src/main/res/layout/activity_main.xml" value="0.29322916666666665" />
         <entry key="..\:/Ekengash/app/src/main/res/layout/fragment_appeals.xml" value="0.29322916666666665" />

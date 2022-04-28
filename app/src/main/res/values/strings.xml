@@ -13,4 +13,20 @@
     <string name="qabulga_nyozilish">Qabulga\nyozilish</string>
     <string name="murojaat_nyuborish">Murojaat\nYuborish</string>
     <string name="malumotlar_bo_ylab_izlash">Malumotlar bo\'ylab izlash</string>
+    <string name="barcha_xizmatlar">Barcha xizmatlar</string>
+    <string name="kengash">Kengash</string>
+    <string name="kotibiyat">Kotibiyat</string>
+    <string name="doimiy_komissiya">Doimiy komissiya</string>
+    <string name="senator_va_deputatlar">Senator va deputatlar</string>
+    <string name="yoshlar_parlamenti">Yoshlar parlamenti</string>
+    <string name="tadbirlar">Tadbirlar</string>
+    <string name="muhokama">Muhokama</string>
+    <string name="qabulga_yozilish">Qabulga yozilish</string>
+    <string name="profil">Profil</string>
+    <string name="maqolalar">Maqolalar</string>
+    <string name="hujjatlar">Hujjatlar</string>
+    <string name="faq">FAQ</string>
+    <string name="sozlamalar">Sozlamalar</string>
+    <string name="dastur_haqida">Dastur haqida</string>
+    <string name="chiqish">Chiqish</string>
 </resources>

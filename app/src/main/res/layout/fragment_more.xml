@@ -1,14 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/margin_padding_16"
+    android:paddingTop="@dimen/margin_padding_16"
+    android:paddingBottom="@dimen/margin_padding_50"
+    android:overScrollMode="never"
+    android:background="@color/main_background"
     tools:context=".main.fragments.more.More">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_padding_16"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/barcha_xizmatlar"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/council"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_12"
+            android:drawableStart="@drawable/ic_council"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="@dimen/margin_padding_16"
+            android:gravity="center_vertical"
+            android:text="@string/kengash"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/secretariat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:drawableStart="@drawable/ic_secretariat"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="@dimen/margin_padding_16"
+            android:gravity="center_vertical"
+            android:text="@string/kotibiyat"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/commission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:drawableStart="@drawable/ic_comissin"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="@dimen/margin_padding_16"
+            android:gravity="center_vertical"
+            android:text="@string/doimiy_komissiya"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/senator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:drawableStart="@drawable/ic_youth"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="@dimen/margin_padding_16"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:text="@string/senator_va_deputatlar"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/youth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:drawableStart="@drawable/ic_youth"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="@dimen/margin_padding_16"
+            android:gravity="center_vertical"
+            android:text="@string/yoshlar_parlamenti"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:drawableStart="@drawable/ic_event"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="@dimen/margin_padding_16"
+            android:gravity="center_vertical"
+            android:text="@string/tadbirlar"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/discussion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:drawableStart="@drawable/ic_discussion"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="@dimen/margin_padding_16"
+            android:gravity="center_vertical"
+            android:text="@string/muhokama"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/acceptance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:drawableStart="@drawable/ic_acceptance"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="@dimen/margin_padding_16"
+            android:gravity="center_vertical"
+            android:text="@string/qabulga_yozilish"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/profil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:drawableStart="@drawable/ic_profil"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="@dimen/margin_padding_16"
+            android:gravity="center_vertical"
+            android:text="@string/profil"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_18" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/articles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:drawableStart="@drawable/ic_articles"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="@dimen/margin_padding_16"
+            android:gravity="center_vertical"
+            android:text="@string/maqolalar"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/document"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:drawableStart="@drawable/ic_document"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="@dimen/margin_padding_16"
+            android:gravity="center_vertical"
+            android:text="@string/hujjatlar"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/faq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:drawableStart="@drawable/ic_faq"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="@dimen/margin_padding_16"
+            android:gravity="center_vertical"
+            android:text="@string/faq"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:drawableStart="@drawable/ic_setting"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="@dimen/margin_padding_16"
+            android:gravity="center_vertical"
+            android:text="@string/sozlamalar"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/about_program"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:drawableStart="@drawable/ic_about_program"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="@dimen/margin_padding_16"
+            android:gravity="center_vertical"
+            android:text="@string/dastur_haqida"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/exit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:drawableStart="@drawable/ic_exit"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="@dimen/margin_padding_16"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:text="@string/chiqish"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.core.widget.NestedScrollView>
