@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/main_background"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingHorizontal="@dimen/margin_padding_24"
+    android:overScrollMode="never"
+    android:paddingBottom="@dimen/margin_padding_55"
     tools:context=".main.fragments.newUser.NewUser">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -69,7 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_padding_24"
-            android:text="Ushbu ma’lumotlarni to‘ldirishingiz talab etiladi"
+            android:text="@string/ushbu_ma_lumotlarni_to_ldirishingiz_talab_etiladi"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_16" />
 
@@ -78,7 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_padding_16"
             android:fontFamily="@font/gotham_pro_medium"
-            android:text="Murojaat mavzusi:"
+            android:text="@string/murojaat_mavzusi"
             android:textColor="@color/black" />
 
         <androidx.appcompat.widget.AppCompatEditText
@@ -86,7 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_padding_8"
             android:background="@drawable/bg_et"
-            android:hint="Murojaat mavzuyingizni kiriting"
+            android:hint="@string/murojaat_mavzuyingizni_kiriting"
             android:paddingHorizontal="@dimen/margin_padding_16"
             android:paddingVertical="@dimen/margin_padding_16"
             android:textColor="@color/black"
@@ -98,7 +101,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_padding_16"
             android:fontFamily="@font/gotham_pro_medium"
-            android:text="Murojaat turi:"
+            android:text="@string/murojaat_turi"
             android:textColor="@color/black" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -110,25 +113,16 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/application"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down"
                 android:paddingHorizontal="@dimen/margin_padding_16"
                 android:paddingVertical="@dimen/margin_padding_16"
-                android:text="Ariza"
+                android:text="@string/ariza"
                 android:textColor="@color/black"
                 android:textColorHint="@color/gray"
                 android:textSize="@dimen/text_size_14" />
-
-            <Spinner
-                android:id="@+id/spinnerType"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginTop="@dimen/margin_padding_12"
-                android:layout_marginBottom="@dimen/margin_padding_12"
-                android:gravity="end"
-                tools:listitem="simple_spinner_item" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -137,7 +131,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_padding_16"
             android:fontFamily="@font/gotham_pro_medium"
-            android:text="Yo‘nalishi:"
+            android:text="@string/yo_nalishi"
             android:textColor="@color/black" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -155,58 +149,48 @@
                 android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down"
                 android:paddingHorizontal="@dimen/margin_padding_16"
                 android:paddingVertical="@dimen/margin_padding_16"
-                android:text="Ta`lim"
+                android:text="@string/ta_lim"
                 android:textColor="@color/black"
                 android:textColorHint="@color/gray"
                 android:textSize="@dimen/text_size_14" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-<!--        <androidx.appcompat.widget.AppCompatTextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="@dimen/margin_padding_16"-->
-<!--            android:fontFamily="@font/gotham_pro_medium"-->
-<!--            android:text="Viloyatinggiz:"-->
-<!--            android:textColor="@color/black" />-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:fontFamily="@font/gotham_pro_medium"
+            android:text="@string/viloyatinggiz"
+            android:textColor="@color/black" />
 
-<!--        <androidx.appcompat.widget.LinearLayoutCompat-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="@dimen/margin_padding_8"-->
-<!--            android:background="@drawable/bg_et">-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_8"
+            android:background="@drawable/bg_et">
 
-<!--            <androidx.appcompat.widget.AppCompatTextView-->
-<!--                android:id="@+id/region"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center_vertical"-->
-<!--                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down"-->
-<!--                android:paddingHorizontal="@dimen/margin_padding_16"-->
-<!--                android:paddingVertical="@dimen/margin_padding_16"-->
-<!--                android:text=""-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textColorHint="@color/gray"-->
-<!--                android:textSize="@dimen/text_size_14" />-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/region"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down"
+                android:paddingHorizontal="@dimen/margin_padding_16"
+                android:paddingVertical="@dimen/margin_padding_16"
+                android:text="@string/viloyatinggizni_kiriting"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/text_size_14" />
 
-<!--                        <Spinner-->
-<!--                            android:id="@+id/spinnerRegion"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_gravity="end|center_vertical"-->
-<!--                            android:layout_marginTop="@dimen/margin_padding_12"-->
-<!--                            android:layout_marginBottom="@dimen/margin_padding_12"-->
-<!--                            android:gravity="end"-->
-<!--                            android:popupBackground="@drawable/bg_circle_white"-->
-<!--                            tools:listitem="simple_spinner_item" />-->
 
-<!--        </androidx.appcompat.widget.LinearLayoutCompat>-->
+        </androidx.appcompat.widget.LinearLayoutCompat>
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_padding_16"
                     android:fontFamily="@font/gotham_pro_medium"
-                    android:text="Tumaningiz (Shahar):"
+                    android:text="@string/tumaningiz_shahar"
                     android:textColor="@color/black" />
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -214,11 +198,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_padding_8"
-                    android:background="@drawable/et_bg"
+                    android:background="@drawable/bg_et"
                     android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down"
                     android:paddingHorizontal="@dimen/margin_padding_16"
                     android:paddingVertical="@dimen/margin_padding_16"
-                    android:text="Toshkent shahri"
+                    android:text="@string/tuman_shahri_ni_kiriting"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray"
                     android:textSize="@dimen/text_size_14" />
@@ -228,7 +212,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_padding_16"
                     android:fontFamily="@font/gotham_pro_medium"
-                    android:text="MFY:"
+                    android:text="@string/mfy"
                     android:textColor="@color/black" />
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -240,7 +224,7 @@
                     android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down"
                     android:paddingHorizontal="@dimen/margin_padding_16"
                     android:paddingVertical="@dimen/margin_padding_16"
-                    android:text="Geofizika MFY"
+                    android:text="@string/mfy_in_kiriting"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray"
                     android:textSize="@dimen/text_size_14" />
@@ -250,7 +234,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_padding_16"
             android:fontFamily="@font/gotham_pro_medium"
-            android:text="Manzil:"
+            android:text="@string/manzil"
             android:textColor="@color/black" />
 
         <androidx.appcompat.widget.AppCompatEditText
@@ -258,8 +242,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_padding_8"
-            android:background="@drawable/et_bg"
-            android:hint="Manzilingizni to‘liq kiriting"
+            android:background="@drawable/bg_et"
+            android:hint="@string/manzilingizni_to_liq_kiriting"
+            android:paddingHorizontal="@dimen/margin_padding_16"
+            android:paddingVertical="@dimen/margin_padding_16"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/text_size_14" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:fontFamily="@font/gotham_pro_medium"
+            android:text="@string/murojaat_matni"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/appleastext"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/margin_padding_8"
+            android:background="@drawable/bg_et"
+            android:gravity="start"
+            android:hint="@string/manzilingizni_to_liq_kiriting"
             android:paddingHorizontal="@dimen/margin_padding_16"
             android:paddingVertical="@dimen/margin_padding_16"
             android:textColor="@color/black"
@@ -271,7 +276,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_padding_16"
-            android:background="@drawable/et_bg"
+            android:background="@drawable/bg_et"
             android:padding="@dimen/margin_padding_24"
             app:srcCompat="@drawable/ic_file" />
 
@@ -280,7 +285,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_padding_8"
             android:fontFamily="@font/gotham_pro_medium"
-            android:text="Rasm yoki fayl biriktirish"
+            android:text="@string/rasm_yoki_fayl_biriktirish"
             android:textColor="@color/black" />
 
         <androidx.appcompat.widget.AppCompatButton

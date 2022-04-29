@@ -28,5 +28,26 @@
     <string name="sozlamalar">Sozlamalar</string>
     <string name="dastur_haqida">Dastur haqida</string>
     <string name="chiqish">Chiqish</string>
+    <string name="ushbu_ma_lumotlarni_to_ldirishingiz_talab_etiladi">Ushbu ma’lumotlarni to‘ldirishingiz talab etiladi</string>
+    <string name="murojaat_mavzusi">Murojaat mavzusi:</string>
+    <string name="murojaat_mavzuyingizni_kiriting">Murojaat mavzuyingizni kiriting</string>
+    <string name="murojaat_turi">Murojaat turi:</string>
+    <string name="ariza">Ariza</string>
+    <string name="yo_nalishi">Yo‘nalishi:</string>
+    <string name="ta_lim">Ta`lim</string>
+    <string name="viloyatinggiz">Viloyatinggiz:</string>
+    <string name="viloyatinggizni_kiriting">Viloyatinggizni kiriting</string>
+    <string name="tumaningiz_shahar">Tumaningiz (Shahar):</string>
+    <string name="tuman_shahri_ni_kiriting">Tuman (Shahri)ni kiriting</string>
+    <string name="mfy">MFY:</string>
+    <string name="mfy_in_kiriting">MFY in kiriting</string>
+    <string name="manzil">Manzil:</string>
+    <string name="manzilingizni_to_liq_kiriting">Manzilingizni to\'liq kiriting</string>
+    <string name="murojaat_matni">Murojaat matni:</string>
+    <string name="keyingisi">Keyingisi</string>
+    <string name="rasm_yoki_fayl_biriktirish">Rasm yoki fayl biriktirish</string>
+    <string name="amalni_bajara_olmaysiz">Amalni bajara olmaysiz</string>
+    <string name="dasturning_imkoniyatlaridan_to_liq_foydalanish_uchun_kirishni_bosing">Dasturning imkoniyatlaridan to\'liq foydalanish \nuchun kirishni bosing!</string>
+    <string name="kirish">Kirish</string>
 
 </resources>

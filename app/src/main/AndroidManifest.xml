@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ekengash">
         <activity
-            android:name=".main.MainActivity"
+            android:name=".main.fragments.newUser.login.main.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

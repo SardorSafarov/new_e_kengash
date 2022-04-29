@@ -1,4 +1,4 @@
-package com.example.e_kengash.main
+package com.example.e_kengash.main.activity
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity

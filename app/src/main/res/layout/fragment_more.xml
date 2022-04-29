@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingHorizontal="@dimen/margin_padding_16"
+    android:paddingHorizontal="@dimen/margin_padding_24"
     android:paddingTop="@dimen/margin_padding_16"
     android:paddingBottom="@dimen/margin_padding_50"
     android:overScrollMode="never"
