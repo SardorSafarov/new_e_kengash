@@ -9,6 +9,6 @@ import retrofit2.http.POST
 
 interface LoginApi {
 
-    @POST("/api/v1/sign-up")
+    @POST("api/v1/check-user/")
     suspend fun checkUser(@Body body: CheckUserRequest): Response<CheckUserResponse>
 }

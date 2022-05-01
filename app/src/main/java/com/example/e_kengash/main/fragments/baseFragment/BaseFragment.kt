@@ -16,9 +16,14 @@ typealias Inflate<T> = (LayoutInflater, ViewGroup?, Boolean) -> T
 abstract class BaseFragment<VB : ViewBinding>(
     private val inflate: Inflate<VB>
 ) : Fragment() {
+
     private var _binding: VB? = null
     val binding get() = _binding!!
+
+    lateinit var navController: NavController
+
     lateinit var sharePereferenseHelper:SharePereferenseHelper
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -31,6 +36,7 @@ abstract class BaseFragment<VB : ViewBinding>(
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        navController = Navigation.findNavController(view)
         onViewCreate()
     }
 

@@ -14,7 +14,7 @@ class RetrofitBuilder {
             .build()
     }
 
-    val turarJoyApi: LoginApi by lazy {
+    val loginApi: LoginApi by lazy {
         retrofit.create(LoginApi::class.java)
     }
 }
