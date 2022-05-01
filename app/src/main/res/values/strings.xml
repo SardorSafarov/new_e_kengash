@@ -3,11 +3,11 @@
     <string name="home">Home</string>
     <string name="appeals">Murojatlar</string>
     <string name="chat">Chat</string>
-    <string name="more">More</string>
+    <string name="more">Ko\'proq</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="e_kengash_naxborot_portali">E-Kengash \nAxborot portali</string>
-    <string name="news">News</string>
+    <string name="news">Yangilik</string>
     <string name="jonli_nefirlar">Jonli\nEfirlar</string>
     <string name="virtual_nqabulxona">Virtual\nQabulxona</string>
     <string name="qabulga_nyozilish">Qabulga\nyozilish</string>
@@ -50,4 +50,14 @@
     <string name="amalni_bajara_olmaysiz">Amalni bajara olmaysiz</string>
     <string name="dasturning_imkoniyatlaridan_to_liq_foydalanish_uchun_kirishni_bosing">Dasturning imkoniyatlaridan to\'liq foydalanish \nuchun kirishni bosing!</string>
     <string name="kirish">Kirish</string>
+    <string name="neww">Yangi</string>
+    <string name="biz_sizning_ma_lumotlaringizni_tekshirishimiz_uchun_telefon_raqamingizni_kiriting">Biz sizning ma’lumotlaringizni tekshirishimiz uchun telefon raqamingizni kiriting</string>
+    <string name="telefon_raqami">Telefon raqami:</string>
+    <string name="parol">Parol:</string>
+    <string name="tizimda_mavjud">Tizimda mavjud</string>
+    <string name="tizimda_mavjud_emas">Tizimda mavjud emas</string>
+    <string name="ismi">Ismi:</string>
+    <string name="familiyasi">Familiyasi:</string>
+    <string name="sharif">Sharif:</string>
+    <string name="xafsizlik_paroli">Xafsizlik paroli:</string>
 </resources>

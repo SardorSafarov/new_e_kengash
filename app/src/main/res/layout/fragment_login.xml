@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/margin_padding_24"
+    tools:context=".main.fragments.newUser.login.fragment.login.Login">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_24"
+                android:lineSpacingExtra="@dimen/margin_padding_4"
+                android:text="@string/biz_sizning_ma_lumotlaringizni_tekshirishimiz_uchun_telefon_raqamingizni_kiriting"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_14" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_16"
+                android:fontFamily="@font/gotham_pro_medium"
+                android:text="@string/telefon_raqami"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_12"
+                app:cardCornerRadius="@dimen/radius_6"
+                app:cardElevation="0dp"
+                app:strokeColor="#DCE8FF"
+                app:strokeWidth="1dp">
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:inputType="phone" />
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="@dimen/margin_padding_12"
+        android:layout_marginBottom="@dimen/margin_padding_24"
+        android:background="@drawable/button_main"
+        android:backgroundTint="@color/blue"
+        android:elevation="0dp"
+        android:fontFamily="@font/gotham_pro_medium"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/margin_padding_16"
+        android:paddingVertical="@dimen/margin_padding_8"
+        android:text="@string/keyingisi"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:cornerRadius="@dimen/margin_padding_30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="@color/button_ripple" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
