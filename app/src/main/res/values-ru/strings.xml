@@ -59,5 +59,10 @@
     <string name="familiyasi">Familiyasi:</string>
     <string name="sharif">Sharif:</string>
     <string name="xafsizlik_paroli">Xafsizlik paroli:</string>
+    <string name="isminggizni_kiriting">Isminggizni kiriting</string>
+    <string name="sharifingizni_kiriting">Sharifingizni kiriting</string>
+    <string name="parolingizni_kiriting">Parolingizni kiriting</string>
+    <string name="parolni_qayta_kiriting">Parolni qayta kiriting</string>
+    <string name="familiyangizni_kiriting">Familiyangizni kiriting</string>
 
 </resources>

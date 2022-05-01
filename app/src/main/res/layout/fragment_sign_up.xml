@@ -11,8 +11,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -107,8 +105,11 @@
                 android:id="@+id/firs_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:hint="@string/isminggizni_kiriting"
+                android:textSize="@dimen/text_size_16"
+                android:paddingStart="@dimen/margin_padding_12"
                 android:backgroundTint="@color/white"
-                android:inputType="textPassword" />
+                android:inputType="textCapWords" />
         </com.google.android.material.card.MaterialCardView>
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -132,8 +133,11 @@
                 android:id="@+id/last_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:hint="@string/familiyangizni_kiriting"
+                android:textSize="@dimen/text_size_16"
+                android:paddingStart="@dimen/margin_padding_12"
                 android:backgroundTint="@color/white"
-                android:inputType="textPassword" />
+                android:inputType="textCapWords" />
         </com.google.android.material.card.MaterialCardView>
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -154,11 +158,14 @@
             app:strokeWidth="1dp">
 
             <EditText
-                android:id="@+id/sharifi"
+                android:id="@+id/middle_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:hint="@string/sharifingizni_kiriting"
+                android:textSize="@dimen/text_size_16"
+                android:paddingStart="@dimen/margin_padding_12"
                 android:backgroundTint="@color/white"
-                android:inputType="textPassword" />
+                android:inputType="textCapWords" />
         </com.google.android.material.card.MaterialCardView>
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -182,6 +189,9 @@
                 android:id="@+id/password1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="@dimen/text_size_16"
+                android:hint="@string/parolingizni_kiriting"
+                android:paddingStart="@dimen/margin_padding_12"
                 android:backgroundTint="@color/white"
                 android:inputType="textPassword" />
         </com.google.android.material.card.MaterialCardView>
@@ -192,6 +202,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_padding_12"
             app:cardCornerRadius="@dimen/radius_6"
+            android:hint="@string/isminggizni_kiriting"
+            android:paddingStart="@dimen/margin_padding_12"
             app:cardElevation="0dp"
             android:layout_marginBottom="@dimen/margin_padding_12"
             app:strokeColor="#DCE8FF"
@@ -201,6 +213,9 @@
                 android:id="@+id/password2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="@dimen/text_size_16"
+                android:hint="@string/parolni_qayta_kiriting"
+                android:paddingStart="@dimen/margin_padding_12"
                 android:backgroundTint="@color/white"
                 android:inputType="textPassword" />
         </com.google.android.material.card.MaterialCardView>
@@ -213,7 +228,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginHorizontal="@dimen/margin_padding_12"
         android:layout_marginBottom="@dimen/margin_padding_24"
         android:background="@drawable/button_main"
         android:backgroundTint="@color/blue"
@@ -226,6 +240,7 @@
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_14"
         app:cornerRadius="@dimen/margin_padding_30"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

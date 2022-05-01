@@ -4,8 +4,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.FragmentLoginBinding
 import com.example.e_kengash.main.fragments.baseFragment.BaseFragment
-import com.example.e_kengash.network.entity.login.CheckUserRequest
-import com.example.e_kengash.network.entity.login.CheckUserResponse
+import com.example.e_kengash.network.entity.login.checkUser.CheckUserRequest
+import com.example.e_kengash.network.entity.login.checkUser.CheckUserResponse
 import com.example.e_kengash.network.repository.LoginRepository
 import com.example.e_kengash.network.viewModel.LoginViewModel
 import com.example.e_kengash.network.viewModelFactory.LoginViewModelFactory
@@ -14,6 +14,7 @@ import retrofit2.Response
 
 class Login : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::inflate){
     private lateinit var loginViewMode: LoginViewModel
+
     override fun onViewCreate() {
         setUi()
         binding.done.setOnClickListener{
