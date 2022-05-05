@@ -221,8 +221,6 @@
         </com.google.android.material.card.MaterialCardView>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/done"
         android:layout_width="match_parent"

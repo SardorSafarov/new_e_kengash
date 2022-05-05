@@ -1,5 +1,6 @@
 package com.example.e_kengash.main.activity
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -40,6 +41,14 @@ class MainActivity : AppCompatActivity() {
                 R.id.moreFragment
             )
         )
+        notification()
+    }
+
+
+    private fun notification() {
+        binding.notification.setOnClickListener {
+            startActivity(Intent(this,NotificationActivity::class.java))
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {

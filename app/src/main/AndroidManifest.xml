@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.e_kengash" >
-    <uses-permission android:name="android.permission.INTERNET"/>
+    package="com.example.e_kengash">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -9,14 +10,25 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.Ekengash" >
+        android:theme="@style/Theme.Ekengash"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".main.activity.LiveSteamActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".main.activity.NotificationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".main.fragments.newUser.login.main.LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".main.activity.MainActivity"
-            android:exported="true" >
+            android:exported="true"
+            android:screenOrientation="portrait"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

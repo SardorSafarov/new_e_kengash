@@ -6,7 +6,7 @@
     <string name="chat">Chat</string>
     <string name="more">Ko\'proq</string>
     <string name="e_kengash_naxborot_portali">E-Kengash \nAxborot portali</string>
-    <string name="news">News</string>
+    <string name="news">Yangilik</string>
     <string name="jonli_nefirlar">Jonli\nEfirlar</string>
     <string name="virtual_nqabulxona">Virtual\nQabulxona</string>
     <string name="qabulga_nyozilish">Qabulga\nyozilish</string>
@@ -64,5 +64,9 @@
     <string name="parolingizni_kiriting">Parolingizni kiriting</string>
     <string name="parolni_qayta_kiriting">Parolni qayta kiriting</string>
     <string name="familiyangizni_kiriting">Familiyangizni kiriting</string>
+    <string name="bildirishnomalar">Bildirishnomalar</string>
+    <string name="jonli_efirlar">Jonli efirlar</string>
+    <string name="shuningdek_yana">Shuningdek yana:</string>
+    <string name="yana">Yana</string>
 
 </resources>
