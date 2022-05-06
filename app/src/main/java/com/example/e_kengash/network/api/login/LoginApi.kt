@@ -1,4 +1,4 @@
-package com.example.e_kengash.network.api
+package com.example.e_kengash.network.api.login
 
 import com.example.e_kengash.network.entity.login.checkUser.CheckUserRequest
 import com.example.e_kengash.network.entity.login.checkUser.CheckUserResponse

@@ -28,20 +28,21 @@ class SignIn : BaseFragment<FragmentSignInBinding>(FragmentSignInBinding::inflat
         binding.apply {
             phone.setText(sharePereferenseHelper.getAccessPhone())
             done.setOnClickListener {
-                loginViewMode.signIn(SignInRequest(
-                    phone = phone.text.toString(),
-                    password1 = password.text.toString(),
-                    password = password.text.toString()
-                ))
-                {
-                    if(it.isSuccessful)
-                    onResponse(it.body())
-                    else{
-                        D("SignIn signIn false")
-                        tosatShort(requireContext(),"Parol yoki Telefon raqam xato")
-                    }
 
-                }
+//                loginViewMode.signIn(SignInRequest(
+//                    phone = phone.text.toString(),
+//                    password1 = password.text.toString(),
+//                    password = password.text.toString()
+//                ))
+//                {
+//                    if(it.isSuccessful)
+//                    onResponse(it.body())
+//                    else{
+//                        D("SignIn signIn false")
+//                        tosatShort(requireContext(),"Parol yoki Telefon raqam xato")
+//                    }
+//
+//                }
             }
         }
     }

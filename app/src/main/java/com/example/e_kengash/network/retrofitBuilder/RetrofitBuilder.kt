@@ -1,7 +1,7 @@
 package com.example.e_kengash.network.retrofitBuilder
 
 import com.example.e_kengash.data.constants.Constants.BASE_URL
-import com.example.e_kengash.network.api.LoginApi
+import com.example.e_kengash.network.api.login.LoginApi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
