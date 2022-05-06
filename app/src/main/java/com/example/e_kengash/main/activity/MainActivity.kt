@@ -18,6 +18,7 @@ import com.example.e_kengash.repetitive.statusbarcolor
 import com.example.e_kengash.repetitive.tosatShort
 
 class MainActivity : AppCompatActivity() {
+    //*======لا اله الا الله محمد رسول الله
 
     private lateinit var binding: ActivityMainBinding
 
@@ -42,6 +43,7 @@ class MainActivity : AppCompatActivity() {
             )
         )
         notification()
+
     }
 
 

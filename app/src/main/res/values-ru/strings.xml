@@ -68,5 +68,12 @@
     <string name="jonli_efirlar">Jonli efirlar</string>
     <string name="shuningdek_yana">Shuningdek yana:</string>
     <string name="yana">Yana</string>
+    <string name="viloyatlar">Viloyatlar</string>
+    <string name="ma_lumotlar">Ma\'lumotlar</string>
+    <string name="tumanlar_shahar">Tumanlar(shahar)</string>
+    <string name="tasdiqlash">Tasdiqlash</string>
+    <string name="raqamiga_yuborildi">raqamiga yuborildi</string>
+    <string name="sms_kod">Sms kod</string>
+    <string name="qayta_yuborish">Qayta yuborish</string>
 
 </resources>

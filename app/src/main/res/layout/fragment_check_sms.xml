@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".main.fragments.newUser.login.fragment.sms.CheckSms">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/tasdiqlash"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_padding_12"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/sms_kod"
+                android:textColor="#2A3344"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text=" +998995056698 "
+                android:textColor="@color/blue"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/raqamiga_yuborildi"
+                android:textColor="#2A3344"
+
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <in.aabhasjindal.otptextview.OtpTextView
+            android:id="@+id/otp_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            app:bar_height="2dp"
+            app:height="40dp"
+            app:length="4"
+            app:otp_box_background="@drawable/bg_sms_box"
+            app:otp_text_size="24dp"
+            app:width="40dp" />
+
+        <TextView
+            android:id="@+id/return_send_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="00:00"
+            android:layout_marginTop="@dimen/margin_padding_12"
+            android:textColor="#2A3344"
+            android:textSize="@dimen/text_size_14" />
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/qayta_yuborish"
+            android:visibility="invisible"
+            android:textColor="#228FFF"
+            android:textSize="@dimen/text_size_16"
+            app:drawableLeftCompat="@drawable/ic_return_send_sms" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/margin_padding_24"
+        android:background="@drawable/button_main"
+        android:backgroundTint="@color/blue"
+        android:elevation="0dp"
+        android:layout_marginHorizontal="@dimen/margin_padding_24"
+        android:fontFamily="@font/gotham_pro_medium"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/margin_padding_16"
+        android:paddingVertical="@dimen/margin_padding_8"
+        android:text="@string/keyingisi"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:cornerRadius="@dimen/margin_padding_30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="@color/button_ripple" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

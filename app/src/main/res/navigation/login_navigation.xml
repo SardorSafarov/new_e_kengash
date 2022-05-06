@@ -26,5 +26,10 @@
         android:name="com.example.e_kengash.main.fragments.newUser.login.fragment.signUp.SignUp"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/checkSms"
+        android:name="com.example.e_kengash.main.fragments.newUser.login.fragment.sms.CheckSms"
+        android:label="fragment_check_sms"
+        tools:layout="@layout/fragment_check_sms" />
 
 </navigation>

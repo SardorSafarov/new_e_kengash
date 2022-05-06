@@ -6,9 +6,12 @@ import com.example.e_kengash.network.entity.login.register.RegisterUserRequest
 import com.example.e_kengash.network.entity.login.register.RegisterUserResponse
 import com.example.e_kengash.network.entity.login.signIn.SignInRequest
 import com.example.e_kengash.network.entity.login.signIn.SignInResponse
+import com.example.e_kengash.network.entity.login.sms.sendSms.SendSmsResponse
 import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Query
 
 
 interface LoginApi {
@@ -22,4 +25,7 @@ interface LoginApi {
 
     @POST("/api/v1/login/")
     suspend fun signIn(@Body body: SignInRequest): Response<SignInResponse>
+
+    @GET("document/sms-check")
+    suspend fun sendPhone(@Query("phone")phone:String):Response<SendSmsResponse>
 }

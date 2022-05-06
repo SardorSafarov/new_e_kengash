@@ -8,6 +8,7 @@ import com.example.e_kengash.network.entity.login.register.RegisterUserRequest
 import com.example.e_kengash.network.entity.login.register.RegisterUserResponse
 import com.example.e_kengash.network.entity.login.signIn.SignInRequest
 import com.example.e_kengash.network.entity.login.signIn.SignInResponse
+import com.example.e_kengash.network.entity.login.sms.sendSms.SendSmsResponse
 import com.example.e_kengash.network.repository.LoginRepository
 import com.example.e_kengash.repetitive.D
 import kotlinx.coroutines.launch
@@ -48,6 +49,18 @@ class LoginViewModel(private val loginRepository: LoginRepository):ViewModel() {
             }catch (e:Exception)
             {
                 D("LoginViewModel signIn  ${e.message}")
+            }
+        }
+    }
+
+    fun sendPhone(request:String, onResponse: (response: Response<SendSmsResponse>) -> Unit)
+    {
+        viewModelScope.launch {
+            try {
+                onResponse(loginRepository.sendPhone(request))
+            }catch (e:Exception)
+            {
+                D("LoginViewModel sendPhone  ${e.message}")
             }
         }
     }

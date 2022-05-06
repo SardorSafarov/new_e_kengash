@@ -13,22 +13,24 @@
         android:theme="@style/Theme.Ekengash"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".main.activity.moreInActivity.SecretariatActivity"
+            android:exported="false" />
+        <activity
             android:name=".main.activity.LiveSteamActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".main.activity.NotificationActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".main.fragments.newUser.login.main.LoginActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".main.activity.MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
-            >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

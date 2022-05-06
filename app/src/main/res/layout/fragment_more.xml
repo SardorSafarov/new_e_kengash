@@ -9,7 +9,7 @@
     android:paddingBottom="@dimen/margin_padding_50"
     android:overScrollMode="never"
     android:background="@color/main_background"
-    tools:context=".main.fragments.more.More">
+    tools:context=".main.fragments.more.main.More">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"

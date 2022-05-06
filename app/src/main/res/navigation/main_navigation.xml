@@ -23,7 +23,7 @@
         tools:layout="@layout/fragment_new_user" />
     <fragment
         android:id="@+id/moreFragment"
-        android:name="com.example.e_kengash.main.fragments.more.More"
+        android:name="com.example.e_kengash.main.fragments.more.main.More"
         tools:layout="@layout/fragment_more" />
 
 </navigation>
