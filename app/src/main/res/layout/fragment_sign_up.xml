@@ -8,8 +8,9 @@
     android:background="@color/main_background"
     android:paddingHorizontal="@dimen/margin_padding_24"
     tools:context=".main.fragments.newUser.login.fragment.signUp.SignUp">
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.appcompat.widget.LinearLayoutCompat
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent">
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -244,7 +245,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:rippleColor="@color/button_ripple" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
 
 
 

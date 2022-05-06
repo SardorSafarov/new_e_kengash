@@ -16,61 +16,18 @@ import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.tosatShort
 
 class SignUp : BaseFragment<FragmentSignUpBinding>(FragmentSignUpBinding::inflate) {
-    private lateinit var loginViewMode: LoginViewModel
+
     override fun onViewCreate() {
-        setUi()
         binding.phone.setText(sharePereferenseHelper.getAccessPhone())
         binding.apply {
             done.setOnClickListener{
-
-                loginViewMode.sendPhone(phone.text.toString()){
-                    if(it.isSuccessful)
-                    {
-                        if (it.body()!!.error==201)
-                        {
-                            navController.navigate(R.id.checkSms)
-                        }
-                        else{
-                            tosatShort(requireContext(),it.body()!!.message)
-                        }
-
-                    }
-                }
-//                loginViewMode.registerUser(
-//                    RegisterUserRequest(
-//                        phone=phone.text.toString(),
-//                        first_name = firsName.text.toString(),
-//                        last_name = lastName.text.toString(),
-//                        middle_name = middleName.text.toString(),
-//                        password = password1.text.toString(),
-//                        password1 = password2.text.toString(),
-//                        location = "ss"
-//                    )
-//                )
-//                {response->
-//                    if(response.isSuccessful)
-//                    onResponse(response.body())
-//                    else
-//                        D("SignUp registerUser false")
-//                }
+                sharePereferenseHelper.setAccessFirsName(firsName.text.toString())
+                sharePereferenseHelper.setAccessLastName(lastName.text.toString())
+                sharePereferenseHelper.setAccessMidelName(middleName.text.toString())
+                sharePereferenseHelper.setAccessPassword1(password1.text.toString())
+                sharePereferenseHelper.setAccessPassword2(password2.text.toString())
+                navController.navigate(R.id.checkSms)
             }
         }
-    }
-
-    private fun onResponse(body: RegisterUserResponse?) {
-        sharePereferenseHelper.setAccessToken(body!!.token)
-        startActivity(Intent(requireContext(),MainActivity::class.java))
-        activity?.finishAffinity()
-    }
-
-    private fun setUi() {
-        val loginRepository = LoginRepository()
-        val loginViewModelFactory = LoginViewModelFactory(loginRepository)
-        val takliflarLayfxaklarViewModel = ViewModelProvider(
-            this,
-            loginViewModelFactory
-        ).get(LoginViewModel::class.java)
-        this.loginViewMode = takliflarLayfxaklarViewModel
-
     }
 }

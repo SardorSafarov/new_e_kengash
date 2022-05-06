@@ -8,6 +8,8 @@ import com.example.e_kengash.network.entity.login.register.RegisterUserRequest
 import com.example.e_kengash.network.entity.login.register.RegisterUserResponse
 import com.example.e_kengash.network.entity.login.signIn.SignInRequest
 import com.example.e_kengash.network.entity.login.signIn.SignInResponse
+import com.example.e_kengash.network.entity.login.sms.sendPhone.SendPhoneResponse
+import com.example.e_kengash.network.entity.login.sms.sendSms.SendSmsRequest
 import com.example.e_kengash.network.entity.login.sms.sendSms.SendSmsResponse
 import com.example.e_kengash.network.repository.LoginRepository
 import com.example.e_kengash.repetitive.D
@@ -53,7 +55,7 @@ class LoginViewModel(private val loginRepository: LoginRepository):ViewModel() {
         }
     }
 
-    fun sendPhone(request:String, onResponse: (response: Response<SendSmsResponse>) -> Unit)
+    fun sendPhone(request:String, onResponse: (response: Response<SendPhoneResponse>) -> Unit)
     {
         viewModelScope.launch {
             try {
@@ -61,6 +63,18 @@ class LoginViewModel(private val loginRepository: LoginRepository):ViewModel() {
             }catch (e:Exception)
             {
                 D("LoginViewModel sendPhone  ${e.message}")
+            }
+        }
+    }
+
+    fun sendSms(request:SendSmsRequest, onResponse: (response: Response<SendSmsResponse>) -> Unit)
+    {
+        viewModelScope.launch {
+            try {
+                onResponse(loginRepository.sendSms(request))
+            }catch (e:Exception)
+            {
+                D("LoginViewModel sendSms  ${e.message}")
             }
         }
     }

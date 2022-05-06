@@ -31,7 +31,6 @@ class Login : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::inflate){
             }
         }
     }
-
     private fun onResponse(response: Response<CheckUserResponse>) {
         if(response.body()!!.user == true)
         {
