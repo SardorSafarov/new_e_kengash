@@ -1,24 +1,14 @@
-package com.example.e_kengash.main.fragments.newUser.login.fragment.signUp
+package com.example.e_kengash.main.activity.login.fragment.signUp
 
 
-import android.content.Intent
-import androidx.lifecycle.ViewModelProvider
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.FragmentSignUpBinding
-import com.example.e_kengash.main.activity.MainActivity
 import com.example.e_kengash.main.fragments.baseFragment.BaseFragment
-import com.example.e_kengash.network.entity.login.register.RegisterUserRequest
-import com.example.e_kengash.network.entity.login.register.RegisterUserResponse
-import com.example.e_kengash.network.repository.LoginRepository
-import com.example.e_kengash.network.viewModel.LoginViewModel
-import com.example.e_kengash.network.viewModelFactory.LoginViewModelFactory
-import com.example.e_kengash.repetitive.D
-import com.example.e_kengash.repetitive.tosatShort
 
 class SignUp : BaseFragment<FragmentSignUpBinding>(FragmentSignUpBinding::inflate) {
 
     override fun onViewCreate() {
-        binding.phone.setText(sharePereferenseHelper.getAccessPhone())
+        binding.phone.setText(requireArguments().getString("phone").toString())
         binding.apply {
             done.setOnClickListener{
                 sharePereferenseHelper.setAccessFirsName(firsName.text.toString())

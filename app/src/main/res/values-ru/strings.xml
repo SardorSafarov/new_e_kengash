@@ -75,5 +75,6 @@
     <string name="raqamiga_yuborildi">raqamiga yuborildi</string>
     <string name="sms_kod">Sms kod</string>
     <string name="qayta_yuborish">Qayta yuborish</string>
+    <string name="raqamni_kiriting">Raqamni kiriting</string>
 
 </resources>

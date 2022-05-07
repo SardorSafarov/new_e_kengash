@@ -4,18 +4,15 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.content.ContextCompat
-import androidx.core.content.res.ResourcesCompat
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.ActivityMainBinding
+import com.example.e_kengash.main.activity.notif.NotificationActivity
 import com.example.e_kengash.repetitive.statusbarcolor
-import com.example.e_kengash.repetitive.tosatShort
 
 class MainActivity : AppCompatActivity() {
     //*======لا اله الا الله محمد رسول الله
@@ -49,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun notification() {
         binding.notification.setOnClickListener {
-            startActivity(Intent(this,NotificationActivity::class.java))
+            startActivity(Intent(this, NotificationActivity::class.java))
         }
     }
 

@@ -1,4 +1,4 @@
-package com.example.e_kengash.network.viewModel
+package com.example.e_kengash.network.viewModel.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -9,9 +9,9 @@ import com.example.e_kengash.network.entity.login.register.RegisterUserResponse
 import com.example.e_kengash.network.entity.login.signIn.SignInRequest
 import com.example.e_kengash.network.entity.login.signIn.SignInResponse
 import com.example.e_kengash.network.entity.login.sms.sendPhone.SendPhoneResponse
-import com.example.e_kengash.network.entity.login.sms.sendSms.SendSmsRequest
-import com.example.e_kengash.network.entity.login.sms.sendSms.SendSmsResponse
-import com.example.e_kengash.network.repository.LoginRepository
+import com.example.e_kengash.network.entity.login.sms.sendSms.CheckSmsRequest
+import com.example.e_kengash.network.entity.login.sms.sendSms.CheckSmsResponse
+import com.example.e_kengash.network.repository.login.LoginRepository
 import com.example.e_kengash.repetitive.D
 import kotlinx.coroutines.launch
 import retrofit2.Response
@@ -67,11 +67,11 @@ class LoginViewModel(private val loginRepository: LoginRepository):ViewModel() {
         }
     }
 
-    fun sendSms(request:SendSmsRequest, onResponse: (response: Response<SendSmsResponse>) -> Unit)
+    fun checkSms(request:CheckSmsRequest, onResponse: (response: Response<CheckSmsResponse>) -> Unit)
     {
         viewModelScope.launch {
             try {
-                onResponse(loginRepository.sendSms(request))
+                onResponse(loginRepository.checkSms(request))
             }catch (e:Exception)
             {
                 D("LoginViewModel sendSms  ${e.message}")

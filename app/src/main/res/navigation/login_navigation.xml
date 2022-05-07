@@ -6,7 +6,7 @@
     app:startDestination="@id/login">
     <fragment
         android:id="@+id/login"
-        android:name="com.example.e_kengash.main.fragments.newUser.login.fragment.login.Login"
+        android:name="com.example.e_kengash.main.activity.login.fragment.login.Login"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -15,20 +15,38 @@
         <action
             android:id="@+id/action_login_to_signIn"
             app:destination="@id/signIn" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/signIn"
-        android:name="com.example.e_kengash.main.fragments.newUser.login.fragment.signIn.SignIn"
+        android:name="com.example.e_kengash.main.activity.login.fragment.signIn.SignIn"
         android:label="fragment_sign_in"
-        tools:layout="@layout/fragment_sign_in" />
+        tools:layout="@layout/fragment_sign_in" >
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <argument
+            android:name="key"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_signIn_to_checkSms"
+            app:destination="@id/checkSms" />
+    </fragment>
     <fragment
         android:id="@+id/signUp"
-        android:name="com.example.e_kengash.main.fragments.newUser.login.fragment.signUp.SignUp"
+        android:name="com.example.e_kengash.main.activity.login.fragment.signUp.SignUp"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" />
+        tools:layout="@layout/fragment_sign_up" >
+
+        <action
+            android:id="@+id/action_signUp_to_checkSms"
+            app:destination="@id/checkSms" />
+    </fragment>
     <fragment
         android:id="@+id/checkSms"
-        android:name="com.example.e_kengash.main.fragments.newUser.login.fragment.sms.CheckSms"
+        android:name="com.example.e_kengash.main.activity.login.fragment.sms.CheckSms"
         android:label="fragment_check_sms"
         tools:layout="@layout/fragment_check_sms" />
 

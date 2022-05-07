@@ -1,4 +1,4 @@
-package com.example.e_kengash.main.fragments.newUser.login.fragment.sms
+package com.example.e_kengash.main.activity.login.fragment.sms
 
 
 import android.content.Intent
@@ -8,13 +8,11 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.e_kengash.databinding.FragmentCheckSmsBinding
 import com.example.e_kengash.main.activity.MainActivity
 import com.example.e_kengash.main.fragments.baseFragment.BaseFragment
-import com.example.e_kengash.network.entity.login.register.RegisterUserRequest
-import com.example.e_kengash.network.entity.login.register.RegisterUserResponse
-import com.example.e_kengash.network.entity.login.sms.sendSms.SendSmsRequest
-import com.example.e_kengash.network.repository.LoginRepository
-import com.example.e_kengash.network.viewModel.LoginViewModel
-import com.example.e_kengash.network.viewModelFactory.LoginViewModelFactory
-import com.example.e_kengash.repetitive.D
+import com.example.e_kengash.network.entity.login.sms.sendSms.CheckSmsRequest
+import com.example.e_kengash.network.entity.login.sms.sendSms.CheckSmsResponse
+import com.example.e_kengash.network.repository.login.LoginRepository
+import com.example.e_kengash.network.viewModel.login.LoginViewModel
+import com.example.e_kengash.network.viewModelFactory.login.LoginViewModelFactory
 import com.example.e_kengash.repetitive.tosatShort
 
 
@@ -22,7 +20,7 @@ class CheckSms : BaseFragment<FragmentCheckSmsBinding>(FragmentCheckSmsBinding::
     private lateinit var loginViewMode: LoginViewModel
     override fun onViewCreate() {
         setUi()
-        binding.txtPhone.setText(" +998${sharePereferenseHelper.getAccessPhone()} ")
+        binding.txtPhone.setText(" ${requireArguments().getString("phone")} ")
         sendPhoneNumber()
         checkSms()
         sendSmsTime()
@@ -50,24 +48,36 @@ class CheckSms : BaseFragment<FragmentCheckSmsBinding>(FragmentCheckSmsBinding::
 
     private fun checkSms() {
         binding.done.setOnClickListener {
-            val user = RegisterUserRequest(
+
+            loginViewMode.checkSms(CheckSmsRequest(
                 phone = sharePereferenseHelper.getAccessPhone(),
-                first_name = sharePereferenseHelper.getAccessFirstName(),
-                last_name = sharePereferenseHelper.getAccessLastName(),
-                middle_name = sharePereferenseHelper.getAccessMidelName(),
-                password = sharePereferenseHelper.getAccessPassword1(),
-                password1 = sharePereferenseHelper.getAccessPassword2(),
-                location = "ss",
-                code = binding.txtSms.text.toString()
-            )
-            D(user.toString())
-            loginViewMode.registerUser(user)
-            { response ->
-                if (response.isSuccessful)
-                    onResponse(response.body())
-                else
-                    D("CheckSms registerUser false")
+                code = binding.txtSms.text.toString(),
+                key_id = requireArguments().getString("key").toString()
+            )){
+                if(it.isSuccessful)
+                {
+                  onResponse(it.body())
+                }
             }
+
+//            val user = RegisterUserRequest(
+//                phone = sharePereferenseHelper.getAccessPhone(),
+//                first_name = sharePereferenseHelper.getAccessFirstName(),
+//                last_name = sharePereferenseHelper.getAccessLastName(),
+//                middle_name = sharePereferenseHelper.getAccessMidelName(),
+//                password = sharePereferenseHelper.getAccessPassword1(),
+//                password1 = sharePereferenseHelper.getAccessPassword2(),
+//                location = "ss",
+//                code = binding.txtSms.text.toString()
+//            )
+//            D(user.toString())
+//            loginViewMode.registerUser(user)
+//            { response ->
+//                if (response.isSuccessful)
+//                    onResponse(response.body())
+//                else
+//                    D("CheckSms registerUser false")
+//            }
 
         }
     }
@@ -93,7 +103,7 @@ class CheckSms : BaseFragment<FragmentCheckSmsBinding>(FragmentCheckSmsBinding::
         }
     }
 
-    private fun onResponse(body: RegisterUserResponse?) {
+    private fun onResponse(body: CheckSmsResponse?) {
         sharePereferenseHelper.setAccessToken(body!!.token)
         startActivity(Intent(requireContext(), MainActivity::class.java))
         activity?.finishAffinity()

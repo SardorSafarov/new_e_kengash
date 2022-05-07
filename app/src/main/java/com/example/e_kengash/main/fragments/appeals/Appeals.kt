@@ -10,8 +10,7 @@ import com.example.e_kengash.adapter.appeal.AppealsTopMenuAdapter
 import com.example.e_kengash.databinding.AlertDialogSignUpBinding
 import com.example.e_kengash.databinding.FragmentAppealsBinding
 import com.example.e_kengash.main.fragments.baseFragment.BaseFragment
-import com.example.e_kengash.main.fragments.newUser.login.main.LoginActivity
-import com.example.e_kengash.repetitive.D
+import com.example.e_kengash.main.activity.login.main.LoginActivity
 import com.example.e_kengash.repetitive.tosatShort
 
 

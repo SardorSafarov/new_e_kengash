@@ -1,4 +1,4 @@
-package com.example.e_kengash.main.fragments.newUser.login.main
+package com.example.e_kengash.main.activity.login.main
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity

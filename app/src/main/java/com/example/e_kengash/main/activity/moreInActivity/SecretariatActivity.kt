@@ -5,7 +5,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.e_kengash.databinding.ActivitySecritariatBinding
-import com.example.e_kengash.main.activity.NotificationActivity
+import com.example.e_kengash.main.activity.notif.NotificationActivity
 import com.example.e_kengash.repetitive.statusbarcolor
 
 class SecretariatActivity : AppCompatActivity() {
@@ -21,7 +21,7 @@ class SecretariatActivity : AppCompatActivity() {
 
     private fun notification() {
         binding.notification.setOnClickListener {
-            startActivity(Intent(this,NotificationActivity::class.java))
+            startActivity(Intent(this, NotificationActivity::class.java))
         }
     }
 

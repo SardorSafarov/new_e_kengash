@@ -7,8 +7,8 @@ import com.example.e_kengash.network.entity.login.register.RegisterUserResponse
 import com.example.e_kengash.network.entity.login.signIn.SignInRequest
 import com.example.e_kengash.network.entity.login.signIn.SignInResponse
 import com.example.e_kengash.network.entity.login.sms.sendPhone.SendPhoneResponse
-import com.example.e_kengash.network.entity.login.sms.sendSms.SendSmsRequest
-import com.example.e_kengash.network.entity.login.sms.sendSms.SendSmsResponse
+import com.example.e_kengash.network.entity.login.sms.sendSms.CheckSmsRequest
+import com.example.e_kengash.network.entity.login.sms.sendSms.CheckSmsResponse
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -32,5 +32,5 @@ interface LoginApi {
     suspend fun sendPhone(@Query("phone")phone:String):Response<SendPhoneResponse>
 
     @POST("/api/v1/check-sms/")
-    suspend fun sendSms(@Body body: SendSmsRequest): Response<SendSmsResponse>
+    suspend fun checkSms(@Body body: CheckSmsRequest): Response<CheckSmsResponse>
 }

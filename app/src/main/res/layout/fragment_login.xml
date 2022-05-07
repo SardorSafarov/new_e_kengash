@@ -7,7 +7,7 @@
     android:background="@color/main_background"
     android:orientation="vertical"
     android:paddingHorizontal="@dimen/margin_padding_24"
-    tools:context=".main.fragments.newUser.login.fragment.login.Login">
+    tools:context=".main.activity.login.fragment.login.Login">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
@@ -41,24 +41,25 @@
                 android:fontFamily="@font/gotham_pro_medium"
                 android:text="@string/telefon_raqami"
                 android:textColor="@color/black" />
-
-            <com.google.android.material.card.MaterialCardView
+            <com.example.council.utils.mask.MaskedEditText
+                android:id="@+id/phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_padding_12"
-                app:cardCornerRadius="@dimen/radius_6"
-                app:cardElevation="0dp"
-                app:strokeColor="#DCE8FF"
-                app:strokeWidth="1dp">
-
-                <EditText
-                    android:id="@+id/phone"
-                    android:paddingStart="@dimen/margin_padding_12"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:backgroundTint="@color/white"
-                    android:inputType="phone" />
-            </com.google.android.material.card.MaterialCardView>
+                android:layout_marginTop="@dimen/margin_padding_8"
+                android:background="@drawable/bg_et"
+                android:fontFamily="@font/gotham_pro_light"
+                android:gravity="start"
+                android:hint="_________"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="@dimen/margin_padding_12"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/text_size_16"
+                app:allowed_chars="1234567890"
+                app:enable_ime_action="true"
+                app:mask="+998 ##-### ## ##" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
 
@@ -70,7 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginBottom="@dimen/margin_padding_24"
-        android:background="@drawable/button_main"
+        android:background="@drawable/bg_button"
         android:backgroundTint="@color/blue"
         android:elevation="0dp"
         android:fontFamily="@font/gotham_pro_medium"

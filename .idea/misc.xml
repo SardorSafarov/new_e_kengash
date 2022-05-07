@@ -63,19 +63,27 @@
         <entry key="..\:/Users/User/StudioProjects/new_e_kengash/app/src/main/res/layout/item_appleas_top_menu.xml" value="0.28396739130434784" />
         <entry key="..\:/Users/User/StudioProjects/new_e_kengash/app/src/main/res/menu/bottom_nav_menu.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/drawable-v24/bg_text_blue.xml" value="0.2345" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/drawable/bg_button.xml" value="0.2345" />
         <entry key="..\:/new_e_kengash/app/src/main/res/drawable/bg_sms_box.xml" value="0.2345" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/drawable/button_main.xml" value="0.2345" />
         <entry key="..\:/new_e_kengash/app/src/main/res/drawable/ic_return_send_sms.xml" value="0.2345" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_article.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_live_steam.xml" value="0.19157608695652173" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_login.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_main.xml" value="0.140625" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_notification.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_secritariat.xml" value="0.25" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_appeals.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_check_sms.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_home.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_login.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_more.xml" value="0.28396739130434784" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_new_user.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_secretariat.xml" value="0.28396739130434784" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_sign_in.xml" value="0.27853260869565216" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_sign_up.xml" value="0.25" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_appleas_top_menu.xml" value="0.28396739130434784" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_notif.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_question.xml" value="0.28396739130434784" />
       </map>
     </option>

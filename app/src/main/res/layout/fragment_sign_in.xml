@@ -7,7 +7,7 @@
     android:background="@color/main_background"
     android:orientation="vertical"
     android:padding="@dimen/margin_padding_24"
-    tools:context=".main.fragments.newUser.login.fragment.signIn.SignIn">
+    tools:context=".main.activity.login.fragment.signIn.SignIn">
 
 
     <androidx.core.widget.NestedScrollView
@@ -71,23 +71,15 @@
                 android:text="@string/telefon_raqami"
                 android:textColor="@color/black" />
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_padding_12"
-                app:cardCornerRadius="@dimen/radius_6"
-                app:cardElevation="0dp"
-                app:strokeColor="#DCE8FF"
-                app:strokeWidth="1dp">
-
-                <EditText
-                    android:id="@+id/phone"
-                    android:paddingStart="@dimen/margin_padding_12"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:backgroundTint="@color/white"
-                    android:inputType="phone" />
-            </com.google.android.material.card.MaterialCardView>
+                android:padding="@dimen/margin_padding_12"
+                android:textSize="@dimen/text_size_16"
+                android:background="@drawable/bg_et"
+                android:text="+998995056698"
+                />
 
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -125,7 +117,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginBottom="@dimen/margin_padding_24"
-        android:background="@drawable/button_main"
+        android:background="@drawable/bg_button"
         android:backgroundTint="@color/blue"
         android:elevation="0dp"
         android:fontFamily="@font/gotham_pro_medium"

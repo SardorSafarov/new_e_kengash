@@ -19,3 +19,9 @@ fun Activity.statusbarcolor(color: Int)
 fun D(message: String){
     Log.d("sardor","log ===>  $message  <===log")
 }
+fun RequestLog(message: String, s: String){
+    Log.d("request","====================================================")
+    Log.d("request","log ===>  $s  <===log")
+    Log.d("request","log ===>  $message  <===log")
+    Log.d("request","====================================================")
+}
