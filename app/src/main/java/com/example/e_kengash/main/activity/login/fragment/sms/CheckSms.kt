@@ -23,12 +23,12 @@ class CheckSms : BaseFragment<FragmentCheckSmsBinding>(FragmentCheckSmsBinding::
         binding.txtPhone.setText(" ${requireArguments().getString("phone")} ")
         sendPhoneNumber()
         checkSms()
-        sendSmsTime()
+        smsTime()
     }
 
-    private fun sendSmsTime() {
+    private fun smsTime() {
         binding.returnSendSms.setOnClickListener {
-            sendSmsTime()
+            smsTime()
             binding.time.visibility = View.VISIBLE
             binding.returnSendSms.visibility = View.INVISIBLE
             sendPhoneNumber()

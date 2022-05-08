@@ -17,6 +17,7 @@ import com.example.e_kengash.repetitive.statusbarcolor
 
 class NotificationActivity : AppCompatActivity(),NotifAdapter.onClickListener {
     private lateinit var binding:ActivityNotificationBinding
+    private lateinit var token:String
     private val adapterNotif:NotifAdapter by lazy { NotifAdapter(this) }
     private lateinit var notifViewModel: NotifViewModel
     private lateinit var  sharePereferenseHelper:SharePereferenseHelper
@@ -25,6 +26,7 @@ class NotificationActivity : AppCompatActivity(),NotifAdapter.onClickListener {
         binding = ActivityNotificationBinding.inflate(layoutInflater)
         setContentView(binding.root)
         sharePereferenseHelper = SharePereferenseHelper(this)
+        token = sharePereferenseHelper.getAccessToken()
         statusbarcolor(Color.WHITE)
         back()
         setUi()
@@ -33,8 +35,7 @@ class NotificationActivity : AppCompatActivity(),NotifAdapter.onClickListener {
     }
 
     private fun setDataToAdapter() {
-        D(sharePereferenseHelper.getAccessToken())
-        val token ="da53c6d80297a53dc4a5f670417eb23e628d25ec"
+        D("Token ".plus(token))
         notifViewModel.notif("Token ".plus(token)) {
             if(it.isSuccessful)
             {
@@ -42,7 +43,7 @@ class NotificationActivity : AppCompatActivity(),NotifAdapter.onClickListener {
                setData(it.body()!!.results)
             }else
             {
-                D("NotificationActivity notif  ${it.errorBody()}  ")
+                D("NotificationActivity notif  ${it.errorBody()!!.string()}  ")
             }
         }
     }
