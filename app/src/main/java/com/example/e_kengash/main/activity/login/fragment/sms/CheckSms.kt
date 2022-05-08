@@ -13,6 +13,7 @@ import com.example.e_kengash.network.entity.login.sms.sendSms.CheckSmsResponse
 import com.example.e_kengash.network.repository.login.LoginRepository
 import com.example.e_kengash.network.viewModel.login.LoginViewModel
 import com.example.e_kengash.network.viewModelFactory.login.LoginViewModelFactory
+import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.tosatShort
 
 
@@ -57,28 +58,11 @@ class CheckSms : BaseFragment<FragmentCheckSmsBinding>(FragmentCheckSmsBinding::
                 if(it.isSuccessful)
                 {
                   onResponse(it.body())
+                }else
+                {
+                 D("CheckSms checkSms false ${it.errorBody()!!.string()}")
                 }
             }
-
-//            val user = RegisterUserRequest(
-//                phone = sharePereferenseHelper.getAccessPhone(),
-//                first_name = sharePereferenseHelper.getAccessFirstName(),
-//                last_name = sharePereferenseHelper.getAccessLastName(),
-//                middle_name = sharePereferenseHelper.getAccessMidelName(),
-//                password = sharePereferenseHelper.getAccessPassword1(),
-//                password1 = sharePereferenseHelper.getAccessPassword2(),
-//                location = "ss",
-//                code = binding.txtSms.text.toString()
-//            )
-//            D(user.toString())
-//            loginViewMode.registerUser(user)
-//            { response ->
-//                if (response.isSuccessful)
-//                    onResponse(response.body())
-//                else
-//                    D("CheckSms registerUser false")
-//            }
-
         }
     }
 
@@ -104,7 +88,7 @@ class CheckSms : BaseFragment<FragmentCheckSmsBinding>(FragmentCheckSmsBinding::
     }
 
     private fun onResponse(body: CheckSmsResponse?) {
-        sharePereferenseHelper.setAccessToken(body!!.token)
+        sharePereferenseHelper.setAccessToken("Token ".plus(body!!.token))
         startActivity(Intent(requireContext(), MainActivity::class.java))
         activity?.finishAffinity()
     }

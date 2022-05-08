@@ -13,6 +13,7 @@ import com.example.e_kengash.network.repository.notif.NotificationRepository
 import com.example.e_kengash.network.viewModel.notif.NotifViewModel
 import com.example.e_kengash.network.viewModelFactory.notif.NotifViewModelFactory
 import com.example.e_kengash.repetitive.D
+import com.example.e_kengash.repetitive.gone
 import com.example.e_kengash.repetitive.statusbarcolor
 
 class NotificationActivity : AppCompatActivity(),NotifAdapter.onClickListener {
@@ -35,11 +36,10 @@ class NotificationActivity : AppCompatActivity(),NotifAdapter.onClickListener {
     }
 
     private fun setDataToAdapter() {
-        D("Token ".plus(token))
-        notifViewModel.notif("Token ".plus(token)) {
+        notifViewModel.notif(token) {
             if(it.isSuccessful)
             {
-                D(it.body().toString())
+                binding.progressBar.gone()
                setData(it.body()!!.results)
             }else
             {
