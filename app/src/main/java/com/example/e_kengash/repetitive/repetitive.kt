@@ -38,3 +38,9 @@ fun View.visible():View
     visibility = View.VISIBLE
     return this
 }
+
+fun View.invisible():View
+{
+    visibility = View.INVISIBLE
+    return this
+}

@@ -12,8 +12,8 @@ import com.example.e_kengash.databinding.ActivitySecritariatBinding
 import com.example.e_kengash.main.activity.notif.NotificationActivity
 import com.example.e_kengash.repetitive.statusbarcolor
 
-class SecretariatActivity : AppCompatActivity(),AppealsTopMenuAdapter.onClickListener {
-    private lateinit var binding:ActivitySecritariatBinding
+class SecretariatActivity : AppCompatActivity(), AppealsTopMenuAdapter.onClickListener {
+    private lateinit var binding: ActivitySecritariatBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySecritariatBinding.inflate(layoutInflater)
@@ -28,15 +28,15 @@ class SecretariatActivity : AppCompatActivity(),AppealsTopMenuAdapter.onClickLis
     private fun navigationFragment() {
         binding.apply {
             btnData.setOnClickListener {
-                bgBtn(btnData,btnRegion,btnDictirct)
+                bgBtn(btnData, btnRegion, btnDictirct)
                 findNavController(R.id.secretariat_nav_fragment).navigate(R.id.secretariatInfo)
             }
             btnRegion.setOnClickListener {
-                bgBtn(btnRegion,btnData,btnDictirct)
+                bgBtn(btnRegion, btnData, btnDictirct)
                 findNavController(R.id.secretariat_nav_fragment).navigate(R.id.secretariatRegion)
             }
             btnDictirct.setOnClickListener {
-                bgBtn(btnDictirct,btnRegion,btnData)
+                bgBtn(btnDictirct, btnRegion, btnData)
                 findNavController(R.id.secretariat_nav_fragment).navigate(R.id.secretariatDistrict)
             }
         }
@@ -47,12 +47,18 @@ class SecretariatActivity : AppCompatActivity(),AppealsTopMenuAdapter.onClickLis
         btn2: AppCompatTextView,
         btn3: AppCompatTextView
     ) {
-        btn1.setBackgroundResource(R.drawable.bg_text_blue)
-        btn1.setTextColor(resources.getColor(R.color.white))
-        btn2.setBackgroundResource(R.color.white)
-        btn2.setTextColor(resources.getColor(R.color.gray))
-        btn3.setBackgroundResource(R.color.white)
-        btn3.setTextColor(resources.getColor(R.color.gray))
+        btn1.apply {
+            setBackgroundResource(R.drawable.bg_text_blue)
+            setTextColor(resources.getColor(R.color.white))
+        }
+        btn2.apply {
+            setBackgroundResource(R.color.white)
+            setTextColor(resources.getColor(R.color.gray))
+        }
+        btn3.apply {
+            setBackgroundResource(R.color.white)
+            setTextColor(resources.getColor(R.color.gray))
+        }
     }
 
     private fun notification() {

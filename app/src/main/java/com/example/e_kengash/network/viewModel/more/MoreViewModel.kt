@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.e_kengash.network.entity.article.ArticleResponse
+import com.example.e_kengash.network.entity.secretariat.region.SecRegionResponse
 import com.example.e_kengash.network.repository.more.MoreRepository
 import com.example.e_kengash.repetitive.D
 import kotlinx.coroutines.launch
@@ -34,6 +35,30 @@ class MoreViewModel(private val moreRepository: MoreRepository): ViewModel() {
             }catch (e:Exception)
             {
                 D("LoginViewModel newsList  ${e.message}")
+            }
+        }
+    }
+
+    fun secRegionList(onResponse:(response:Response<SecRegionResponse>)->Unit)
+    {
+        viewModelScope.launch {
+            try {
+               onResponse(moreRepository.secRegionList())
+            }catch (e:Exception)
+            {
+                D("LoginViewModel secRegionList  ${e.message}")
+            }
+        }
+    }
+
+    fun secDistrictList(onResponse:(response:Response<SecRegionResponse>)->Unit)
+    {
+        viewModelScope.launch {
+            try {
+                onResponse(moreRepository.secDistrictList())
+            }catch (e:Exception)
+            {
+                D("LoginViewModel secDistrictList  ${e.message}")
             }
         }
     }

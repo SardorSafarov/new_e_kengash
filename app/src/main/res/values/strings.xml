@@ -77,4 +77,12 @@
     <string name="sms_kod">Sms kod</string>
     <string name="qayta_yuborish">Qayta yuborish</string>
     <string name="raqamni_kiriting">Raqamni kiriting</string>
+    <string name="lavozimi">Lavozimi</string>
+    <string name="f_i_o">F.I.O</string>
+    <string name="o_zbekiston_respublikasi_deputatlar_nto_g_risidagi_moddalar_jamlanmasi">O\'zbekiston Respublikasi Deputatlar\nto\'g\'risidagi moddalar jamlanmasi</string>
+    <string name="tuman_shaharlar_ni_tanlang">Tuman(shaharlar)ni tanlang</string>
+    <string name="umumiy">Umumiy</string>
+    <string name="umumiy_kotibiyat_a_zolari">Umumiy kotibiyat a\'zolari</string>
+    <string name="deputatlar">Deputatlar</string>
+    <string name="senatorlar">Senatorlar</string>
 </resources>

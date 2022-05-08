@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Ekengash"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".main.activity.moreInActivity.senatorAndDeputat.main.SenatorAndDeputat"
+            android:exported="false" />
+        <activity
             android:name=".main.activity.moreInActivity.article.ArticleActivity"
             android:exported="false" />
         <activity
@@ -27,11 +30,10 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.e_kengash.main.activity.login.main.LoginActivity"
+            android:name=".main.activity.login.main.LoginActivity"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"
-            />
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".main.activity.MainActivity"
             android:exported="true"

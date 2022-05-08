@@ -7,8 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.FragmentSecretariatInfoBinding
+import com.example.e_kengash.main.activity.moreInActivity.MoreBaseFragment
 
-class SecretariatInfo : SecretariatBaseFragment<FragmentSecretariatInfoBinding>(FragmentSecretariatInfoBinding::inflate) {
+class SecretariatInfo : MoreBaseFragment<FragmentSecretariatInfoBinding>(FragmentSecretariatInfoBinding::inflate) {
+
     override fun onViewCreate() {
 
     }

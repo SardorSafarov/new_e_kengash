@@ -1,4 +1,4 @@
-package com.example.e_kengash.main.activity.moreInActivity.secretariat.fragment
+package com.example.e_kengash.main.activity.moreInActivity
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,7 +14,7 @@ import com.example.e_kengash.data.localMemory.SharePereferenseHelper
 
 typealias Inflate<T> = (LayoutInflater, ViewGroup?, Boolean) -> T
 
-abstract class SecretariatBaseFragment<VB : ViewBinding>(
+abstract class MoreBaseFragment<VB : ViewBinding>(
     private val inflate: Inflate<VB>
 ) : Fragment() {
 
