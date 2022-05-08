@@ -66,6 +66,7 @@ class NotificationActivity : AppCompatActivity(),NotifAdapter.onClickListener {
         this.notifViewModel = notifViewModel
 
     }
+
     private fun back() {
         binding.back.setOnClickListener {
             finish()

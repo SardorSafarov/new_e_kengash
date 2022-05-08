@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/main_background"
     tools:context=".main.activity.moreInActivity.ArticleActivity">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
@@ -93,12 +94,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appbar" />
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="@dimen/margin_padding_0"
+        android:layout_marginHorizontal="@dimen/margin_padding_12"
+        android:layout_marginTop="@dimen/margin_padding_12"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:src="@drawable/img_article"
-        android:scaleType="centerCrop"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/margin_padding_12"
+            android:layout_marginTop="@dimen/margin_padding_12"
+            android:overScrollMode="never"
+            android:src="@drawable/img_article"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:listitem="@layout/item_home_news" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <ProgressBar
+        android:id="@+id/progress_Bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="visible"
+        android:indeterminateTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
