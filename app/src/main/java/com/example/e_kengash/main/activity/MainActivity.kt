@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.moreFragment
             )
         )
+
         notification()
 
     }

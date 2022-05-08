@@ -7,5 +7,7 @@
     android:fontFamily="@font/gotham_pro_light"
     android:padding="@dimen/margin_padding_8"
     android:text="Barchasi"
+    android:layout_weight="1"
+    android:gravity="center"
     android:textColor="@color/gray"
     android:textSize="@dimen/text_size_12" />

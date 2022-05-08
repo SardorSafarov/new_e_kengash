@@ -8,6 +8,15 @@
         android:id="@+id/homeFragment"
         android:name="com.example.e_kengash.main.fragments.home.Home"
         tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_appealsFragment"
+            app:destination="@id/appealsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_newUserFragment"
+            app:destination="@id/newUserFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
     </fragment>
     <fragment
         android:id="@+id/appealsFragment"

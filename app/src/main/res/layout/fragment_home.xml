@@ -156,6 +156,7 @@
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/appleas"
+                android:touchscreenBlocksFocus="true"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -196,11 +197,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_padding_8"
             android:indeterminateTint="@color/blue"
-            android:visibility="gone" />
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:indeterminate="true"
+            android:visibility="visible" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recNews"
             android:layout_width="match_parent"
+            android:overScrollMode="never"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_padding_16"
             android:layout_marginBottom="@dimen/margin_padding_16"

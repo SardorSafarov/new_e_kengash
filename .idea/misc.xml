@@ -74,18 +74,24 @@
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_notification.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_secritariat.xml" value="0.25" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_appeals.xml" value="0.28396739130434784" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_chat.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_check_sms.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_home.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_login.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_more.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_new_user.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_secretariat.xml" value="0.28396739130434784" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_secretariat_district.xml" value="0.29322916666666665" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_secretariat_info.xml" value="0.29322916666666665" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_secretariat_region.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_sign_in.xml" value="0.27853260869565216" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_sign_up.xml" value="0.25" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_appleas_top_menu.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_home_news.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_notif.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_question.xml" value="0.28396739130434784" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_secretariat_top_btn.xml" value="0.29322916666666665" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/menu/bottom_nav_menu.xml" value="0.29322916666666665" />
       </map>
     </option>
   </component>

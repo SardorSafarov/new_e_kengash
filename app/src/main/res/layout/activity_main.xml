@@ -86,6 +86,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:elevation="8dp"
+        android:touchscreenBlocksFocus="true"
         app:itemBackground="@color/transparent"
         app:itemIconTint="@color/bottom_nav_item_color"
         app:itemTextColor="@color/bottom_nav_item_color"

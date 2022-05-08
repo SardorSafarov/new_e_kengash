@@ -1,4 +1,4 @@
-package com.example.e_kengash.main.activity.moreInActivity
+package com.example.e_kengash.main.activity.moreInActivity.article
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -9,15 +9,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.e_kengash.adapter.article.ArticleAdapter
 import com.example.e_kengash.databinding.ActivityArticleBinding
 import com.example.e_kengash.network.entity.article.New
-import com.example.e_kengash.network.repository.ArticleRepository
-import com.example.e_kengash.network.viewModel.article.ArticleViewModel
-import com.example.e_kengash.network.viewModelFactory.article.ArticleViewModelFactory
+import com.example.e_kengash.network.repository.more.MoreRepository
+import com.example.e_kengash.network.viewModel.more.MoreViewModel
+import com.example.e_kengash.network.viewModelFactory.more.MoreViewModelFactory
 import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.gone
 import com.example.e_kengash.repetitive.statusbarcolor
 
 class ArticleActivity : AppCompatActivity(),ArticleAdapter.onClickListener {
-    private lateinit var articleViewModel: ArticleViewModel
+    private lateinit var moreViewModel: MoreViewModel
     private val adapterArticle:ArticleAdapter by lazy { ArticleAdapter(this) }
     private lateinit var binding:ActivityArticleBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,8 +30,8 @@ class ArticleActivity : AppCompatActivity(),ArticleAdapter.onClickListener {
     }
 
     private fun getArticleList() {
-        articleViewModel.articleList()
-        articleViewModel.articleList.observe(this, Observer {
+        moreViewModel.articleList()
+        moreViewModel.articleList.observe(this, Observer {
             if(it.isSuccessful)
             {
                 onResponse(it.body()!!.news)
@@ -53,13 +53,13 @@ class ArticleActivity : AppCompatActivity(),ArticleAdapter.onClickListener {
     }
 
     private fun setUi() {
-        val articleRepository = ArticleRepository()
-        val articleViewModelFactory = ArticleViewModelFactory(articleRepository)
+        val articleRepository = MoreRepository()
+        val articleViewModelFactory = MoreViewModelFactory(articleRepository)
         val articleViewModel = ViewModelProvider(
             this,
             articleViewModelFactory
-        ).get(ArticleViewModel::class.java)
-        this.articleViewModel = articleViewModel
+        ).get(MoreViewModel::class.java)
+        this.moreViewModel = articleViewModel
 
     }
 

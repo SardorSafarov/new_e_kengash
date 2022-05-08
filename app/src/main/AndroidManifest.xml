@@ -13,10 +13,10 @@
         android:theme="@style/Theme.Ekengash"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".main.activity.moreInActivity.ArticleActivity"
+            android:name=".main.activity.moreInActivity.article.ArticleActivity"
             android:exported="false" />
         <activity
-            android:name=".main.activity.moreInActivity.SecretariatActivity"
+            android:name=".main.activity.moreInActivity.secretariat.mian.SecretariatActivity"
             android:exported="false" />
         <activity
             android:name=".main.activity.strem.LiveSteamActivity"
