@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/discussion_navigation"
+    app:startDestination="@id/discussionOffer">
+
+    <fragment
+        android:id="@+id/discussionOffer"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.discussion.fragment.DiscussionOffer"
+        android:label="fragment_discussion_offer"
+        tools:layout="@layout/fragment_discussion_offer" />
+    <fragment
+        android:id="@+id/discussionI"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.discussion.fragment.DiscussionI"
+        android:label="fragment_discussion_i"
+        tools:layout="@layout/fragment_discussion_i" />
+</navigation>

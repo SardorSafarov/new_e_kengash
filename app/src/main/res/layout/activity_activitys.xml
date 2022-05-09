@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@color/main_background"
-    tools:context=".main.activity.moreInActivity.senatorAndDeputat.main.SenatorAndDeputat">
+    android:layout_height="match_parent"
+    tools:context=".main.activity.moreInActivity.activitys.main.Activitys">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
@@ -80,26 +81,37 @@
         </com.google.android.material.card.MaterialCardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_padding_24"
+        android:layout_marginTop="@dimen/margin_padding_12"
+        android:text="@string/tadbirlar"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_18"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_padding_24"
-        android:layout_marginTop="@dimen/margin_padding_12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appbar">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:weightSum="2">
+            android:weightSum="3">
+
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/btn_senator"
+                android:id="@+id/btn_offer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_padding_8"
@@ -107,33 +119,37 @@
                 android:background="@drawable/bg_text_blue"
                 android:gravity="center"
                 android:padding="@dimen/margin_padding_8"
-                android:text="@string/senatorlar"
+                android:text="@string/umumiy"
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/btn_deputat"
+                android:id="@+id/btn_i"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_padding_8"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:padding="@dimen/margin_padding_8"
-                android:text="@string/deputatlar"
+                android:text="@string/news"
+                android:textColor="@color/gray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_iq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_padding_8"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/margin_padding_8"
+                android:text="@string/sessiyalar"
                 android:textColor="@color/gray" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </com.google.android.material.card.MaterialCardView>
 
-    <fragment
-        android:id="@+id/youth_nav_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:defaultNavHost="true"
-        android:layout_marginTop="@dimen/margin_padding_12"
+        android:src="@drawable/img_activitys"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView2"
-        app:navGraph="@navigation/senator_deputat_navigation" />
-
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

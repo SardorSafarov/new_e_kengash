@@ -1,12 +1,10 @@
 package com.example.e_kengash.main.activity.login.fragment.signIn
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.FragmentSignInBinding
-import com.example.e_kengash.main.activity.MainActivity
 import com.example.e_kengash.main.fragments.baseFragment.BaseFragment
 import com.example.e_kengash.network.entity.login.signIn.SignInRequest
 import com.example.e_kengash.network.entity.login.signIn.SignInResponse

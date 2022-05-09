@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/senator_deputat_navigation">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/senator_deputat_navigation"
+    app:startDestination="@id/senator_frag">
 
+    <fragment
+        android:id="@+id/senator_frag"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.senatorAndDeputat.fragment.Senator"
+        android:label="fragment_senator"
+        tools:layout="@layout/fragment_senator" />
+    <fragment
+        android:id="@+id/deputat_frag"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.senatorAndDeputat.fragment.Deputat"
+        android:label="fragment_deputat"
+        tools:layout="@layout/fragment_deputat" />
 </navigation>

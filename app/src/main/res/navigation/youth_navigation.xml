@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/youth_navigation"
+    app:startDestination="@id/youthData">
+
+    <fragment
+        android:id="@+id/youthData"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.youth.fragment.YouthData"
+        android:label="fragment_youth_data"
+        tools:layout="@layout/fragment_youth_data" />
+    <fragment
+        android:id="@+id/youthRegion"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.youth.fragment.YouthRegion"
+        android:label="fragment_youth_region"
+        tools:layout="@layout/fragment_youth_region" />
+</navigation>

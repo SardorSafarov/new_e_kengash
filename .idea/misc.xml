@@ -68,16 +68,26 @@
         <entry key="..\:/new_e_kengash/app/src/main/res/drawable/bg_sms_box.xml" value="0.2345" />
         <entry key="..\:/new_e_kengash/app/src/main/res/drawable/button_main.xml" value="0.2345" />
         <entry key="..\:/new_e_kengash/app/src/main/res/drawable/ic_return_send_sms.xml" value="0.2345" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_activitys.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_article.xml" value="0.28396739130434784" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_commission.xml" value="0.29322916666666665" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_discussion.xml" value="0.2791666666666667" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_live_steam.xml" value="0.19157608695652173" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_login.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_main.xml" value="0.140625" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_notification.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_secritariat.xml" value="0.25" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_senator_and_deputat.xml" value="0.29322916666666665" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_youth.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_appeals.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_chat.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_check_sms.xml" value="0.28396739130434784" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_commission_d_k.xml" value="0.29322916666666665" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_commission_data.xml" value="0.29322916666666665" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_commission_regulation.xml" value="0.29322916666666665" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_deputat.xml" value="0.29322916666666665" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_discussion_i.xml" value="0.29322916666666665" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_discussion_offer.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_home.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_login.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_more.xml" value="0.28396739130434784" />
@@ -86,8 +96,11 @@
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_secretariat_district.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_secretariat_info.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_secretariat_region.xml" value="0.29322916666666665" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_senator.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_sign_in.xml" value="0.27853260869565216" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_sign_up.xml" value="0.25" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_youth_data.xml" value="0.29322916666666665" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_youth_region.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_appleas_menu.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_appleas_top_menu.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_home_news.xml" value="0.29322916666666665" />

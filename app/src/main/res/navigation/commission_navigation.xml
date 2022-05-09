@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/commission_navigation"
+    app:startDestination="@id/commissionData">
+
+    <fragment
+        android:id="@+id/commissionData"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.commission.fragment.CommissionData"
+        android:label="fragment_commission_data"
+        tools:layout="@layout/fragment_commission_data" />
+    <fragment
+        android:id="@+id/commissionDK"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.commission.fragment.CommissionDK"
+        android:label="fragment_commission_d_k"
+        tools:layout="@layout/fragment_commission_d_k" />
+    <fragment
+        android:id="@+id/commissionRegulation"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.commission.fragment.CommissionRegulation"
+        android:label="fragment_commission_regulation"
+        tools:layout="@layout/fragment_commission_regulation" />
+</navigation>

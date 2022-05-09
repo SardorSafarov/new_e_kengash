@@ -1,13 +1,13 @@
 package com.example.e_kengash.main.activity.moreInActivity.senatorAndDeputat.fragment
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import com.example.e_kengash.R
+
+import com.example.e_kengash.databinding.FragmentDeputatBinding
+import com.example.e_kengash.main.activity.moreInActivity.MoreBaseFragment
 
 
-class Deputat : Fragment() {
+class Deputat : MoreBaseFragment<FragmentDeputatBinding>(FragmentDeputatBinding::inflate){
+    override fun onViewCreate() {
+
+    }
 
 }

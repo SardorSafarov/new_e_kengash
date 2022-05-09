@@ -3,12 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.activity.moreInActivity.senatorAndDeputat.fragment.Deputat">
-
+    tools:context=".main.activity.moreInActivity.discussion.fragment.DiscussionOffer">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/img_deputat" />
+       android:src="@drawable/img_discussion_offer" />
 
 </FrameLayout>

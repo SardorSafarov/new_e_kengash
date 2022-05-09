@@ -6,7 +6,7 @@ import android.os.CountDownTimer
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.example.e_kengash.databinding.FragmentCheckSmsBinding
-import com.example.e_kengash.main.activity.MainActivity
+import com.example.e_kengash.main.activity.mainActivity.MainActivity
 import com.example.e_kengash.main.fragments.baseFragment.BaseFragment
 import com.example.e_kengash.network.entity.login.sms.sendSms.CheckSmsRequest
 import com.example.e_kengash.network.entity.login.sms.sendSms.CheckSmsResponse

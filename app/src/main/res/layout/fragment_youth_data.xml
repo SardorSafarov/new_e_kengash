@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.activity.moreInActivity.senatorAndDeputat.fragment.Deputat">
+    tools:context=".main.activity.moreInActivity.youth.fragment.YouthData">
 
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/img_deputat" />
+        android:src="@drawable/img_youth_data" />
 
 </FrameLayout>

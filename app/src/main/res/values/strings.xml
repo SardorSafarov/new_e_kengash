@@ -85,4 +85,9 @@
     <string name="umumiy_kotibiyat_a_zolari">Umumiy kotibiyat a\'zolari</string>
     <string name="deputatlar">Deputatlar</string>
     <string name="senatorlar">Senatorlar</string>
+    <string name="takliflar">Takliflar</string>
+    <string name="meniki">Meniki</string>
+    <string name="sessiyalar">Sessiyalar</string>
+    <string name="dk_tarkibi">DK tarkibi</string>
+    <string name="nizom">Nizom</string>
 </resources>
