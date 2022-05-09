@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.ActivityYouthBinding
 import com.example.e_kengash.main.activity.notif.NotificationActivity
+import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.statusbarcolor
 
 class YouthActivity : AppCompatActivity() {
@@ -61,5 +62,21 @@ class YouthActivity : AppCompatActivity() {
         binding.back.setOnClickListener {
             finish()
         }
+    }
+
+    override fun onBackPressed() {
+
+        when(findNavController(R.id.youth_nav_fragment).currentDestination?.id)
+        {
+            R.id.youthData->
+            {
+                finish()
+            }
+            R.id.youthRegion->
+            {
+                bgBtn(binding.btnData,binding.btnRegion)
+            }
+        }
+        super.onBackPressed()
     }
 }

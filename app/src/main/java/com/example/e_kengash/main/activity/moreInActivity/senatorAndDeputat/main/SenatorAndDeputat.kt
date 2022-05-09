@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.ActivitySenatorAndDeputatBinding
 import com.example.e_kengash.main.activity.notif.NotificationActivity
+import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.statusbarcolor
 
 class SenatorAndDeputat : AppCompatActivity() {
@@ -27,11 +28,11 @@ class SenatorAndDeputat : AppCompatActivity() {
         binding.apply {
             btnSenator.setOnClickListener {
                 bgBtn(btnSenator,btnDeputat)
-                findNavController(R.id.youth_nav_fragment).navigate(R.id.senator_frag)
+                findNavController(R.id.senator_nav_fragment).navigate(R.id.senator_frag)
             }
             btnDeputat.setOnClickListener {
                 bgBtn(btnDeputat,btnSenator)
-                findNavController(R.id.youth_nav_fragment).navigate(R.id.deputat_frag)
+                findNavController(R.id.senator_nav_fragment).navigate(R.id.deputat_frag)
             }
         }
     }
@@ -59,6 +60,21 @@ class SenatorAndDeputat : AppCompatActivity() {
     private fun back() {
         binding.back.setOnClickListener {
             finish()
+        }
+    }
+
+    override fun onBackPressed() {
+        when(findNavController(R.id.senator_nav_fragment).currentDestination?.id)
+        {
+            R.id.senator_frag->
+            {
+             finish()
+            }
+            R.id.deputat_frag->
+            {
+               bgBtn(binding.btnSenator,binding.btnDeputat)
+                super.onBackPressed()
+            }
         }
     }
 }

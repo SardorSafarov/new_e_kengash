@@ -124,7 +124,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <fragment
-        android:id="@+id/youth_nav_fragment"
+        android:id="@+id/senator_nav_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"

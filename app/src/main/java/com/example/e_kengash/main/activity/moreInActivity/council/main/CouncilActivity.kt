@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.ActivityCouncilBinding
 import com.example.e_kengash.main.activity.notif.NotificationActivity
+import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.statusbarcolor
 
 class CouncilActivity : AppCompatActivity() {
@@ -70,5 +71,30 @@ class CouncilActivity : AppCompatActivity() {
         binding.back.setOnClickListener {
             finish()
         }
+    }
+
+    override fun onBackPressed() {
+        D(findNavController(R.id.council_nav_fragment).currentDestination?.displayName.toString())
+        D(findNavController(R.id.council_nav_fragment).currentDestination?.navigatorName.toString())
+        D(findNavController(R.id.council_nav_fragment).currentDestination?.route.toString())
+        D(findNavController(R.id.council_nav_fragment).currentDestination?.label.toString())
+        D(findNavController(R.id.council_nav_fragment).currentDestination?.parent.toString())
+        binding.apply {
+            when(findNavController(R.id.council_nav_fragment).currentDestination?.id)
+            {
+                R.id.councilData ->{
+                    D("1")
+                }
+                R.id.councilDeputat->
+                {
+                    D("2")
+                }
+                R.id.councilDistrict->
+                {
+                    D("3")
+                }
+            }
+        }
+        super.onBackPressed()
     }
 }

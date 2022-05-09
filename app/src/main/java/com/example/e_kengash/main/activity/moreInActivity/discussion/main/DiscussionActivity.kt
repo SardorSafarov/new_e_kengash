@@ -62,4 +62,20 @@ class DiscussionActivity : AppCompatActivity() {
             finish()
         }
     }
+    override fun onBackPressed() {
+
+        when(findNavController(R.id.discussion_nav_fragment).currentDestination?.id)
+        {
+            R.id.discussionOffer->
+            {
+                finish()
+            }
+            R.id.discussionI->
+            {
+                bgBtn(binding.btnOffer,binding.btnI)
+                super.onBackPressed()
+            }
+        }
+
+    }
 }
