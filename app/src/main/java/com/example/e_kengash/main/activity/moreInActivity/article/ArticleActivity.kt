@@ -27,6 +27,13 @@ class ArticleActivity : AppCompatActivity(),ArticleAdapter.onClickListener {
         statusbarcolor(Color.WHITE)
         setUi()
         getArticleList()
+        back()
+    }
+
+    private fun back() {
+        binding.back.setOnClickListener {
+            finish()
+        }
     }
 
     private fun getArticleList() {

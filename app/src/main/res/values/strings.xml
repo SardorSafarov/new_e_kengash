@@ -90,4 +90,9 @@
     <string name="sessiyalar">Sessiyalar</string>
     <string name="dk_tarkibi">DK tarkibi</string>
     <string name="nizom">Nizom</string>
+    <string name="tumanlar">Tumanlar</string>
+    <string name="ro_yhatdan_o_tgan">Ro\'yhatdan o\'tgan</string>
+    <string name="ha_ketin_nqaytib_kelaman">Ha,keyin\nqaytib kelaman</string>
+    <string name="yo_q">Yo\'q</string>
+    <string name="haqiqattan_dasturdan_nchiqmoqchimisiz">Haqiqattan dasturdan\nchiqmoqchimisiz?</string>
 </resources>

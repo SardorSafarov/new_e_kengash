@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_background"
-    tools:context=".main.activity.moreInActivity.commission.main.CommissionActivity">
+    tools:context=".main.activity.moreInActivity.acceptance.main.AcceptanceActivity">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
@@ -80,18 +80,6 @@
         </com.google.android.material.card.MaterialCardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_padding_24"
-        android:layout_marginTop="@dimen/margin_padding_12"
-        android:text="@string/doimiy_komissiya"
-        android:textColor="@color/black"
-        android:textSize="@dimen/text_size_18"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appbar" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView2"
@@ -101,16 +89,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/appbar">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:weightSum="3">
+            android:weightSum="2">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/btn_data"
+                android:id="@+id/btn_acceptance"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_padding_8"
@@ -118,35 +106,24 @@
                 android:background="@drawable/bg_text_blue"
                 android:gravity="center"
                 android:padding="@dimen/margin_padding_8"
-                android:text="@string/ma_lumotlar"
+                android:text="@string/qabulga_yozilish"
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/btn_dk"
+                android:id="@+id/btn_sign_up"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_padding_8"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:padding="@dimen/margin_padding_8"
-                android:text="@string/dk_tarkibi"
-                android:textColor="@color/gray" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/btn_regulation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_padding_8"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:padding="@dimen/margin_padding_8"
-                android:text="@string/nizom"
+                android:text="@string/ro_yhatdan_o_tgan"
                 android:textColor="@color/gray" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </com.google.android.material.card.MaterialCardView>
 
     <fragment
-        android:id="@+id/commission_nav_fragment"
+        android:id="@+id/acceptance_nav_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -156,5 +133,5 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView2"
-        app:navGraph="@navigation/commission_navigation" />
+        app:navGraph="@navigation/acceptance_navigation" />
 </androidx.constraintlayout.widget.ConstraintLayout>

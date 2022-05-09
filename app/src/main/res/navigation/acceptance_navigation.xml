@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/acceptance_navigation"
+    app:startDestination="@id/acceptanceWrite">
+
+    <fragment
+        android:id="@+id/acceptanceWrite"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.acceptance.fragment.AcceptanceWrite"
+        android:label="fragment_acceptance_write"
+        tools:layout="@layout/fragment_acceptance_write" />
+    <fragment
+        android:id="@+id/acceptanceSignUp"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.acceptance.fragment.AcceptanceSignUp"
+        android:label="fragment_acceptance_sign_up"
+        tools:layout="@layout/fragment_acceptance_sign_up" />
+</navigation>

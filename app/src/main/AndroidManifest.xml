@@ -13,10 +13,31 @@
         android:theme="@style/Theme.Ekengash"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".main.activity.moreInActivity.aboutProgramma.main.AboutProgrammaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.activity.moreInActivity.settings.main.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.activity.moreInActivity.faq.main.FaqActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.activity.moreInActivity.document.main.DocumentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.activity.moreInActivity.profil.main.ProfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.activity.moreInActivity.acceptance.main.AcceptanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.activity.moreInActivity.council.main.CouncilActivity"
+            android:exported="false" />
+        <activity
             android:name=".main.activity.moreInActivity.commission.main.CommissionActivity"
             android:exported="false" />
         <activity
-            android:name=".main.activity.moreInActivity.activitys.main.Activitys"
+            android:name=".main.activity.moreInActivity.activitys.main.ActivitysActivity"
             android:exported="false" />
         <activity
             android:name=".main.activity.moreInActivity.discussion.main.DiscussionActivity"

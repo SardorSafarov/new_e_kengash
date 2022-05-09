@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/council_navigation"
+    app:startDestination="@id/councilData">
+
+    <fragment
+        android:id="@+id/councilData"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.council.fragment.CouncilData"
+        android:label="fragment_council_data"
+        tools:layout="@layout/fragment_council_data" />
+    <fragment
+        android:id="@+id/councilDeputat"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.council.fragment.CouncilDeputat"
+        android:label="fragment_council_deputat"
+        tools:layout="@layout/fragment_council_deputat" />
+    <fragment
+        android:id="@+id/councilDistrict"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.council.fragment.CouncilDistrict"
+        android:label="fragment_council_district"
+        tools:layout="@layout/fragment_council_district" />
+</navigation>

@@ -16,4 +16,8 @@
     <dimen name="margin_padding_55">55dp</dimen>
     <dimen name="margin_padding_30">30dp</dimen>
     <dimen name="margin_padding_0">0dp</dimen>
+    <dimen name="margin_padding_32">32dp</dimen>
+    <dimen name="text_size_32">32dp</dimen>
+    <dimen name="text_size_26">26dp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
 </resources>
