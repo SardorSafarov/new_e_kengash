@@ -6,6 +6,7 @@ import android.widget.LinearLayout
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.AlertDialogExitBinding
 import com.example.e_kengash.databinding.FragmentMoreBinding
+import com.example.e_kengash.main.activity.mainActivity.MainActivity
 import com.example.e_kengash.main.activity.moreInActivity.aboutProgramma.main.AboutProgrammaActivity
 import com.example.e_kengash.main.activity.moreInActivity.acceptance.main.AcceptanceActivity
 import com.example.e_kengash.main.activity.moreInActivity.activitys.main.ActivitysActivity
@@ -21,6 +22,7 @@ import com.example.e_kengash.main.activity.moreInActivity.secretariat.mian.Secre
 import com.example.e_kengash.main.activity.moreInActivity.senatorAndDeputat.main.SenatorAndDeputat
 import com.example.e_kengash.main.activity.moreInActivity.settings.main.SettingsActivity
 import com.example.e_kengash.main.activity.moreInActivity.youth.main.YouthActivity
+import com.example.e_kengash.repetitive.D
 
 class More : BaseFragment<FragmentMoreBinding>(FragmentMoreBinding::inflate) {
     override fun onViewCreate() {
@@ -75,7 +77,7 @@ class More : BaseFragment<FragmentMoreBinding>(FragmentMoreBinding::inflate) {
     }
 
     private fun exitDialog() {
-        val alertDialog = AlertDialog.Builder(requireContext(),R.style.Style_Dialog_Rounded_Corner)
+        val alertDialog = AlertDialog.Builder(requireContext(),R.style.Style_Dialog_Rounded_Corner).create()
         val view = LinearLayout.inflate(requireContext(), R.layout.alert_dialog_exit,null)
         val dialogBind = AlertDialogExitBinding.bind(view)
         alertDialog.apply {
@@ -83,6 +85,13 @@ class More : BaseFragment<FragmentMoreBinding>(FragmentMoreBinding::inflate) {
             show()
         }
         dialogBind.exitNo.setOnClickListener {
+            D("keliiii")
+            alertDialog.dismiss()
+        }
+        dialogBind.exitYes.setOnClickListener {
+            sharePereferenseHelper.setAccessToken("empty")
+            startActivity(Intent(requireContext(),MainActivity::class.java))
+            activity?.finishAffinity()
         }
     }
 

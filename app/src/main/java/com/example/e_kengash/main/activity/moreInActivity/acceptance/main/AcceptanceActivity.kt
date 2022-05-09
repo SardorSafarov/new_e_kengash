@@ -61,20 +61,20 @@ class AcceptanceActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-
-        when(findNavController(R.id.acceptance_nav_fragment).currentDestination?.id)
-        {
-            R.id.acceptanceWrite->
-            {
-                finish()
-            }
-            R.id.acceptanceSignUp->
-            {
-                bgBtn(binding.btnAcceptance,binding.btnSignUp)
-                super.onBackPressed()
-            }
-        }
-
-    }
+//    override fun onBackPressed() {
+//
+//        when(findNavController(R.id.acceptance_nav_fragment).currentDestination?.id)
+//        {
+//            R.id.acceptanceWrite->
+//            {
+//                finish()
+//            }
+//            R.id.acceptanceSignUp->
+//            {
+//                bgBtn(binding.btnAcceptance,binding.btnSignUp)
+//                super.onBackPressed()
+//            }
+//        }
+//
+//    }
 }

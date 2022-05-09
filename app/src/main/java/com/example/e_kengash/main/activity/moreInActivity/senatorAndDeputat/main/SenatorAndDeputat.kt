@@ -63,18 +63,18 @@ class SenatorAndDeputat : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-        when(findNavController(R.id.senator_nav_fragment).currentDestination?.id)
-        {
-            R.id.senator_frag->
-            {
-             finish()
-            }
-            R.id.deputat_frag->
-            {
-               bgBtn(binding.btnSenator,binding.btnDeputat)
-                super.onBackPressed()
-            }
-        }
-    }
+//    override fun onBackPressed() {
+//        when(findNavController(R.id.senator_nav_fragment).currentDestination?.id)
+//        {
+//            R.id.senator_frag->
+//            {
+//             finish()
+//            }
+//            R.id.deputat_frag->
+//            {
+//               bgBtn(binding.btnSenator,binding.btnDeputat)
+//                super.onBackPressed()
+//            }
+//        }
+//    }
 }

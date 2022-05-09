@@ -64,19 +64,20 @@ class YouthActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-
-        when(findNavController(R.id.youth_nav_fragment).currentDestination?.id)
-        {
-            R.id.youthData->
-            {
-                finish()
-            }
-            R.id.youthRegion->
-            {
-                bgBtn(binding.btnData,binding.btnRegion)
-            }
-        }
-        super.onBackPressed()
-    }
+//    override fun onBackPressed() {
+//
+//        when(findNavController(R.id.youth_nav_fragment).currentDestination?.id)
+//        {
+//            R.id.youthData->
+//            {
+//                finish()
+//            }
+//            R.id.youthRegion->
+//            {
+//                bgBtn(binding.btnData,binding.btnRegion)
+//                super.onBackPressed()
+//            }
+//        }
+//
+//    }
 }

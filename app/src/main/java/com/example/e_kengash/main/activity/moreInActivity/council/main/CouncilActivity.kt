@@ -73,28 +73,23 @@ class CouncilActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-        D(findNavController(R.id.council_nav_fragment).currentDestination?.displayName.toString())
-        D(findNavController(R.id.council_nav_fragment).currentDestination?.navigatorName.toString())
-        D(findNavController(R.id.council_nav_fragment).currentDestination?.route.toString())
-        D(findNavController(R.id.council_nav_fragment).currentDestination?.label.toString())
-        D(findNavController(R.id.council_nav_fragment).currentDestination?.parent.toString())
-        binding.apply {
-            when(findNavController(R.id.council_nav_fragment).currentDestination?.id)
-            {
-                R.id.councilData ->{
-                    D("1")
-                }
-                R.id.councilDeputat->
-                {
-                    D("2")
-                }
-                R.id.councilDistrict->
-                {
-                    D("3")
-                }
-            }
-        }
-        super.onBackPressed()
-    }
+//    override fun onBackPressed() {
+//        binding.apply {
+//            when(findNavController(R.id.council_nav_fragment).currentDestination?.id)
+//            {
+//                R.id.councilData ->{
+//                    D("1")
+//                }
+//                R.id.councilDeputat->
+//                {
+//                    D("2")
+//                }
+//                R.id.councilDistrict->
+//                {
+//                    D("3")
+//                }
+//            }
+//        }
+//        super.onBackPressed()
+//    }
 }
