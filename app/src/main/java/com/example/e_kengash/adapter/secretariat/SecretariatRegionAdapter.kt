@@ -6,8 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.ItemSecretariatRegionBinding
-import com.example.e_kengash.network.entity.notif.Result
-import com.example.e_kengash.network.entity.secretariat.region.Info
+import com.example.e_kengash.network.entity.more.secretariat.region.Info
 
 
 class SecretariatRegionAdapter(private val listener: onClickListener) :

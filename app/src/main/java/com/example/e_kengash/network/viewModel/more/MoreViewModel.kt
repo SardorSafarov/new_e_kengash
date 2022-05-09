@@ -3,8 +3,8 @@ package com.example.e_kengash.network.viewModel.more
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.e_kengash.network.entity.article.ArticleResponse
-import com.example.e_kengash.network.entity.secretariat.region.SecRegionResponse
+import com.example.e_kengash.network.entity.more.article.ArticleResponse
+import com.example.e_kengash.network.entity.more.secretariat.region.SecRegionResponse
 import com.example.e_kengash.network.repository.more.MoreRepository
 import com.example.e_kengash.repetitive.D
 import kotlinx.coroutines.launch

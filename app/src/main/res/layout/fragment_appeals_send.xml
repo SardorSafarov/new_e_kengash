@@ -8,7 +8,7 @@
     android:paddingHorizontal="@dimen/margin_padding_24"
     android:overScrollMode="never"
     android:paddingBottom="@dimen/margin_padding_55"
-    tools:context=".main.fragments.newUser.NewUser">
+    tools:context=".main.fragments.appealsSend.AppealsSend">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
             android:indeterminate="true"
             android:indeterminateTint="@color/blue"
             android:progress="1000"
-            android:visibility="gone" />
+            android:visibility="visible" />
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

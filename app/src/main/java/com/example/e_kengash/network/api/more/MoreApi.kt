@@ -1,7 +1,7 @@
 package com.example.e_kengash.network.api.more
 
-import com.example.e_kengash.network.entity.article.ArticleResponse
-import com.example.e_kengash.network.entity.secretariat.region.SecRegionResponse
+import com.example.e_kengash.network.entity.more.article.ArticleResponse
+import com.example.e_kengash.network.entity.more.secretariat.region.SecRegionResponse
 import retrofit2.Response
 import retrofit2.http.GET
 

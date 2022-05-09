@@ -1,4 +1,4 @@
-package com.example.e_kengash.network.entity.article
+package com.example.e_kengash.network.entity.more.article
 
 data class New(
     val date: String,

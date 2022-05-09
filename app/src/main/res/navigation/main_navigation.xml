@@ -28,8 +28,8 @@
         tools:layout="@layout/fragment_chat" />
     <fragment
         android:id="@+id/newUserFragment"
-        android:name="com.example.e_kengash.main.fragments.newUser.NewUser"
-        tools:layout="@layout/fragment_new_user" />
+        android:name="com.example.e_kengash.main.fragments.appealsSend.AppealsSend"
+        tools:layout="@layout/fragment_appeals_send" />
     <fragment
         android:id="@+id/moreFragment"
         android:name="com.example.e_kengash.main.fragments.more.main.More"

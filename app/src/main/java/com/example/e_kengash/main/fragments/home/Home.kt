@@ -11,7 +11,7 @@ import com.example.e_kengash.adapter.article.ArticleAdapter
 import com.example.e_kengash.databinding.FragmentHomeBinding
 import com.example.e_kengash.main.activity.strem.LiveSteamActivity
 import com.example.e_kengash.main.fragments.baseFragment.BaseFragment
-import com.example.e_kengash.network.entity.article.New
+import com.example.e_kengash.network.entity.more.article.New
 import com.example.e_kengash.network.repository.more.MoreRepository
 import com.example.e_kengash.network.viewModel.more.MoreViewModel
 import com.example.e_kengash.network.viewModelFactory.more.MoreViewModelFactory

@@ -1,22 +1,15 @@
 package com.example.e_kengash.main.activity.moreInActivity.secretariat.fragment
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.e_kengash.R
 import com.example.e_kengash.adapter.secretariat.SecretariatRegionAdapter
 import com.example.e_kengash.databinding.FragmentSecretariatDistrictBinding
 import com.example.e_kengash.main.activity.moreInActivity.MoreBaseFragment
-import com.example.e_kengash.network.entity.secretariat.region.Info
+import com.example.e_kengash.network.entity.more.secretariat.region.Info
 import com.example.e_kengash.network.repository.more.MoreRepository
 import com.example.e_kengash.network.viewModel.more.MoreViewModel
 import com.example.e_kengash.network.viewModelFactory.more.MoreViewModelFactory
 import com.example.e_kengash.repetitive.D
-import com.example.e_kengash.repetitive.gone
 import com.example.e_kengash.repetitive.invisible
 
 

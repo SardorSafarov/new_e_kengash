@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.e_kengash.adapter.secretariat.SecretariatRegionAdapter
 import com.example.e_kengash.databinding.FragmentSecretariatRegionBinding
 import com.example.e_kengash.main.activity.moreInActivity.MoreBaseFragment
-import com.example.e_kengash.network.entity.secretariat.region.Info
+import com.example.e_kengash.network.entity.more.secretariat.region.Info
 import com.example.e_kengash.network.repository.more.MoreRepository
 import com.example.e_kengash.network.viewModel.more.MoreViewModel
 import com.example.e_kengash.network.viewModelFactory.more.MoreViewModelFactory

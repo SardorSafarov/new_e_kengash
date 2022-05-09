@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.ItemHomeNewsBinding
-import com.example.e_kengash.network.entity.article.New
+import com.example.e_kengash.network.entity.more.article.New
 
 
 class ArticleAdapter(private val listener: onClickListener ) : RecyclerView.Adapter<ArticleAdapter.ViewHolder>() {
