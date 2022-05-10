@@ -25,6 +25,7 @@ import com.example.e_kengash.network.viewModel.appealsSend.AppealsSendViewModel
 import com.example.e_kengash.network.viewModelFactory.appealsSend.AppealsSendViewModelFactory
 import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.invisible
+import com.example.e_kengash.repetitive.tosatShort
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 
@@ -50,16 +51,33 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
         getRequestAppealsAndDirectionAndRegion()
         binding.apply {
             application.setOnClickListener {
-                getAppealsType(appealsList)
+                try {
+                    getAppealsType(appealsList)
+                }catch (e:Exception){
+                    tosatShort(requireContext(),"Signal past!!")
+                }
+
             }
             direction.setOnClickListener {
-                getDirection(directionList)
+                try {
+                    getDirection(directionList)
+                }catch (e:Exception){
+                    tosatShort(requireContext(),"Signal past!!")
+                }
             }
             region.setOnClickListener {
-                getRegionn()
+                try {
+                   getRegionn()
+                }catch (e:Exception){
+                    tosatShort(requireContext(),"Signal past!!")
+                }
             }
             district.setOnClickListener {
-               getDistrict(districtList!!)
+                try {
+                    getDistrict(districtList!!)
+                }catch (e:Exception){
+                    tosatShort(requireContext(),"Signal past!!")
+                }
             }
 
         }

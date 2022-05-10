@@ -78,7 +78,7 @@
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_discussion.xml" value="0.2791666666666667" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_document.xml" value="0.2791666666666667" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_faq.xml" value="0.29322916666666665" />
-        <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_live_steam.xml" value="0.19157608695652173" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_live_steam.xml" value="0.25" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_login.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_main.xml" value="0.140625" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_notification.xml" value="0.28396739130434784" />
@@ -122,6 +122,7 @@
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_appleas_top_menu.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_bottom_sheet_diaolg_appeals.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_home_news.xml" value="0.29322916666666665" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_live_strem.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_notif.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_question.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_secretariat_region.xml" value="0.29322916666666665" />
