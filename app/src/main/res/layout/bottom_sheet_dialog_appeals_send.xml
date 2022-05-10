@@ -10,6 +10,7 @@
         android:id="@+id/rec_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_padding_24"
         android:overScrollMode="never"
         tools:listitem="@layout/item_bottom_sheet_diaolg_appeals"
         android:layout_marginBottom="@dimen/margin_padding_32"

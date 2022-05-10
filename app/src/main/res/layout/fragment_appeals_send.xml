@@ -75,7 +75,7 @@
                 android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down"
                 android:paddingHorizontal="@dimen/margin_padding_16"
                 android:paddingVertical="@dimen/margin_padding_16"
-                android:text="@string/ariza"
+                android:text="@string/murojaat_turini_kiriting"
                 android:textColor="@color/black"
                 android:textColorHint="@color/gray"
                 android:textSize="@dimen/text_size_14" />
@@ -105,7 +105,7 @@
                 android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down"
                 android:paddingHorizontal="@dimen/margin_padding_16"
                 android:paddingVertical="@dimen/margin_padding_16"
-                android:text="@string/ta_lim"
+                android:text="@string/yo_nalishni_kiriting"
                 android:textColor="@color/black"
                 android:textColorHint="@color/gray"
                 android:textSize="@dimen/text_size_14" />
@@ -150,7 +150,7 @@
                     android:textColor="@color/black" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/city"
+                    android:id="@+id/district"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_padding_8"
