@@ -44,7 +44,6 @@ class SignIn : BaseFragment<FragmentSignInBinding>(FragmentSignInBinding::inflat
        findNavController().navigate(R.id.checkSms, Bundle().apply {
            putString("phone",binding.phone.text.toString())
            putString("key",body!!.key_id)
-
        })
     }
 
