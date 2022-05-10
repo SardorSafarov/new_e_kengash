@@ -85,6 +85,14 @@
                     app:srcCompat="@drawable/ic_notification_dot" />
             </com.google.android.material.card.MaterialCardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
+        <ProgressBar
+            android:id="@+id/progress_Bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/blue"
+            />
 
         <TextView
             android:id="@+id/textView"

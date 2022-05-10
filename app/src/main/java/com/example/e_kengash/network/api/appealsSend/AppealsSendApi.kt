@@ -5,6 +5,6 @@ import retrofit2.Response
 import retrofit2.http.GET
 
 interface AppealsSendApi {
-    @GET("/api/v1/appeal-types/")
+    @GET("/api/v1/appeal-direction/")
     suspend fun appealsType():Response<AppealsSendTypeResponse>
 }

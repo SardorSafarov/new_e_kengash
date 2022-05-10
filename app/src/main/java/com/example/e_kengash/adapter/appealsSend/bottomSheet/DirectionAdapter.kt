@@ -1,4 +1,4 @@
-package com.example.e_kengash.adapter.appealsSend
+package com.example.e_kengash.adapter.appealsSend.bottomSheet
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,23 +6,21 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.ItemBottomSheetDiaolgAppealsBinding
-import com.example.e_kengash.databinding.ItemHomeNewsBinding
-import com.example.e_kengash.network.entity.appealsSend.type.Result
-import com.example.e_kengash.network.entity.more.article.New
+import com.example.e_kengash.network.entity.appealsSend.type.Direction
 
 
-class BottomSheetDiaolgAdapter(private val listener: onClickListener ) : RecyclerView.Adapter<BottomSheetDiaolgAdapter.ViewHolder>() {
+class DirectionAdapter(private val listener: onClickListener) : RecyclerView.Adapter<DirectionAdapter.ViewHolder>() {
 
-    private var list: MutableList<Result> = mutableListOf()
+    private var list: MutableList<Direction> = mutableListOf()
     interface onClickListener{
-        fun setOnClickLister(text: String)
+        fun setOnClickListerDirection(text: String)
     }
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val bind = ItemBottomSheetDiaolgAppealsBinding.bind(itemView)
-        fun item(item: Result) {
+        fun item(item: Direction) {
            bind.title.text = item.name
             itemView.setOnClickListener {
-                listener.setOnClickLister(item.name)
+                listener.setOnClickListerDirection(item.name)
             }
         }
     }
@@ -30,18 +28,18 @@ class BottomSheetDiaolgAdapter(private val listener: onClickListener ) : Recycle
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): BottomSheetDiaolgAdapter.ViewHolder = ViewHolder(
+    ): ViewHolder = ViewHolder(
         LayoutInflater.from(parent.context).inflate(R.layout.item_bottom_sheet_diaolg_appeals, parent, false)
     )
 
-    override fun onBindViewHolder(holder: BottomSheetDiaolgAdapter.ViewHolder,position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.item(list[position])
     }
 
     override fun getItemCount(): Int = list.size
 
-    fun setData(list: List<Result>) {
-        this.list = list as MutableList<Result>
+    fun setData(list: List<Direction>) {
+        this.list = list as MutableList<Direction>
         notifyDataSetChanged()
     }
 }

@@ -2,11 +2,11 @@ package com.example.e_kengash.main.activity.strem
 
 import android.content.Intent
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.webkit.WebViewClient
 import com.example.e_kengash.databinding.ActivityLiveSteamBinding
 import com.example.e_kengash.main.activity.notif.NotificationActivity
+import com.example.e_kengash.repetitive.D
+import com.example.e_kengash.repetitive.invisible
 import com.example.e_kengash.repetitive.statusbarcolor
 import com.example.e_kengash.repetitive.tosatShort
 import com.google.android.youtube.player.YouTubeBaseActivity
@@ -26,10 +26,10 @@ class LiveSteamActivity : YouTubeBaseActivity() {
         statusbarcolor(Color.WHITE)
         back()
         notification()
-        webView()
+        youtobe()
     }
 
-    private fun webView() {
+    private fun youtobe() {
         yy=object :YouTubePlayer.OnInitializedListener{
             override fun onInitializationSuccess(
                 p0: YouTubePlayer.Provider?,
@@ -37,13 +37,17 @@ class LiveSteamActivity : YouTubeBaseActivity() {
                 p2: Boolean
             ) {
                 p1?.loadVideo("L0WGZSiOZsM")
+                when(p2)
+                {
+                    false-> binding.progressBar.invisible()
+                }
             }
 
             override fun onInitializationFailure(
                 p0: YouTubePlayer.Provider?,
                 p1: YouTubeInitializationResult?
             ) {
-               tosatShort(this@LiveSteamActivity,"keldiii")
+               tosatShort(this@LiveSteamActivity,"Error")
             }
         }
         binding.apply {

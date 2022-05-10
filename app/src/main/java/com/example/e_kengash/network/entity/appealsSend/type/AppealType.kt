@@ -1,6 +1,6 @@
 package com.example.e_kengash.network.entity.appealsSend.type
 
-data class Result(
+data class AppealType(
     val id: Int,
     val name: String
 )

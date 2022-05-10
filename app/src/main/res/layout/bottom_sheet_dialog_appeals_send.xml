@@ -5,15 +5,6 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools">
-    <ProgressBar
-        android:id="@+id/progress_Bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:indeterminateTint="@color/blue"
-        android:indeterminate="true"
-        android:layout_marginTop="@dimen/margin_padding_12"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rec_list"
