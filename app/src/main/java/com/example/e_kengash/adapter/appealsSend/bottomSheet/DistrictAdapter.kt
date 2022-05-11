@@ -7,21 +7,20 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.ItemBottomSheetDiaolgAppealsBinding
 import com.example.e_kengash.network.entity.appealsSend.district.Addresse
-import com.example.e_kengash.network.entity.appealsSend.type.AppealType
 
 
 class DistrictAdapter(private val listener: onClickListener) : RecyclerView.Adapter<DistrictAdapter.ViewHolder>() {
 
     private var list: MutableList<Addresse> = mutableListOf()
     interface onClickListener{
-        fun setOnClickListerDistrict(text: String)
+        fun setOnClickListerDistrict(text: Addresse)
     }
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val bind = ItemBottomSheetDiaolgAppealsBinding.bind(itemView)
         fun item(item: Addresse) {
            bind.title.text = item.name
             itemView.setOnClickListener {
-                listener.setOnClickListerDistrict(item.name)
+                listener.setOnClickListerDistrict(item)
             }
         }
     }

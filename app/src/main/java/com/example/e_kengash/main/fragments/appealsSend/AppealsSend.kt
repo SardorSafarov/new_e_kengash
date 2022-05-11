@@ -1,8 +1,5 @@
 package com.example.e_kengash.main.fragments.appealsSend
 
-import android.app.AlertDialog
-import android.content.Intent
-import android.view.LayoutInflater
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,10 +8,8 @@ import com.example.e_kengash.adapter.appealsSend.bottomSheet.AppealsTypeAdapter
 import com.example.e_kengash.adapter.appealsSend.bottomSheet.DirectionAdapter
 import com.example.e_kengash.adapter.appealsSend.bottomSheet.DistrictAdapter
 import com.example.e_kengash.adapter.appealsSend.bottomSheet.RegionAdapter
-import com.example.e_kengash.databinding.AlertDialogSignUpBinding
 import com.example.e_kengash.databinding.BottomSheetDialogAppealsSendBinding
 import com.example.e_kengash.databinding.FragmentAppealsSendBinding
-import com.example.e_kengash.main.activity.login.main.LoginActivity
 import com.example.e_kengash.main.fragments.baseFragment.BaseFragment
 import com.example.e_kengash.network.entity.appealsSend.district.DistrictResponse
 import com.example.e_kengash.network.entity.appealsSend.region.Addresse
@@ -84,7 +79,7 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
         }
     }
 
-    private fun getDistrict(addresses: DistrictResponse) {
+    private fun getAppealsType(appealsList: MutableList<AppealType>) {
         val view: View = layoutInflater.inflate(R.layout.bottom_sheet_dialog_appeals_send, null)
         bottomSheetDiaolg = BottomSheetDialog(requireContext(),R.style.BottomSheetDialogTheme)
         val bottomSheetBind = BottomSheetDialogAppealsSendBinding.bind(view)
@@ -93,13 +88,25 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
             show()
         }
         bottomSheetBind.recList.apply {
-            adapter = districtAdapter
+            adapter = appealsTypeAdapter
             layoutManager = LinearLayoutManager(requireContext())
         }
-        districtAdapter.setData(addresses.addresses)
+        appealsTypeAdapter.setData(appealsList)
     }
-    override fun setOnClickListerDistrict(text: String) {
-        binding.district.text = text
+
+    private fun getDirection(appealsList: MutableList<Direction>) {
+        val view: View = layoutInflater.inflate(R.layout.bottom_sheet_dialog_appeals_send, null)
+        bottomSheetDiaolg = BottomSheetDialog(requireContext(),R.style.BottomSheetDialogTheme)
+        val bottomSheetBind = BottomSheetDialogAppealsSendBinding.bind(view)
+        bottomSheetDiaolg.apply {
+            setContentView(view)
+            show()
+        }
+        bottomSheetBind.recList.apply {
+            adapter = directionAdapter
+            layoutManager = LinearLayoutManager(requireContext())
+        }
+        directionAdapter.setData(appealsList)
     }
 
     private fun getRegionn() {
@@ -116,48 +123,51 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
         }
         regionAdapter.setData(regionList)
     }
-    override fun setOnClickListerRegion(text: Addresse) {
-        region = text.id
+
+    private fun getDistrict(addresses: DistrictResponse) {
+        val view: View = layoutInflater.inflate(R.layout.bottom_sheet_dialog_appeals_send, null)
+        bottomSheetDiaolg = BottomSheetDialog(requireContext(),R.style.BottomSheetDialogTheme)
+        val bottomSheetBind = BottomSheetDialogAppealsSendBinding.bind(view)
+        bottomSheetDiaolg.apply {
+            setContentView(view)
+            show()
+        }
+        bottomSheetBind.recList.apply {
+            adapter = districtAdapter
+            layoutManager = LinearLayoutManager(requireContext())
+        }
+        districtAdapter.setData(addresses.addresses)
+    }
+    override fun setOnClickListerAppeals(item: AppealType) {
+        application = item.id
+        binding.application.text = item.name
+        bottomSheetDiaolg.dismiss()
+    }
+
+    override fun setOnClickListerDirection(item: Direction) {
+        direction = item.id
+        binding.direction.text = item.name
+        bottomSheetDiaolg.dismiss()
+    }
+    override fun setOnClickListerRegion(item: Addresse) {
+        region = item.id
         getRequestDistrictList(region.toString())
-        binding.region.text = text.name
+        binding.region.text = item.name
         bottomSheetDiaolg.dismiss()
     }
-    private fun getAppealsType(appealsList: MutableList<AppealType>) {
-        val view: View = layoutInflater.inflate(R.layout.bottom_sheet_dialog_appeals_send, null)
-        bottomSheetDiaolg = BottomSheetDialog(requireContext(),R.style.BottomSheetDialogTheme)
-        val bottomSheetBind = BottomSheetDialogAppealsSendBinding.bind(view)
-        bottomSheetDiaolg.apply {
-            setContentView(view)
-            show()
-        }
-        bottomSheetBind.recList.apply {
-            adapter = appealsTypeAdapter
-            layoutManager = LinearLayoutManager(requireContext())
-        }
-        appealsTypeAdapter.setData(appealsList)
-    }
-    override fun setOnClickListerAppeals(text: String) {
-        binding.application.text = text
+
+    override fun setOnClickListerDistrict(item: com.example.e_kengash.network.entity.appealsSend.district.Addresse) {
+        district =item.id
+        binding.district.text = item.name
         bottomSheetDiaolg.dismiss()
     }
-    private fun getDirection(appealsList: MutableList<Direction>) {
-        val view: View = layoutInflater.inflate(R.layout.bottom_sheet_dialog_appeals_send, null)
-        bottomSheetDiaolg = BottomSheetDialog(requireContext(),R.style.BottomSheetDialogTheme)
-        val bottomSheetBind = BottomSheetDialogAppealsSendBinding.bind(view)
-        bottomSheetDiaolg.apply {
-            setContentView(view)
-            show()
-        }
-        bottomSheetBind.recList.apply {
-            adapter = directionAdapter
-            layoutManager = LinearLayoutManager(requireContext())
-        }
-        directionAdapter.setData(appealsList)
-    }
-    override fun setOnClickListerDirection(text: String) {
-        binding.direction.text = text
-        bottomSheetDiaolg.dismiss()
-    }
+
+
+
+
+
+
+
 
 
 

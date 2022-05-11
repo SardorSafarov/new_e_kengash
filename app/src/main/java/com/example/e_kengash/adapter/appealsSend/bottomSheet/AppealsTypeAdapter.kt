@@ -13,14 +13,14 @@ class AppealsTypeAdapter(private val listener: onClickListener) : RecyclerView.A
 
     private var list: MutableList<AppealType> = mutableListOf()
     interface onClickListener{
-        fun setOnClickListerAppeals(text: String)
+        fun setOnClickListerAppeals(text: AppealType)
     }
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val bind = ItemBottomSheetDiaolgAppealsBinding.bind(itemView)
         fun item(item: AppealType) {
            bind.title.text = item.name
             itemView.setOnClickListener {
-                listener.setOnClickListerAppeals(item.name)
+                listener.setOnClickListerAppeals(item)
             }
         }
     }

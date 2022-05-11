@@ -13,14 +13,14 @@ class DirectionAdapter(private val listener: onClickListener) : RecyclerView.Ada
 
     private var list: MutableList<Direction> = mutableListOf()
     interface onClickListener{
-        fun setOnClickListerDirection(text: String)
+        fun setOnClickListerDirection(text: Direction)
     }
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val bind = ItemBottomSheetDiaolgAppealsBinding.bind(itemView)
         fun item(item: Direction) {
            bind.title.text = item.name
             itemView.setOnClickListener {
-                listener.setOnClickListerDirection(item.name)
+                listener.setOnClickListerDirection(item)
             }
         }
     }
