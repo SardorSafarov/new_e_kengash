@@ -74,6 +74,7 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
             }
             district.setOnClickListener {
                 try {
+                    if(districtList!!.addresses.size!=0)
                     getDistrict(districtList!!)
                 }catch (e:Exception){
                     tosatShort(requireContext(),"Signal past!!")
@@ -85,7 +86,7 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
 
     private fun getDistrict(addresses: DistrictResponse) {
         val view: View = layoutInflater.inflate(R.layout.bottom_sheet_dialog_appeals_send, null)
-        bottomSheetDiaolg = BottomSheetDialog(requireContext())
+        bottomSheetDiaolg = BottomSheetDialog(requireContext(),R.style.BottomSheetDialogTheme)
         val bottomSheetBind = BottomSheetDialogAppealsSendBinding.bind(view)
         bottomSheetDiaolg.apply {
             setContentView(view)
@@ -103,7 +104,7 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
 
     private fun getRegionn() {
         val view: View = layoutInflater.inflate(R.layout.bottom_sheet_dialog_appeals_send, null)
-        bottomSheetDiaolg = BottomSheetDialog(requireContext())
+        bottomSheetDiaolg = BottomSheetDialog(requireContext(),R.style.BottomSheetDialogTheme)
         val bottomSheetBind = BottomSheetDialogAppealsSendBinding.bind(view)
         bottomSheetDiaolg.apply {
             setContentView(view)
@@ -123,7 +124,7 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
     }
     private fun getAppealsType(appealsList: MutableList<AppealType>) {
         val view: View = layoutInflater.inflate(R.layout.bottom_sheet_dialog_appeals_send, null)
-        bottomSheetDiaolg = BottomSheetDialog(requireContext())
+        bottomSheetDiaolg = BottomSheetDialog(requireContext(),R.style.BottomSheetDialogTheme)
         val bottomSheetBind = BottomSheetDialogAppealsSendBinding.bind(view)
         bottomSheetDiaolg.apply {
             setContentView(view)
@@ -141,7 +142,7 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
     }
     private fun getDirection(appealsList: MutableList<Direction>) {
         val view: View = layoutInflater.inflate(R.layout.bottom_sheet_dialog_appeals_send, null)
-        bottomSheetDiaolg = BottomSheetDialog(requireContext())
+        bottomSheetDiaolg = BottomSheetDialog(requireContext(),R.style.BottomSheetDialogTheme)
         val bottomSheetBind = BottomSheetDialogAppealsSendBinding.bind(view)
         bottomSheetDiaolg.apply {
             setContentView(view)
@@ -158,16 +159,7 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
         bottomSheetDiaolg.dismiss()
     }
 
-    private fun checkToken() {
-        when (sharePereferenseHelper.getAccessToken()) {
-            "empty" -> {
-                signUp()
-            }
-            else -> {
 
-            }
-        }
-    }
 
 
     private fun getRequestDistrictList(region: String) {
@@ -219,19 +211,7 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
 
     }
 
-    private fun signUp() {
-        val alertDialog: AlertDialog.Builder =
-            AlertDialog.Builder(requireContext(), R.style.Style_Dialog_Rounded_Corner)
-        val view = LayoutInflater.from(context).inflate(R.layout.alert_dialog_sign_up, null)
-        val dialogBind = AlertDialogSignUpBinding.bind(view)
-        dialogBind.done.setOnClickListener {
-            startActivity(Intent(requireContext(), LoginActivity::class.java))
-        }
-        alertDialog.apply {
-            setView(view)
-            show()
-        }
-    }
+
 
 
 

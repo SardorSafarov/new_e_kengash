@@ -9,7 +9,7 @@
         android:icon="@drawable/ic_appleas"
         android:title="@string/appeals" />
     <item
-        android:id="@+id/newUserFragment"
+        android:id="@+id/appealsSendFragment"
         android:icon="@drawable/ic_new"
         android:title="@string/neww" />
     <item

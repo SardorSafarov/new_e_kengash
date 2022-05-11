@@ -13,7 +13,7 @@
             app:destination="@id/appealsFragment" />
         <action
             android:id="@+id/action_homeFragment_to_newUserFragment"
-            app:destination="@id/newUserFragment" />
+            app:destination="@id/appealsSendFragment" />
         <action
             android:id="@+id/action_homeFragment_to_chatFragment"
             app:destination="@id/chatFragment" />
@@ -27,7 +27,7 @@
         android:name="com.example.e_kengash.main.fragments.chat.Chat"
         tools:layout="@layout/fragment_chat" />
     <fragment
-        android:id="@+id/newUserFragment"
+        android:id="@+id/appealsSendFragment"
         android:name="com.example.e_kengash.main.fragments.appealsSend.AppealsSend"
         tools:layout="@layout/fragment_appeals_send" />
     <fragment

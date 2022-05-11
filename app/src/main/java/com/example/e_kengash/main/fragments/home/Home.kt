@@ -1,14 +1,18 @@
 package com.example.e_kengash.main.fragments.home
 
 
+import android.app.AlertDialog
 import android.content.Intent
+import android.view.LayoutInflater
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.e_kengash.R
 import com.example.e_kengash.adapter.article.ArticleAdapter
+import com.example.e_kengash.databinding.AlertDialogSignUpBinding
 import com.example.e_kengash.databinding.FragmentHomeBinding
+import com.example.e_kengash.main.activity.login.main.LoginActivity
 import com.example.e_kengash.main.activity.strem.LiveSteamActivity
 import com.example.e_kengash.main.fragments.baseFragment.BaseFragment
 import com.example.e_kengash.network.entity.more.article.New
@@ -50,21 +54,50 @@ class Home :  BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate),Ar
     }
 
     private fun mainFragments() {
-        binding.chat.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_chatFragment)
-        }
+        binding.apply {
+            chat.setOnClickListener {
+                navController.navigate(R.id.chatFragment)
+            }
+            live.setOnClickListener {
+                startActivity(Intent(requireContext(), LiveSteamActivity::class.java))
+            }
+            appleas.setOnClickListener {
+                when (sharePereferenseHelper.getAccessToken()) {
+                    "empty" -> {
+                        signUp()
+                    }
+                    else -> {
+                        navController.navigate(R.id.appealsFragment)
+                    }
+                }
 
-        binding.appleas.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_appealsFragment)
-        }
-        binding.live.setOnClickListener {
-            startActivity(Intent(requireContext(), LiveSteamActivity::class.java))
-        }
-        binding.neww.setOnClickListener {
-            navController.navigate(R.id.newUserFragment)
+            }
+            neww.setOnClickListener {
+                when (sharePereferenseHelper.getAccessToken()) {
+                    "empty" -> {
+                        signUp()
+                    }
+                    else -> {
+                        navController.navigate(R.id.appealsSendFragment)
+                    }
+                }
+
+            }
         }
     }
-
+    private fun signUp() {
+        val alertDialog: AlertDialog.Builder =
+            AlertDialog.Builder(requireContext(), R.style.Style_Dialog_Rounded_Corner)
+        val view = LayoutInflater.from(requireContext()).inflate(R.layout.alert_dialog_sign_up, null)
+        val dialogBind = AlertDialogSignUpBinding.bind(view)
+        dialogBind.done.setOnClickListener {
+            startActivity(Intent(requireContext(), LoginActivity::class.java))
+        }
+        alertDialog.apply {
+            setView(view)
+            show()
+        }
+    }
     private fun setUi() {
         val articleRepository = MoreRepository()
         val articleViewModelFactory = MoreViewModelFactory(articleRepository)
