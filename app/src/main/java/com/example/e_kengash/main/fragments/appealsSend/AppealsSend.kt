@@ -1,13 +1,14 @@
 package com.example.e_kengash.main.fragments.appealsSend
 
+import android.app.Activity.RESULT_OK
+import android.content.Intent
+import android.net.Uri
+import android.provider.MediaStore
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.e_kengash.R
-import com.example.e_kengash.adapter.appealsSend.bottomSheet.AppealsTypeAdapter
-import com.example.e_kengash.adapter.appealsSend.bottomSheet.DirectionAdapter
-import com.example.e_kengash.adapter.appealsSend.bottomSheet.DistrictAdapter
-import com.example.e_kengash.adapter.appealsSend.bottomSheet.RegionAdapter
+import com.example.e_kengash.adapter.appealsSend.bottomSheet.*
 import com.example.e_kengash.databinding.BottomSheetDialogAppealsSendBinding
 import com.example.e_kengash.databinding.FragmentAppealsSendBinding
 import com.example.e_kengash.main.fragments.baseFragment.BaseFragment
@@ -25,22 +26,28 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 
 
 class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSendBinding::inflate),
-    AppealsTypeAdapter.onClickListener,DirectionAdapter.onClickListener,RegionAdapter.onClickListener,DistrictAdapter.onClickListener {
+    AppealsTypeAdapter.onClickListener,DirectionAdapter.onClickListener,RegionAdapter.onClickListener,DistrictAdapter.onClickListener,MFYAdapter.onClickListener {
     private lateinit var appealsSendViewModel: AppealsSendViewModel
     private lateinit var bottomSheetDiaolg: BottomSheetDialog
     private val appealsTypeAdapter: AppealsTypeAdapter by lazy { AppealsTypeAdapter(this) }
     private val directionAdapter: DirectionAdapter by lazy { DirectionAdapter(this) }
     private val regionAdapter: RegionAdapter by lazy { RegionAdapter(this) }
     private val districtAdapter: DistrictAdapter by lazy { DistrictAdapter(this) }
+    private val mfyAdapter: MFYAdapter by lazy { MFYAdapter(this) }
     private var application:Int = 0
     private var direction:Int = 0
     private var region:Int = 0
     private var district:Int = 0
+    private var mfy:Int = 0
+    private var pickImage:Int = 100
+    private var imageUri: Uri? = null
 
     private lateinit var appealsList: MutableList<AppealType>
     private lateinit var directionList: MutableList<Direction>
     private lateinit var regionList: MutableList<Addresse>
     private  var districtList: DistrictResponse? = null
+    private  var mfyList: DistrictResponse? = null
+
     override fun onViewCreate() {
         setUi()
         getRequestAppealsAndDirectionAndRegion()
@@ -75,7 +82,27 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
                     tosatShort(requireContext(),"Signal past!!")
                 }
             }
+            mfy.setOnClickListener {
+                try {
+                    if(districtList!!.addresses.size!=0)
+                        getMFY(mfyList!!)
+                }catch (e:Exception){
+                    tosatShort(requireContext(),"Signal past!!")
+                }
+            }
+            file.setOnClickListener {
+                val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
+                startActivityForResult(gallery, pickImage)
+            }
 
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == RESULT_OK && requestCode == pickImage) {
+            imageUri = data?.data
+            binding.file.setImageURI(imageUri)
         }
     }
 
@@ -124,7 +151,7 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
         regionAdapter.setData(regionList)
     }
 
-    private fun getDistrict(addresses: DistrictResponse) {
+     private fun getDistrict(addresses: DistrictResponse) {
         val view: View = layoutInflater.inflate(R.layout.bottom_sheet_dialog_appeals_send, null)
         bottomSheetDiaolg = BottomSheetDialog(requireContext(),R.style.BottomSheetDialogTheme)
         val bottomSheetBind = BottomSheetDialogAppealsSendBinding.bind(view)
@@ -138,6 +165,22 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
         }
         districtAdapter.setData(addresses.addresses)
     }
+
+    private fun getMFY(addresses: DistrictResponse) {
+        val view: View = layoutInflater.inflate(R.layout.bottom_sheet_dialog_appeals_send, null)
+        bottomSheetDiaolg = BottomSheetDialog(requireContext(),R.style.BottomSheetDialogTheme)
+        val bottomSheetBind = BottomSheetDialogAppealsSendBinding.bind(view)
+        bottomSheetDiaolg.apply {
+            setContentView(view)
+            show()
+        }
+        bottomSheetBind.recList.apply {
+            adapter = mfyAdapter
+            layoutManager = LinearLayoutManager(requireContext())
+        }
+        mfyAdapter.setData(addresses.addresses)
+    }
+
     override fun setOnClickListerAppeals(item: AppealType) {
         application = item.id
         binding.application.text = item.name
@@ -158,7 +201,14 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
 
     override fun setOnClickListerDistrict(item: com.example.e_kengash.network.entity.appealsSend.district.Addresse) {
         district =item.id
+        getRequestMfyList(district.toString())
         binding.district.text = item.name
+        bottomSheetDiaolg.dismiss()
+    }
+
+    override fun setOnClickListerMFY(item: com.example.e_kengash.network.entity.appealsSend.district.Addresse) {
+        mfy =item.id
+        binding.mfy.text = item.name
         bottomSheetDiaolg.dismiss()
     }
 
@@ -166,9 +216,19 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
 
 
 
-
-
-
+    private fun getRequestMfyList(district: String) {
+        appealsSendViewModel.getMFY(district){
+            when(it.isSuccessful)
+            {
+                true ->{
+                    mfyList =it.body()!!
+                }
+                else ->{
+                    D("AppealsSend getRequestMfyList false ${it.errorBody()!!.string()}")
+                }
+            }
+        }
+    }
 
 
 
@@ -177,11 +237,14 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
             when(it.isSuccessful)
             {
                 true ->{
-                    D(it.body().toString())
                     districtList =it.body()!!}
+                else ->{
+                    D("AppealsSend   getRequestDistrictList false ${it.errorBody()!!.string()}")
+                }
             }
         }
     }
+
     private fun getRequestAppealsAndDirectionAndRegion() {
         appealsSendViewModel.apply {
             appealsType {
@@ -192,7 +255,7 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
                         directionList = it.body()!!.directions as MutableList<Direction>
                     }
                     else -> {
-                        D("AppealsSend getAppealsType ${it.errorBody()?.string()}")
+                        D("AppealsSend getRequestAppealsAndDirectionAndRegion false ${it.errorBody()?.string()}")
                     }
                 }
             }
@@ -220,7 +283,6 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
         this.appealsSendViewModel = appealsSendViewModel
 
     }
-
 
 
 

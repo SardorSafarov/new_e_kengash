@@ -56,7 +56,7 @@ class AppealsSendViewModel(private val appealsSendRepository: AppealsSendReposit
                 onResponse(appealsSendRepository.getMFY(id))
             }catch (e:Exception)
             {
-                D("AppealsSendViewModel getDistict ${e.message}")
+                D("AppealsSendViewModel getMFY ${e.message}")
             }
         }
     }

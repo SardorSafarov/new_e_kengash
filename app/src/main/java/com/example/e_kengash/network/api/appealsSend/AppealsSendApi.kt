@@ -19,6 +19,10 @@ interface AppealsSendApi {
     suspend fun getDistict(@Query("sub")id:String):Response<DistrictResponse>
 
 
-    @GET("/api/v1/address?sub={id}")
-    suspend fun getMFY(@Part("id")id:String):Response<DistrictResponse>
+    @GET("/api/v1/address")
+    suspend fun getMFY(@Query("sub")id:String):Response<DistrictResponse>
+
+
+
+
 }
