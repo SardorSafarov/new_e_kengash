@@ -9,7 +9,7 @@ import com.example.e_kengash.main.activity.notif.NotificationActivity
 import com.example.e_kengash.repetitive.statusbarcolor
 
 class FaqActivity : AppCompatActivity() {
-    private lateinit var binding:ActivityFaqBinding
+    private lateinit var binding: ActivityFaqBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFaqBinding.inflate(layoutInflater)

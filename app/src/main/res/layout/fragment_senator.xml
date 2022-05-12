@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_background"
+    android:paddingHorizontal="@dimen/margin_padding_24"
     android:layout_height="match_parent"
     tools:context=".main.activity.moreInActivity.senatorAndDeputat.fragment.Senator">
 
-   <ImageView
+
+   <ProgressBar
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:indeterminate="true"
+       android:indeterminateTint="@color/blue"
+       style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+       />
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/oliy_majlis_senatorlari"
+       android:layout_marginTop="@dimen/margin_padding_8"
+       android:layout_marginStart="@dimen/margin_padding_12"
+       android:textColor="@color/black"
+       android:textStyle="bold"
+       />
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/rec_region_list"
        android:layout_width="match_parent"
        android:layout_height="match_parent"
-       android:src="@drawable/img_senator"
-       />
+       android:overScrollMode="never"
+       android:layout_margin="@dimen/margin_padding_12"
+       tools:listitem="@layout/item_secretariat_region" />
 
-</FrameLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

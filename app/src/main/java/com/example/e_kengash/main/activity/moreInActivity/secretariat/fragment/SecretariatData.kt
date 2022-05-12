@@ -9,7 +9,7 @@ import com.example.e_kengash.R
 import com.example.e_kengash.databinding.FragmentSecretariatInfoBinding
 import com.example.e_kengash.main.activity.moreInActivity.MoreBaseFragment
 
-class SecretariatInfo : MoreBaseFragment<FragmentSecretariatInfoBinding>(FragmentSecretariatInfoBinding::inflate) {
+class SecretariatData : MoreBaseFragment<FragmentSecretariatInfoBinding>(FragmentSecretariatInfoBinding::inflate) {
 
     override fun onViewCreate() {
 

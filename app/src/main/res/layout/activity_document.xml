@@ -81,13 +81,118 @@
         </com.google.android.material.card.MaterialCardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        android:src="@drawable/img_document"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/margin_padding_24"
+        android:background="@color/main_background"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appbar" />
+        app:layout_constraintTop_toBottomOf="@+id/appbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hujjatlar"
+            android:layout_marginTop="@dimen/margin_padding_12"
+            android:textSize="@dimen/text_size_18"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_search"
+            android:backgroundTint="#e9f0ff"
+            android:text="@string/hujjatlar_bo_ylab_izlash"
+            android:textColor="#8cb3ef"
+            android:layout_marginTop="@dimen/margin_padding_12"
+            android:drawableStart="@drawable/ic_search"
+            android:padding="@dimen/margin_padding_12"
+            android:drawablePadding="@dimen/margin_padding_6"
+            />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginVertical="@dimen/margin_padding_12"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_padding_12"
+                android:layout_weight="1"
+                android:text="@string/viloyat"
+                android:layout_marginStart="4dp"
+                android:gravity="center"
+                android:drawablePadding="@dimen/margin_padding_6"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_radius"
+                android:drawableEnd="@drawable/ic_question"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_padding_12"
+                android:layout_weight="1"
+                android:text="@string/tuman"
+                android:layout_marginHorizontal="@dimen/margin_padding_6"
+                android:gravity="center"
+                android:drawablePadding="@dimen/margin_padding_6"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_radius"
+                android:drawableEnd="@drawable/ic_question"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_padding_12"
+                android:layout_weight="1"
+                android:text="@string/turi"
+                android:gravity="center"
+                android:drawablePadding="@dimen/margin_padding_6"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_radius"
+                android:drawableEnd="@drawable/ic_question"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_padding_12"
+                android:text="@string/vaqti"
+                android:layout_marginStart="4dp"
+                android:gravity="center"
+                android:drawablePadding="@dimen/margin_padding_24"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_radius"
+                android:drawableEnd="@drawable/ic_question"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_padding_12"
+                android:layout_weight="1"
+                android:text="@string/yo_nalish_nuqtasiz"
+
+                android:layout_marginHorizontal="@dimen/margin_padding_6"
+                android:gravity="start"
+                android:drawablePadding="@dimen/margin_padding_6"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_radius"
+                android:drawableEnd="@drawable/ic_question"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.constraintlayout.widget.ConstraintLayout>

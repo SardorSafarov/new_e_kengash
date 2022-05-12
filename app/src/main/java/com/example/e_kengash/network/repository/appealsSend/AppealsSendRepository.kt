@@ -1,6 +1,8 @@
 package com.example.e_kengash.network.repository.appealsSend
 
 import com.example.e_kengash.network.entity.appealsSend.district.DistrictResponse
+import com.example.e_kengash.network.entity.appealsSend.myAppealsSend.request.MyAppealsSendRequest
+import com.example.e_kengash.network.entity.appealsSend.myAppealsSend.response.MyAppealsSendResponse
 import com.example.e_kengash.network.entity.appealsSend.region.RegionResponse
 import com.example.e_kengash.network.entity.appealsSend.type.AppealsSendTypeResponse
 import com.example.e_kengash.network.retrofitBuilder.RetrofitBuilder
@@ -14,4 +16,7 @@ class AppealsSendRepository {
     suspend fun getDistict(id:String): Response<DistrictResponse> = RetrofitBuilder().appealsSendApi.getDistict(id)
 
     suspend fun getMFY(id:String): Response<DistrictResponse> = RetrofitBuilder().appealsSendApi.getMFY(id)
+
+
+    suspend fun myAppealsSend(token: String, body: MyAppealsSendRequest): Response<MyAppealsSendResponse> = RetrofitBuilder().appealsSendApi.myAppealsSend(token,body = body)
 }

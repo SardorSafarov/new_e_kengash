@@ -96,5 +96,25 @@
     <string name="haqiqattan_dasturdan_nchiqmoqchimisiz">Haqiqattan dasturdan\nchiqmoqchimisiz?</string>
     <string name="yo_nalishni_kiriting">Yo\'nalishni kiriting</string>
     <string name="murojaat_turini_kiriting">Murojaat turini kiriting</string>
+    <string name="murojaatingiz_yuborildi">Murojaatingiz yuborildi</string>
+    <string name="tez_orada_murojaatingizga_javob_beriladi">Tez orada murojaatingizga javob beriladi</string>
+    <string name="asosiy_menyuga_qaytish">Asosiy menyuga qaytish</string>
+    <string name="chop_etish">Chop etish</string>
+    <string name="ulashish">Ulashish</string>
+    <string name="komissiyani_tanlang">Komissiyani tanlang</string>
+    <string name="mahalliy_byudjet_iqtisodiy_islohotlarni_amalga_oshirish_ninvestitsiyalar_va_tadbirkotlikni_rivojlantirish_nbo_yicha_doimiy_komissiyasi">Mahalliy byudjet,iqtisodiy islohotlarni amalga oshirish,\ninvestitsiyalar va tadbirkotlikni rivojlantirish\nbo\'yicha doimiy komissiyasi</string>
+    <string name="oliy_majlis_senatorlari">Oliy Majlis senatorlari</string>
+    <string name="oliy_majlis_deputatlari">Oliy Majlis deputatlari</string>
+    <string name="yo_nalish_nuqtasiz">Yo\'nalish</string>
+    <string name="parolni_yangilash">Parolni yangilash</string>
+    <string name="tumaningiz">Tumaningiz</string>
+    <string name="erkak">Erkak</string>
+    <string name="hujjatlar_bo_ylab_izlash">Hujjatlar bo\'ylab izlash</string>
+    <string name="viloyat">Viloyat</string>
+    <string name="tuman">Tuman</string>
+    <string name="turi">Turi</string>
+    <string name="vaqti">Vaqti</string>
+    <string name="xabarnoma">Xabarnoma</string>
+    <string name="keshlash_imkoniyati">Keshlash imkoniyati</string>
 
 </resources>

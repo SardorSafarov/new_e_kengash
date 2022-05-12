@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/margin_padding_24"
+    android:background="@color/main_background"
     android:layout_height="match_parent"
     tools:context=".main.activity.moreInActivity.youth.fragment.YouthRegion">
 
-    <ImageView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_region_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/img_youth_region" />
+        android:overScrollMode="never"
+        android:layout_margin="@dimen/margin_padding_12"
+        tools:listitem="@layout/item_secretariat_region" />
 
-</FrameLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

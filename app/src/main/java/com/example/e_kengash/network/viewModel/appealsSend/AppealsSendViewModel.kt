@@ -3,6 +3,8 @@ package com.example.e_kengash.network.viewModel.appealsSend
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.e_kengash.network.entity.appealsSend.district.DistrictResponse
+import com.example.e_kengash.network.entity.appealsSend.myAppealsSend.request.MyAppealsSendRequest
+import com.example.e_kengash.network.entity.appealsSend.myAppealsSend.response.MyAppealsSendResponse
 import com.example.e_kengash.network.entity.appealsSend.region.RegionResponse
 import com.example.e_kengash.network.entity.appealsSend.type.AppealsSendTypeResponse
 import com.example.e_kengash.network.repository.appealsSend.AppealsSendRepository
@@ -57,6 +59,18 @@ class AppealsSendViewModel(private val appealsSendRepository: AppealsSendReposit
             }catch (e:Exception)
             {
                 D("AppealsSendViewModel getMFY ${e.message}")
+            }
+        }
+    }
+
+    fun myAppealsSend(token:String,body:MyAppealsSendRequest,onResponse: (response: Response<MyAppealsSendResponse>) -> Unit)
+    {
+        viewModelScope.launch {
+            try {
+                onResponse(appealsSendRepository.myAppealsSend(token,body))
+            }catch (e:Exception)
+            {
+                D("AppealsSendViewModel myAppealsSend ${e.message}")
             }
         }
     }

@@ -3,7 +3,8 @@
     package="com.example.e_kengash">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ekengash"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".main.activity.myAppealsSendSuccess.MyAppealsSendSuccess"
+            android:exported="false" />
         <activity
             android:name=".main.activity.moreInActivity.aboutProgramma.main.AboutProgrammaActivity"
             android:exported="false" />
