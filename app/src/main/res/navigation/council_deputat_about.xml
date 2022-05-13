@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/council_deputat_about"
+    app:startDestination="@id/councilDeputatData">
+
+    <fragment
+        android:id="@+id/councilDeputatData"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.council.fragment.councilDeputat.CouncilDeputatData"
+        android:label="fragment_council_deputat_data"
+        tools:layout="@layout/fragment_council_deputat_data" />
+    <fragment
+        android:id="@+id/councilDeputatAppealsSend"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.council.fragment.councilDeputat.CouncilDeputatAppealsSend"
+        android:label="fragment_council_deputat_appeals_send"
+        tools:layout="@layout/fragment_council_deputat_appeals_send" />
+    <fragment
+        android:id="@+id/councilDeputatArticle"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.council.fragment.councilDeputat.CouncilDeputatArticle"
+        android:label="fragment_council_deputat_article"
+        tools:layout="@layout/fragment_council_deputat_article" />
+    <fragment
+        android:id="@+id/councilDeputatDocument"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.council.fragment.councilDeputat.CouncilDeputatDocument"
+        android:label="fragment_council_deputat_document"
+        tools:layout="@layout/fragment_council_deputat_document" />
+    <fragment
+        android:id="@+id/councilDeputatAcceptanceWrite"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.council.fragment.councilDeputat.CouncilDeputatAcceptanceWrite"
+        android:label="fragment_council_deputat_acceptance_write"
+        tools:layout="@layout/fragment_council_deputat_acceptance_write" />
+    <fragment
+        android:id="@+id/councilDeputatActivitys"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.council.fragment.councilDeputat.CouncilDeputatActivitys"
+        android:label="fragment_council_deputat_activitys"
+        tools:layout="@layout/fragment_council_deputat_activitys" />
+</navigation>

@@ -1,14 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/margin_padding_24"
+    android:orientation="vertical"
+    android:background="@color/main_background"
     tools:context=".main.activity.moreInActivity.acceptance.fragment.AcceptanceSignUp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <ImageView
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/img_acceptance_sign_up" />
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_padding_12"
+        android:orientation="horizontal">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radius"
+            android:drawableEnd="@drawable/ic_calendar"
+            android:drawablePadding="@dimen/margin_padding_6"
+            android:gravity="center"
+            android:padding="@dimen/margin_padding_8"
+            android:text="@string/vaqti" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/margin_padding_6"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radius"
+            android:drawableEnd="@drawable/ic_question"
+            android:drawablePadding="@dimen/margin_padding_6"
+            android:gravity="center"
+            android:padding="@dimen/margin_padding_8"
+            android:text="@string/holat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:background="@drawable/bg_radius"
+            android:drawableEnd="@drawable/ic_question"
+            android:drawablePadding="@dimen/margin_padding_6"
+            android:gravity="center"
+            android:padding="@dimen/margin_padding_8"
+            android:text="@string/mfy_nuqtasiz" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

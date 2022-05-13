@@ -107,6 +107,7 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_padding_8"
             android:layout_gravity="center_horizontal"
             android:weightSum="3">
 

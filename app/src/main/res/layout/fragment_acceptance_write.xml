@@ -1,14 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/main_background"
+    android:paddingHorizontal="@dimen/margin_padding_24"
     tools:context=".main.activity.moreInActivity.acceptance.fragment.AcceptanceWrite">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_12"
+            android:background="@drawable/bg_search"
+            android:backgroundTint="#e9f0ff"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="@dimen/margin_padding_6"
+            android:padding="@dimen/margin_padding_12"
+            android:text="Deputatlar bo'ylab izlash"
+            android:textColor="#8cb3ef" />
 
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_padding_12"
+            android:orientation="horizontal">
 
-    <ImageView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_radius"
+                android:drawableEnd="@drawable/ic_question"
+                android:drawablePadding="@dimen/margin_padding_6"
+                android:gravity="center"
+                android:padding="@dimen/margin_padding_8"
+                android:text="@string/viloyat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="@dimen/margin_padding_6"
+                android:layout_weight="1"
+                android:background="@drawable/bg_radius"
+                android:drawableEnd="@drawable/ic_question"
+                android:drawablePadding="@dimen/margin_padding_6"
+                android:gravity="center"
+                android:padding="@dimen/margin_padding_8"
+                android:text="@string/tuman" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/bg_radius"
+                android:drawableEnd="@drawable/ic_question"
+                android:drawablePadding="@dimen/margin_padding_6"
+                android:gravity="center"
+                android:padding="@dimen/margin_padding_8"
+                android:text="@string/mfy_nuqtasiz" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin_padding_6"
+                android:layout_weight="1"
+                android:background="@drawable/bg_radius"
+                android:drawableEnd="@drawable/ic_question"
+                android:drawablePadding="@dimen/margin_padding_6"
+                android:gravity="start|center_vertical"
+                android:paddingVertical="@dimen/margin_padding_8"
+                android:paddingStart="@dimen/margin_padding_12"
+                android:paddingEnd="@dimen/margin_padding_8"
+                android:text="@string/yo_nalish_nuqtasiz" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-       android:src="@drawable/img_acceptance_write"/>
+        android:layout_marginTop="@dimen/margin_padding_12"
+        tools:listitem="@layout/item_secretariat_region"
+        />
 
-</FrameLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

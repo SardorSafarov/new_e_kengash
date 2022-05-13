@@ -117,4 +117,19 @@
     <string name="vaqti">Vaqti</string>
     <string name="xabarnoma">Xabarnoma</string>
     <string name="keshlash_imkoniyati">Keshlash imkoniyati</string>
+    <string name="tizim_haqida">Tizim haqida</string>
+    <string name="mfy_nuqtasiz">MFY</string>
+    <string name="holat">Holat</string>
+    <string name="murojaat_jo_natish">Murojaat jo\'natish</string>
+    <string name="ishxonasi">Ishxonasi:</string>
+    <string name="tug_ulgan_sana">Tug\'ulgan sana:</string>
+    <string name="tug_ulgan_joyi">Tug\'ulgan joyi:</string>
+    <string name="mullati">Mullati:</string>
+    <string name="mutaxassisligi">Mutaxassisligi:</string>
+    <string name="qo_mitaga_na_zoligi">Qo\'mitaga\na\'zoligi:</string>
+    <string name="deputatning_qabul_vaqtlari">Deputatning qabul vaqtlari</string>
+    <string name="qabul_vaqtini_tanlang">Qabul vaqtini tanlang</string>
+    <string name="vaqtni_tanlang">Vaqtni tanlang</string>
+    <string name="qabul_yo_nalishini_tanlang">Qabul yo\'nalishini tanlang</string>
+    <string name="izoh_yozing">Izoh yozing</string>
 </resources>

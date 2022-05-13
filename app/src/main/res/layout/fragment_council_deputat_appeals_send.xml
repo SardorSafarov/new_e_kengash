@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/main_background"
+    tools:context=".main.activity.moreInActivity.council.fragment.councilDeputat.CouncilDeputatAppealsSend">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:indeterminateTint="@color/blue"
+            android:indeterminate="true"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_24"
+            android:text="@string/ushbu_ma_lumotlarni_to_ldirishingiz_talab_etiladi"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:fontFamily="@font/gotham_pro_medium"
+            android:text="@string/murojaat_mavzusi"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_8"
+            android:background="@drawable/bg_et"
+            android:hint="@string/murojaat_mavzuyingizni_kiriting"
+            android:paddingHorizontal="@dimen/margin_padding_16"
+            android:paddingVertical="@dimen/margin_padding_16"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/text_size_14" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:fontFamily="@font/gotham_pro_medium"
+            android:text="@string/murojaat_turi"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_8"
+            android:background="@drawable/bg_et"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/application"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down"
+                android:paddingHorizontal="@dimen/margin_padding_16"
+                android:paddingVertical="@dimen/margin_padding_16"
+                android:text="@string/murojaat_turini_kiriting"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/text_size_14" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:fontFamily="@font/gotham_pro_medium"
+            android:text="@string/yo_nalishi"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_8"
+            android:background="@drawable/bg_et"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/direction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down"
+                android:paddingHorizontal="@dimen/margin_padding_16"
+                android:paddingVertical="@dimen/margin_padding_16"
+                android:text="@string/yo_nalishni_kiriting"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/text_size_14" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:fontFamily="@font/gotham_pro_medium"
+            android:text="@string/viloyatinggiz"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_8"
+            android:background="@drawable/bg_et">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/region"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down"
+                android:paddingHorizontal="@dimen/margin_padding_16"
+                android:paddingVertical="@dimen/margin_padding_16"
+                android:text="@string/viloyatinggizni_kiriting"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/text_size_14" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:fontFamily="@font/gotham_pro_medium"
+            android:text="@string/tumaningiz_shahar"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/district"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_8"
+            android:background="@drawable/bg_et"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down"
+            android:paddingHorizontal="@dimen/margin_padding_16"
+            android:paddingVertical="@dimen/margin_padding_16"
+            android:text="@string/tuman_shahri_ni_kiriting"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/text_size_14" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:fontFamily="@font/gotham_pro_medium"
+            android:text="@string/mfy"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mfy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_8"
+            android:background="@drawable/bg_et"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down"
+            android:paddingHorizontal="@dimen/margin_padding_16"
+            android:paddingVertical="@dimen/margin_padding_16"
+            android:text="@string/mfy_in_kiriting"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/text_size_14" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:fontFamily="@font/gotham_pro_medium"
+            android:text="@string/manzil"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_8"
+            android:background="@drawable/bg_et"
+            android:hint="@string/manzilingizni_to_liq_kiriting"
+            android:paddingHorizontal="@dimen/margin_padding_16"
+            android:paddingVertical="@dimen/margin_padding_16"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/text_size_14" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:fontFamily="@font/gotham_pro_medium"
+            android:text="@string/murojaat_matni"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/margin_padding_8"
+            android:background="@drawable/bg_et"
+            android:gravity="start"
+            android:hint="@string/manzilingizni_to_liq_kiriting"
+            android:paddingHorizontal="@dimen/margin_padding_16"
+            android:paddingVertical="@dimen/margin_padding_16"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/text_size_14" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/file"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="@dimen/margin_padding_16"
+            android:background="@drawable/bg_et"
+            android:padding="@dimen/margin_padding_24"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_file" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_8"
+            android:fontFamily="@font/gotham_pro_medium"
+            android:text="@string/rasm_yoki_fayl_biriktirish"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/margin_padding_24"
+            android:layout_marginBottom="@dimen/margin_padding_8"
+            android:background="@drawable/bg_button"
+            android:backgroundTint="@color/blue"
+            android:fontFamily="@font/gotham_pro_medium"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/margin_padding_16"
+            android:paddingVertical="@dimen/margin_padding_8"
+            android:text="Keyingisi"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14"
+            app:cornerRadius="@dimen/margin_padding_30"
+            app:rippleColor="@color/button_ripple" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.core.widget.NestedScrollView>
