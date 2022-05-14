@@ -68,11 +68,17 @@
         <entry key="..\:/new_e_kengash/app/src/main/res/drawable-v24/bg_text_blue.xml" value="0.2345" />
         <entry key="..\:/new_e_kengash/app/src/main/res/drawable/bg_bottom_sheet_dialog.xml" value="0.224" />
         <entry key="..\:/new_e_kengash/app/src/main/res/drawable/bg_button.xml" value="0.2345" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/drawable/bg_like_dislike.xml" value="0.29" />
         <entry key="..\:/new_e_kengash/app/src/main/res/drawable/bg_radius.xml" value="0.237" />
         <entry key="..\:/new_e_kengash/app/src/main/res/drawable/bg_secretariat_data_top_img.xml" value="0.2325" />
         <entry key="..\:/new_e_kengash/app/src/main/res/drawable/bg_sms_box.xml" value="0.2345" />
         <entry key="..\:/new_e_kengash/app/src/main/res/drawable/button_main.xml" value="0.2345" />
         <entry key="..\:/new_e_kengash/app/src/main/res/drawable/dialog_rounded_corner.xml" value="0.226" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/drawable/ic_calendar.xml" value="0.29" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/drawable/ic_dislike.xml" value="0.29" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/drawable/ic_like.xml" value="0.29" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/drawable/ic_persom.xml" value="0.29" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/drawable/ic_question.xml" value="0.29" />
         <entry key="..\:/new_e_kengash/app/src/main/res/drawable/ic_return_send_sms.xml" value="0.2345" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_about_programma.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_acceptance.xml" value="0.29322916666666665" />
@@ -82,11 +88,12 @@
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_council.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_council_deputat_about.xml" value="0.38697916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_discussion.xml" value="0.2791666666666667" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_discussion_discription_about.xml" value="0.38697916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_document.xml" value="0.2791666666666667" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_faq.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_live_steam.xml" value="0.25" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_login.xml" value="0.28396739130434784" />
-        <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_main.xml" value="0.140625" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_my_appeals_send_success.xml" value="0.38697916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_notification.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/activity_profil.xml" value="0.29322916666666665" />
@@ -119,7 +126,7 @@
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_council_district.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_deputat.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_discussion_i.xml" value="0.29322916666666665" />
-        <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_discussion_offer.xml" value="0.29322916666666665" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_discussion_offer.xml" value="0.33" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_home.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_login.xml" value="0.28396739130434784" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_more.xml" value="0.28396739130434784" />
@@ -135,7 +142,9 @@
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/fragment_youth_region.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_appleas_menu.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_appleas_top_menu.xml" value="0.28396739130434784" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_apples.xml" value="0.38697916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_bottom_sheet_diaolg_appeals.xml" value="0.29322916666666665" />
+        <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_discussion.xml" value="0.38697916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_home_news.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_live_strem.xml" value="0.29322916666666665" />
         <entry key="..\:/new_e_kengash/app/src/main/res/layout/item_notif.xml" value="0.28396739130434784" />

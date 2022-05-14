@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="@dimen/margin_padding_24"
-    android:orientation="vertical"
     android:background="@color/main_background"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/margin_padding_24"
     tools:context=".main.activity.moreInActivity.acceptance.fragment.AcceptanceSignUp">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginHorizontal="@dimen/margin_padding_6"
+            android:layout_marginStart="4dp"
             android:layout_weight="1"
             android:background="@drawable/bg_radius"
             android:drawableEnd="@drawable/ic_question"
@@ -45,13 +45,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:visibility="invisible"
             android:background="@drawable/bg_radius"
             android:drawableEnd="@drawable/ic_question"
             android:drawablePadding="@dimen/margin_padding_6"
             android:gravity="center"
             android:padding="@dimen/margin_padding_8"
-            android:text="@string/mfy_nuqtasiz" />
+            android:text="@string/mfy_nuqtasiz"
+            android:visibility="invisible" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 

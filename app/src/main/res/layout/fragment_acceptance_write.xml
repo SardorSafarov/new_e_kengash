@@ -30,7 +30,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginStart="4dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_radius"
                 android:drawableEnd="@drawable/ic_question"
@@ -69,20 +68,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <androidx.appcompat.widget.AppCompatTextView
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="@dimen/margin_padding_6"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:background="@drawable/bg_radius"
                 android:drawableEnd="@drawable/ic_question"
                 android:drawablePadding="@dimen/margin_padding_6"
-                android:gravity="start|center_vertical"
-                android:paddingVertical="@dimen/margin_padding_8"
-                android:paddingStart="@dimen/margin_padding_12"
-                android:paddingEnd="@dimen/margin_padding_8"
-                android:text="@string/yo_nalish_nuqtasiz" />
+                android:padding="@dimen/margin_padding_8"
+                android:paddingStart="@dimen/margin_padding_30"
+                android:text="@string/viloyat" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.recyclerview.widget.RecyclerView

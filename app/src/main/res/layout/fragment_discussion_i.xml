@@ -66,5 +66,11 @@
             android:drawableEnd="@drawable/ic_question"
             />
     </androidx.appcompat.widget.LinearLayoutCompat>
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:layout_marginTop="@dimen/margin_padding_24"
+        tools:listitem="@layout/item_discussion"
+        />
 </androidx.appcompat.widget.LinearLayoutCompat>

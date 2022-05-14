@@ -4,11 +4,6 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.example.e_kengash.data.constants.Constants.ACCESS_TOKEN
 import com.example.e_kengash.data.constants.Constants.APP_LOCAL_MEMORY
-import com.example.e_kengash.data.constants.Constants.FIRST_NAME
-import com.example.e_kengash.data.constants.Constants.LAST_NAME
-import com.example.e_kengash.data.constants.Constants.MIDEL_NAME
-import com.example.e_kengash.data.constants.Constants.PASSWORD1
-import com.example.e_kengash.data.constants.Constants.PASSWORD2
 import com.example.e_kengash.data.constants.Constants.PHONE
 
 class SharePereferenseHelper(val context: Context) {
