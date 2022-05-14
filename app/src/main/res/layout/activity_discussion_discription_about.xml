@@ -10,6 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:paddingHorizontal="@dimen/margin_padding_12"
