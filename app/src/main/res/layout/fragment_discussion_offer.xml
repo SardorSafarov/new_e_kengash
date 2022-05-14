@@ -33,6 +33,7 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/margin_padding_8"
             android:layout_weight="1"
+
             android:text="@string/yo_nalish_nuqtasiz"
             android:layout_marginStart="4dp"
             android:gravity="center"
