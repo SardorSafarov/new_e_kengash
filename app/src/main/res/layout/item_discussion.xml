@@ -75,7 +75,7 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:padding="@dimen/margin_padding_6">
+                        android:padding="@dimen/margin_padding_4">
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -108,7 +108,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:padding="@dimen/margin_padding_6">
+                        android:padding="@dimen/margin_padding_4">
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

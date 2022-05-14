@@ -96,8 +96,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="@dimen/margin_padding_12"
-            >
+            android:padding="@dimen/margin_padding_12">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -113,30 +112,164 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/ic_person"
+                        android:layout_gravity="center"
                         android:background="@color/blue"
-                        android:layout_gravity="center" />
+                        android:src="@drawable/ic_person" />
                 </com.google.android.material.card.MaterialCardView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
                     android:layout_marginStart="@dimen/margin_padding_6"
+                    android:layout_weight="1"
                     android:text="@string/qabulga_yozilish" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Status"
                     android:layout_gravity="center_vertical"
-                    android:padding="@dimen/margin_padding_4"
-                    android:textSize="@dimen/text_size_10"
                     android:background="@drawable/bg_radius"
-                    />
+                    android:padding="@dimen/margin_padding_4"
+                    android:text="Status"
+                    android:textSize="@dimen/text_size_10" />
             </LinearLayout>
 
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_12"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_hour"
+
+                    android:drawablePadding="@dimen/margin_padding_12"
+                    android:text="12.12.2000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_padding_32"
+                    android:drawableStart="@drawable/ic_see"
+                    android:drawablePadding="@dimen/margin_padding_12"
+                    android:drawableTint="@color/gray"
+                    android:text="asdfsadfas" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_12"
+                android:text="Savol"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_flag"
+
+                    android:text="@string/yo_nalishi" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/margin_padding_12"
+                    android:text="Huquq"
+                    android:textColor="#484848" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_12"
+                android:orientation="horizontal"
+                >
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/margin_padding_16"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#8bc68b"
+                    android:backgroundTint="#f7fff7"
+                    >
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/margin_padding_4">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_like"
+                            android:layout_marginStart="@dimen/margin_padding_6"
+                            android:layout_gravity="center_vertical"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10"
+                            android:layout_marginStart="@dimen/margin_padding_6"
+                            android:layout_marginEnd="@dimen/margin_padding_6"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="#188D16"
+                            />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_padding_6"
+                    app:cardCornerRadius="@dimen/margin_padding_16"
+                    app:strokeWidth="1dp"
+                    android:layout_marginStart="@dimen/margin_padding_32"
+                    app:strokeColor="#f198a5"
+                    android:backgroundTint="#fff8f9"
+                    >
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/margin_padding_4">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_padding_6"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_dislike"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10"
+                            android:textColor="#E3324C"
+                            android:layout_marginHorizontal="6dp"
+                            android:layout_gravity="center_vertical"
+                            />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sardor"
+                android:layout_marginTop="@dimen/margin_padding_32"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fayllar"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_padding_32"
+                />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
