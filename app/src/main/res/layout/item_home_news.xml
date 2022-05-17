@@ -7,11 +7,12 @@
     android:orientation="horizontal">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/image"
         android:layout_width="100dp"
         android:layout_height="70dp"
+        app:cardElevation="@dimen/margin_padding_0"
          >
         <ImageView
+            android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/simple_news"

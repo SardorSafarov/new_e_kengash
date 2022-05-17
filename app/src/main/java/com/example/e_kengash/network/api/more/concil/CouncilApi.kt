@@ -1,0 +1,23 @@
+package com.example.e_kengash.network.api.more.concil
+
+import com.example.e_kengash.network.entity.more.council.changeDeputat.article.ChangeDeputatArticle
+import com.example.e_kengash.network.entity.more.council.changeDeputat.info.ChangeDeputatInfoResponse
+import com.example.e_kengash.network.entity.more.council.data.CouncilDataResponse
+import com.example.e_kengash.network.entity.more.council.deputat.CouncilDeputatListResponse
+import retrofit2.Response
+import retrofit2.http.GET
+import retrofit2.http.Path
+
+interface CouncilApi {
+    @GET("/api/v1/council-deputies")
+    suspend fun getDeputatList(): Response<CouncilDeputatListResponse>
+
+    @GET("/api/v1/council-info")
+    suspend fun getDataList(): Response<CouncilDataResponse>
+
+    @GET("/api/v1/deputy/{id}/info/")
+    suspend fun changeDeputatInfo(@Path("id") id:String):Response<ChangeDeputatInfoResponse>
+
+    @GET("/api/v1/deputy/{id}/articles/")
+    suspend fun changeDeputatArticle(@Path("id") id:String):Response<ChangeDeputatArticle>
+}

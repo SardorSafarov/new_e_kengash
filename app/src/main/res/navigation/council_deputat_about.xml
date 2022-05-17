@@ -9,7 +9,9 @@
         android:id="@+id/councilDeputatData"
         android:name="com.example.e_kengash.main.activity.moreInActivity.council.fragment.councilDeputat.CouncilDeputatData"
         android:label="fragment_council_deputat_data"
-        tools:layout="@layout/fragment_council_deputat_data" />
+        tools:layout="@layout/fragment_council_deputat_data" >
+        <argument android:name="_id" />
+    </fragment>
     <fragment
         android:id="@+id/councilDeputatAppealsSend"
         android:name="com.example.e_kengash.main.activity.moreInActivity.council.fragment.councilDeputat.CouncilDeputatAppealsSend"

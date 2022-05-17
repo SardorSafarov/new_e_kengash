@@ -4,6 +4,7 @@ import com.example.e_kengash.data.constants.Constants.BASE_URL
 import com.example.e_kengash.network.api.appealsSend.AppealsSendApi
 import com.example.e_kengash.network.api.login.LoginApi
 import com.example.e_kengash.network.api.more.MoreApi
+import com.example.e_kengash.network.api.more.concil.CouncilApi
 import com.example.e_kengash.network.api.notif.NotificationApi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -31,5 +32,9 @@ class RetrofitBuilder {
 
     val appealsSendApi: AppealsSendApi by lazy {
         retrofit.create(AppealsSendApi::class.java)
+    }
+
+    val councilApi: CouncilApi by lazy {
+        retrofit.create(CouncilApi::class.java)
     }
 }

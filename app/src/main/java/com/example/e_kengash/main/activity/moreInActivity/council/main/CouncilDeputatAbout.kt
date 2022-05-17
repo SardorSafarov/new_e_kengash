@@ -6,13 +6,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import com.bumptech.glide.Glide
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.ActivityCouncilDeputatAboutBinding
 import com.example.e_kengash.main.activity.notif.NotificationActivity
+import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.statusbarcolor
 
 class CouncilDeputatAbout : AppCompatActivity() {
     private lateinit var binding:ActivityCouncilDeputatAboutBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCouncilDeputatAboutBinding.inflate(layoutInflater)
@@ -21,7 +25,17 @@ class CouncilDeputatAbout : AppCompatActivity() {
         back()
         notification()
         navigationFragment()
+        deputatData()
     }
+
+    private fun deputatData() {
+        Glide.with(applicationContext)
+            .load("http://e-kengash.uz/media/user/anonim_VdwOVaO.jpg")
+            .into(binding.image)
+        binding.fullName.text = intent.getStringExtra("full_name")
+
+    }
+
     private fun navigationFragment() {
         binding.apply {
             btnData.setOnClickListener {

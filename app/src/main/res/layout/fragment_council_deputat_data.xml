@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:overScrollMode="never"
     android:background="@color/main_background"
     tools:context=".main.activity.moreInActivity.council.fragment.councilDeputat.CouncilDeputatData">
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -28,9 +29,11 @@
                 android:text="@string/ishxonasi"
                 />
             <TextView
+                android:id="@+id/position"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Uzb Deputat"
+
+                android:textStyle="bold"
                 android:textColor="@color/black"
                 />
 
@@ -47,9 +50,11 @@
                 android:text="@string/tug_ulgan_sana"
                 />
             <TextView
+                android:id="@+id/birthday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Uzb Deputat"
+
+                android:textStyle="bold"
                 android:textColor="@color/black"
                 />
 
@@ -66,9 +71,11 @@
                 android:text="@string/tug_ulgan_joyi"
                 />
             <TextView
+                android:id="@+id/birthday_region"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Uzb Deputat"
+
+                android:textStyle="bold"
                 android:textColor="@color/black"
                 />
 
@@ -87,7 +94,50 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Uzb Deputat"
+
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_24"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/hududi"
+                />
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_24"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/ma_lumoti"
+                />
+            <TextView
+                android:id="@+id/education"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textStyle="bold"
                 android:textColor="@color/black"
                 />
 
@@ -104,9 +154,11 @@
                 android:text="@string/mutaxassisligi"
                 />
             <TextView
+                android:id="@+id/specialization"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Uzb Deputat"
+
+                android:textStyle="bold"
                 android:textColor="@color/black"
                 />
 
@@ -115,6 +167,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_padding_24"
+            android:layout_marginBottom="@dimen/margin_padding_12"
             android:orientation="horizontal"
             >
             <TextView
@@ -125,7 +178,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Uzb Deputat"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
                 android:textColor="@color/black"
                 />
 

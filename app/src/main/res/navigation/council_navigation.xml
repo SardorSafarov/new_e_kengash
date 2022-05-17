@@ -20,4 +20,5 @@
         android:name="com.example.e_kengash.main.activity.moreInActivity.council.fragment.CouncilDistrict"
         android:label="fragment_council_district"
         tools:layout="@layout/fragment_council_district" />
+
 </navigation>
