@@ -1,6 +1,7 @@
 package com.example.e_kengash.network.api.more.concil
 
-import com.example.e_kengash.network.entity.more.council.changeDeputat.article.ChangeDeputatArticle
+import com.example.e_kengash.network.entity.more.council.changeDeputat.activity.ChangeDeputatActivityResponse
+import com.example.e_kengash.network.entity.more.council.changeDeputat.article.ChangeDeputatArticleResponse
 import com.example.e_kengash.network.entity.more.council.changeDeputat.info.ChangeDeputatInfoResponse
 import com.example.e_kengash.network.entity.more.council.data.CouncilDataResponse
 import com.example.e_kengash.network.entity.more.council.deputat.CouncilDeputatListResponse
@@ -19,5 +20,8 @@ interface CouncilApi {
     suspend fun changeDeputatInfo(@Path("id") id:String):Response<ChangeDeputatInfoResponse>
 
     @GET("/api/v1/deputy/{id}/articles/")
-    suspend fun changeDeputatArticle(@Path("id") id:String):Response<ChangeDeputatArticle>
+    suspend fun changeDeputatArticle(@Path("id") id:String):Response<ChangeDeputatArticleResponse>
+
+    @GET("/api/v1/deputy/{id}/events/")
+    suspend fun changeDeputatActivity(@Path("id") id:String):Response<ChangeDeputatActivityResponse>
 }

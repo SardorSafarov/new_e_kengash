@@ -1,4 +1,4 @@
-package com.example.e_kengash.adapter.more.council
+package com.example.e_kengash.adapter.more.council.changeDeputat
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,17 +8,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.ItemHomeNewsBinding
-import com.example.e_kengash.databinding.ItemSecretariatRegionBinding
-import com.example.e_kengash.network.entity.more.council.changeDeputat.article.Meeting
+import com.example.e_kengash.network.entity.more.council.changeDeputat.activity.New
 import com.example.e_kengash.network.entity.more.council.deputat.Deputy
 
 
-class ChangeDeputatArticleAdapter(
+
+
+class ChangeDeputatActivityAdapter(
     private val listener: onClickListener,
     private val context: Context
-) : RecyclerView.Adapter<ChangeDeputatArticleAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<ChangeDeputatActivityAdapter.ViewHolder>() {
 
-    private var list: MutableList<Meeting> = mutableListOf()
+    private var list: MutableList<New> = mutableListOf()
 
     interface onClickListener {
         fun setOnClickLister(id: Deputy)
@@ -26,7 +27,7 @@ class ChangeDeputatArticleAdapter(
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val bind = ItemHomeNewsBinding.bind(itemView)
-        fun item(item: Meeting) {
+        fun item(item: New) {
             bind.apply {
                 title.text = item.fields.title
                 time.text = item.fields.date
@@ -43,18 +44,18 @@ class ChangeDeputatArticleAdapter(
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): ChangeDeputatArticleAdapter.ViewHolder = ViewHolder(
+    ): ViewHolder = ViewHolder(
         LayoutInflater.from(parent.context).inflate(R.layout.item_home_news, parent, false)
     )
 
-    override fun onBindViewHolder(holder: ChangeDeputatArticleAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.item(list[position])
     }
 
     override fun getItemCount(): Int = list.size
 
-    fun setData(list: List<Meeting>) {
-        this.list = list as MutableList<Meeting>
+    fun setData(list: List<New>) {
+        this.list = list as MutableList<New>
         notifyDataSetChanged()
     }
 }
