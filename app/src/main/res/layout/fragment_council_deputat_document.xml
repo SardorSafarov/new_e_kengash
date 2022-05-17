@@ -18,13 +18,12 @@
             android:indeterminate="true"
             android:indeterminateTint="@color/blue" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_padding_12"
-            android:text="Bu yerda so'rov sarlavhasi bo`ladi"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/rec_list"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          tools:listitem="@layout/item_council_deputat_change_doc"
+          />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

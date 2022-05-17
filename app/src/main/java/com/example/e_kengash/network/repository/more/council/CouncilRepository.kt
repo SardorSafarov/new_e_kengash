@@ -2,6 +2,7 @@ package com.example.e_kengash.network.repository.more.council
 
 import com.example.e_kengash.network.entity.more.council.changeDeputat.activity.ChangeDeputatActivityResponse
 import com.example.e_kengash.network.entity.more.council.changeDeputat.article.ChangeDeputatArticleResponse
+import com.example.e_kengash.network.entity.more.council.changeDeputat.doc.ChangeDeputatDocResponse
 import com.example.e_kengash.network.entity.more.council.changeDeputat.info.ChangeDeputatInfoResponse
 import com.example.e_kengash.network.entity.more.council.data.CouncilDataResponse
 import com.example.e_kengash.network.entity.more.council.deputat.CouncilDeputatListResponse
@@ -24,4 +25,7 @@ class CouncilRepository {
 
     suspend fun changeDeputatActivity(id:String): Response<ChangeDeputatActivityResponse> =
         RetrofitBuilder().councilApi.changeDeputatActivity(id)
+
+    suspend fun changeDeputatDoc(id:String): Response<ChangeDeputatDocResponse> =
+        RetrofitBuilder().councilApi.changeDeputatDoc(id)
 }

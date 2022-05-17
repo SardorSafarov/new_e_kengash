@@ -3,6 +3,7 @@ package com.example.e_kengash.network.viewModel.more
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.e_kengash.network.entity.getDomen.GetDomenResponse
 import com.example.e_kengash.network.entity.more.article.ArticleResponse
 import com.example.e_kengash.network.entity.more.secretariat.region.SecRegionResponse
 import com.example.e_kengash.network.repository.more.MoreRepository
@@ -11,6 +12,18 @@ import kotlinx.coroutines.launch
 import retrofit2.Response
 
 class MoreViewModel(private val moreRepository: MoreRepository): ViewModel() {
+
+    fun getDomen(onResponse:(response:Response<GetDomenResponse>)->Unit)
+    {
+        viewModelScope.launch {
+            try {
+                onResponse(moreRepository.getDomen())
+            }catch (e:Exception)
+            {
+                D("MoreViewModel getDomen  ${e.message}")
+            }
+        }
+    }
 
      val articleList:MutableLiveData<Response<ArticleResponse>> = MutableLiveData()
      val newsList:MutableLiveData<Response<ArticleResponse>> = MutableLiveData()
@@ -22,7 +35,7 @@ class MoreViewModel(private val moreRepository: MoreRepository): ViewModel() {
                articleList.value = moreRepository.articleList()
             }catch (e:Exception)
             {
-                D("LoginViewModel registerUser  ${e.message}")
+                D("MoreViewModel articleList  ${e.message}")
             }
         }
     }
@@ -34,7 +47,7 @@ class MoreViewModel(private val moreRepository: MoreRepository): ViewModel() {
                 newsList.value = moreRepository.newsList()
             }catch (e:Exception)
             {
-                D("LoginViewModel newsList  ${e.message}")
+                D("MoreViewModel newsList  ${e.message}")
             }
         }
     }
@@ -46,7 +59,7 @@ class MoreViewModel(private val moreRepository: MoreRepository): ViewModel() {
                onResponse(moreRepository.secRegionList())
             }catch (e:Exception)
             {
-                D("LoginViewModel secRegionList  ${e.message}")
+                D("MoreViewModel secRegionList  ${e.message}")
             }
         }
     }
@@ -58,8 +71,10 @@ class MoreViewModel(private val moreRepository: MoreRepository): ViewModel() {
                 onResponse(moreRepository.secDistrictList())
             }catch (e:Exception)
             {
-                D("LoginViewModel secDistrictList  ${e.message}")
+                D("MoreViewModel secDistrictList  ${e.message}")
             }
         }
     }
+
+
 }

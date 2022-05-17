@@ -30,6 +30,18 @@ class Home :  BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate),Ar
         setUi()
         mainFragments()
         getNiewsList()
+        getDomen()
+    }
+
+    private fun getDomen() {
+        moreViewModel.getDomen {
+            when(it.isSuccessful){
+                true->{
+                    sharePereferenseHelper.setAccessDomen1(it.body()!!.domen)
+                    sharePereferenseHelper.setAccessDomen2(it.body()!!.domen_media)
+                }
+            }
+        }
     }
 
     private fun getNiewsList() {

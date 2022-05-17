@@ -9,4 +9,5 @@ import retrofit2.http.Headers
 interface NotificationApi {
     @GET("/api/v1/notifaction")
     suspend fun notif(@Header("Authorization")token:String):Response<NotificationResponse>
+
 }

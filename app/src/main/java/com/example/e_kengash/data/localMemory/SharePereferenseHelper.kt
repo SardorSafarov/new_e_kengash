@@ -35,5 +35,21 @@ class SharePereferenseHelper(val context: Context) {
 
     fun getAccessDeputatId() = preferences.getString("deputatId", "empty").toString()
 
+    fun setAccessDomen1(phone: String) {
+        editor = preferences.edit()
+        editor.putString("domen1", phone)
+        editor.apply()
+    }
+
+    fun getAccessDomen1() = preferences.getString("domen1", "empty").toString()
+
+    fun setAccessDomen2(phone: String) {
+        editor = preferences.edit()
+        editor.putString("domen2", phone)
+        editor.apply()
+    }
+
+    fun getAccessDomen2() = preferences.getString("domen2", "empty").toString()
+
 
 }
