@@ -1,32 +1,24 @@
 package com.example.e_kengash.adapter.more.council.changeDeputat
 
-import android.app.DownloadManager
-import android.content.Context
-import android.content.Context.DOWNLOAD_SERVICE
-import android.net.Uri
+
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.recyclerview.widget.RecyclerView
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.ItemCouncilDeputatChangeDocBinding
 import com.example.e_kengash.network.entity.more.council.changeDeputat.doc.Document
-import com.example.e_kengash.network.entity.more.council.deputat.Deputy
-import com.example.e_kengash.repetitive.D
 
 
 class ChangeDeputatDocAdapter(
-    private val listener: onClickListener,
-    private val context: Context,
-    private val url:String
-
+    private val listener: onClickListener
 ) : RecyclerView.Adapter<ChangeDeputatDocAdapter.ViewHolder>() {
 
     private var list: MutableList<Document> = mutableListOf()
 
     interface onClickListener {
-        fun setOnClickLister(id: Deputy)
+        fun setOnClickLister(url: String)
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -40,22 +32,20 @@ class ChangeDeputatDocAdapter(
                 doc4.text =item.fields.files[3].name
 
             }
-          bind.apply {
-              doc1.setOnClickListener {
-//                  val request =DownloadManager.Request(Uri.parse(url.plus(item.fields.files[0].doc)))
-//                      .setTitle("File")
-//                      .setDescription("Yuklanmoqda...")
-//                      .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-//                      .setAllowedOverMetered(true)
-//                  val dm =getSystemService(DOWNLOAD_SERVICE) as DownloadManager
-
-//
-
-              }
-          }
-//            itemView.setOnClickListener {
-//                listener.setOnClickLister(item)
-//            }
+           bind.apply {
+               doc1.setOnClickListener {
+                   listener.setOnClickLister(item.fields.files[0].doc)
+               }
+               doc2.setOnClickListener {
+                   listener.setOnClickLister(item.fields.files[1].doc)
+               }
+               doc3.setOnClickListener {
+                   listener.setOnClickLister(item.fields.files[2].doc)
+               }
+               doc4.setOnClickListener {
+                   listener.setOnClickLister(item.fields.files[3].doc)
+               }
+           }
         }
     }
 
