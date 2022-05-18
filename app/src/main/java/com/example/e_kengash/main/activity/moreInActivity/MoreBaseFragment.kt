@@ -11,10 +11,13 @@ import androidx.navigation.Navigation
 import androidx.viewbinding.ViewBinding
 import com.example.e_kengash.data.localMemory.SharePereferenseHelper
 import com.example.e_kengash.network.repository.more.council.CouncilRepository
+import com.example.e_kengash.network.repository.more.senator.SenatorRepository
 import com.example.e_kengash.network.repository.more.youth.YouthRepository
 import com.example.e_kengash.network.viewModel.more.council.CouncilViewModel
+import com.example.e_kengash.network.viewModel.more.senator.SenatorViewModel
 import com.example.e_kengash.network.viewModel.more.youth.YouthViewModel
 import com.example.e_kengash.network.viewModelFactory.more.council.CouncilViewModelFactory
+import com.example.e_kengash.network.viewModelFactory.more.senator.SenatorVewModelFactory
 import com.example.e_kengash.network.viewModelFactory.more.youth.YouthViewModelFactory
 
 
@@ -29,6 +32,7 @@ abstract class MoreBaseFragment<VB : ViewBinding>(
 
     lateinit var councilViewModel: CouncilViewModel
     lateinit var youthViewModel: YouthViewModel
+    lateinit var senatorViewModel: SenatorViewModel
 
 
     lateinit var sharePereferenseHelper: SharePereferenseHelper
@@ -42,7 +46,18 @@ abstract class MoreBaseFragment<VB : ViewBinding>(
         _binding = inflate.invoke(inflater, container, false)
         councilSetUi()
         youthSetUi()
+        senatorSetUi()
         return binding.root
+    }
+
+    private fun senatorSetUi() {
+        val senatorRepository = SenatorRepository()
+        val senatorVewModelFactory = SenatorVewModelFactory(senatorRepository)
+        val senatorViewModel = ViewModelProvider(
+            this,
+            senatorVewModelFactory
+        ).get(SenatorViewModel::class.java)
+        this.senatorViewModel = senatorViewModel
     }
 
     private fun youthSetUi() {

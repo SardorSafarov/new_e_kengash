@@ -5,6 +5,7 @@ import com.example.e_kengash.network.api.appealsSend.AppealsSendApi
 import com.example.e_kengash.network.api.login.LoginApi
 import com.example.e_kengash.network.api.more.MoreApi
 import com.example.e_kengash.network.api.more.concil.CouncilApi
+import com.example.e_kengash.network.api.more.senatorAndDeputat.SenatorApi
 import com.example.e_kengash.network.api.more.youth.YouthApi
 import com.example.e_kengash.network.api.notif.NotificationApi
 import retrofit2.Retrofit
@@ -41,5 +42,9 @@ class RetrofitBuilder {
 
     val youthApi: YouthApi by lazy {
         retrofit.create(YouthApi::class.java)
+    }
+
+    val senatorApi: SenatorApi by lazy {
+        retrofit.create(SenatorApi::class.java)
     }
 }

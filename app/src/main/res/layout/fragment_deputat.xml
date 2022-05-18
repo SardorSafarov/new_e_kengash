@@ -10,6 +10,7 @@
 
 
     <ProgressBar
+        android:id="@+id/progress_Bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:indeterminate="true"
@@ -22,6 +23,7 @@
         android:text="@string/oliy_majlis_deputatlari"
         android:layout_marginTop="@dimen/margin_padding_8"
         android:layout_marginStart="@dimen/margin_padding_12"
+        android:textSize="@dimen/text_size_18"
         android:textColor="@color/black"
         android:textStyle="bold"
         />
