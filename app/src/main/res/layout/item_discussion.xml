@@ -8,7 +8,7 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        app:cardElevation="@dimen/margin_padding_0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -23,6 +23,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/full_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_person"
@@ -30,9 +31,11 @@
                 android:text="Ism Familiya" />
 
             <TextView
+                android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/margin_padding_6"
+                android:textStyle="bold"
+                android:layout_marginVertical="@dimen/margin_padding_12"
                 android:text="SardorSardorSardorSardorSardorSardorSardorSardorSardorSardorSardorSardor"
                 android:textColor="@color/black"
                 />
@@ -47,14 +50,15 @@
                     android:drawableStart="@drawable/ic_hour"
 
                     android:drawablePadding="@dimen/margin_padding_12"
-                    android:text="asdfsadfasasdf"
+                    android:text=""
                     />
                 <TextView
+                    android:id="@+id/total_comment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_padding_32"
-                    android:drawableStart="@drawable/ic_hour"
-                    android:text="asdfsadfas"
+                    android:drawableStart="@drawable/ic_smmal_chat"
+                    android:text=""
                     android:drawablePadding="@dimen/margin_padding_12"
                     />
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -70,6 +74,7 @@
                     app:cardCornerRadius="@dimen/margin_padding_16"
                     app:strokeWidth="1dp"
                     app:strokeColor="#8bc68b"
+                    app:cardElevation="@dimen/margin_padding_0"
                     android:backgroundTint="#f7fff7"
                     >
                     <androidx.appcompat.widget.LinearLayoutCompat
@@ -84,6 +89,7 @@
                             android:layout_gravity="center_vertical"
                             />
                         <TextView
+                            android:id="@+id/total_like"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="10"
@@ -102,6 +108,7 @@
                     app:strokeWidth="1dp"
                     android:layout_marginStart="@dimen/margin_padding_32"
                     app:strokeColor="#f198a5"
+                    app:cardElevation="@dimen/margin_padding_0"
                     android:backgroundTint="#fff8f9"
                     >
                     <androidx.appcompat.widget.LinearLayoutCompat
@@ -117,6 +124,7 @@
                             android:src="@drawable/ic_dislike"
                             />
                         <TextView
+                            android:id="@+id/total_dislike"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="10"

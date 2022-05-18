@@ -2,6 +2,7 @@ package com.example.e_kengash.network.repository.more
 
 import com.example.e_kengash.network.entity.getDomen.GetDomenResponse
 import com.example.e_kengash.network.entity.more.article.ArticleResponse
+import com.example.e_kengash.network.entity.more.discussion.offer.DiscussionOfferListResponse
 import com.example.e_kengash.network.entity.more.secretariat.changeDeputat.SecretariatChangeDeputatDataResponse
 import com.example.e_kengash.network.entity.more.secretariat.data.SecretariatDataListResponse
 import com.example.e_kengash.network.entity.more.secretariat.region.SecRegionResponse
@@ -23,4 +24,6 @@ class MoreRepository {
     suspend fun secretariatDataList():Response<SecretariatDataListResponse> = RetrofitBuilder().moreApi.secretariatDataList()
 
     suspend fun secretariatChangeDeputatData(id:String):Response<SecretariatChangeDeputatDataResponse> = RetrofitBuilder().moreApi.secretariatChangeDeputatData(id)
+
+    suspend fun discussionOfferList():Response<DiscussionOfferListResponse> = RetrofitBuilder().moreApi.discussionOfferList()
 }
