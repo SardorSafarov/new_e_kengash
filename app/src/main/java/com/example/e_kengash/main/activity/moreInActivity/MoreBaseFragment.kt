@@ -11,8 +11,11 @@ import androidx.navigation.Navigation
 import androidx.viewbinding.ViewBinding
 import com.example.e_kengash.data.localMemory.SharePereferenseHelper
 import com.example.e_kengash.network.repository.more.council.CouncilRepository
+import com.example.e_kengash.network.repository.more.youth.YouthRepository
 import com.example.e_kengash.network.viewModel.more.council.CouncilViewModel
+import com.example.e_kengash.network.viewModel.more.youth.YouthViewModel
 import com.example.e_kengash.network.viewModelFactory.more.council.CouncilViewModelFactory
+import com.example.e_kengash.network.viewModelFactory.more.youth.YouthViewModelFactory
 
 
 typealias Inflate<T> = (LayoutInflater, ViewGroup?, Boolean) -> T
@@ -25,6 +28,8 @@ abstract class MoreBaseFragment<VB : ViewBinding>(
     val binding get() = _binding!!
 
     lateinit var councilViewModel: CouncilViewModel
+    lateinit var youthViewModel: YouthViewModel
+
 
     lateinit var sharePereferenseHelper: SharePereferenseHelper
 
@@ -35,8 +40,19 @@ abstract class MoreBaseFragment<VB : ViewBinding>(
     ): View? {
         sharePereferenseHelper = SharePereferenseHelper(requireContext())
         _binding = inflate.invoke(inflater, container, false)
-        setUi()
+        councilSetUi()
+        youthSetUi()
         return binding.root
+    }
+
+    private fun youthSetUi() {
+        val youthRepository = YouthRepository()
+        val youthViewModelFactory = YouthViewModelFactory(youthRepository)
+        val youthViewModel = ViewModelProvider(
+            this,
+            youthViewModelFactory
+        ).get(YouthViewModel::class.java)
+        this.youthViewModel = youthViewModel
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -44,7 +60,7 @@ abstract class MoreBaseFragment<VB : ViewBinding>(
         onViewCreate()
     }
 
-    private fun setUi() {
+    private fun councilSetUi() {
         val councilRepository = CouncilRepository()
         val councilViewModelFactory = CouncilViewModelFactory(councilRepository)
         val councilViewModel = ViewModelProvider(

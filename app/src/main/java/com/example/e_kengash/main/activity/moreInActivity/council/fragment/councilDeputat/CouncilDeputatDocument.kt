@@ -18,7 +18,6 @@ class CouncilDeputatDocument :
     private val adapter: ChangeDeputatDocAdapter by lazy { ChangeDeputatDocAdapter(this) }
 
     override fun onViewCreate() {
-        D(sharePereferenseHelper.getAccessDeputatId())
         councilViewModel.changeDeputatDoc(sharePereferenseHelper.getAccessDeputatId()) {
             when (it.isSuccessful) {
                 true -> {
@@ -46,7 +45,6 @@ class CouncilDeputatDocument :
     }
 
     override fun setOnClickLister(url: String) {
-        D(sharePereferenseHelper.getAccessDomen2().plus(url))
         val request =
             DownloadManager.Request(Uri.parse(sharePereferenseHelper.getAccessDomen1().plus(url)))
                 .setTitle("File")
