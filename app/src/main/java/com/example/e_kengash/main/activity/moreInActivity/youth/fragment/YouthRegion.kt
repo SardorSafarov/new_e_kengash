@@ -1,13 +1,15 @@
 package com.example.e_kengash.main.activity.moreInActivity.youth.fragment
 
+import android.content.Intent
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.e_kengash.adapter.more.youth.YouthDeputatAdapter
 import com.example.e_kengash.databinding.FragmentYouthRegionBinding
+import com.example.e_kengash.main.activity.moreInActivity.AboutSenatorActivity
 import com.example.e_kengash.main.activity.moreInActivity.MoreBaseFragment
-import com.example.e_kengash.network.entity.more.council.deputat.Deputy
 import com.example.e_kengash.network.entity.more.youth.deputat.Info
 import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.invisible
+import com.example.e_kengash.repetitive.visible
 
 class YouthRegion :
     MoreBaseFragment<FragmentYouthRegionBinding>(FragmentYouthRegionBinding::inflate),
@@ -37,7 +39,29 @@ class YouthRegion :
         adapter.setData(info)
     }
 
-    override fun setOnClickLister(id: Info) {
+    override fun setOnClickLister(item: Info) {
+        binding.progressBar.visible()
+            youthViewModel.changeDeputatData(item.id.toString()){
+                when(it.isSuccessful){
+                    true->{
+                        aboutSenator(it.body()!!.info[0])
+                    }
+                    else->{
 
+                    }
+                }
+            }
+    }
+
+    private fun aboutSenator(info: com.example.e_kengash.network.entity.more.youth.changeDeputat.Info) {
+        val intent =Intent(requireContext(),AboutSenatorActivity::class.java)
+        intent.putExtra("full_name",info.full_name)
+        intent.putExtra("position",info.position)
+        intent.putExtra("image",sharePereferenseHelper.getAccessDomen2().plus(info.image))
+        intent.putExtra("nation__name",info.nation__name)
+        intent.putExtra("education",info.education)
+        intent.putExtra("specialization",info.specialization)
+        intent.putExtra("status",info.status)
+        startActivity(intent)
     }
 }

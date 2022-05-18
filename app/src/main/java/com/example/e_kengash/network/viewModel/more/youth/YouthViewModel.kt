@@ -2,6 +2,7 @@ package com.example.e_kengash.network.viewModel.more.youth
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.e_kengash.network.entity.more.youth.changeDeputat.YouthChangeDeputatDataResponse
 import com.example.e_kengash.network.entity.more.youth.data.YouthDataResponse
 import com.example.e_kengash.network.entity.more.youth.deputat.YouthDeputatResponse
 import com.example.e_kengash.network.repository.more.youth.YouthRepository
@@ -30,7 +31,7 @@ class YouthViewModel(private val youthRepository: YouthRepository) : ViewModel()
             }
         }
     }
-    fun changeDeputatData(id:String,onResponse: (response: Response<YouthDeputatResponse>) -> Unit) {
+    fun changeDeputatData(id:String,onResponse: (response: Response<YouthChangeDeputatDataResponse>) -> Unit) {
         viewModelScope.launch {
             try {
                 onResponse(youthRepository.changeDeputatData(id))

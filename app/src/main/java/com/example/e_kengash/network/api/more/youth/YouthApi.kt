@@ -1,5 +1,6 @@
 package com.example.e_kengash.network.api.more.youth
 
+import com.example.e_kengash.network.entity.more.youth.changeDeputat.YouthChangeDeputatDataResponse
 import com.example.e_kengash.network.entity.more.youth.data.YouthDataResponse
 import com.example.e_kengash.network.entity.more.youth.deputat.YouthDeputatResponse
 import retrofit2.Response
@@ -15,5 +16,5 @@ interface YouthApi {
     suspend fun getDeputatList():Response<YouthDeputatResponse>
 
     @GET("/api/v1/youth-parliament-deputy/{id}/")
-    suspend fun changeDeputatData(@Path("id")id:String):Response<YouthDeputatResponse>
+    suspend fun changeDeputatData(@Path("id")id:String):Response<YouthChangeDeputatDataResponse>
 }
