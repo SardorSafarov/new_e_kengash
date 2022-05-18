@@ -21,7 +21,7 @@ class SecretariatRegionAdapter(
     private var list: MutableList<Info> = mutableListOf()
 
     interface onClickListener {
-        fun setOnClickLister(text: String)
+        fun setOnClickLister(item: Info)
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -31,6 +31,9 @@ class SecretariatRegionAdapter(
                 fullName.text = item.full_name
                 position.text = item.position
                 Glide.with(requireContext).load(accessDomen2.plus(item.image)).into(image)
+                this.item.setOnClickListener {
+                    listener.setOnClickLister(item)
+                }
             }
         }
     }

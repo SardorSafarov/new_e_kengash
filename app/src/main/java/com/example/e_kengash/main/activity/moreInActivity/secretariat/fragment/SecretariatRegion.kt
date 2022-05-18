@@ -50,7 +50,7 @@ class SecretariatRegion : MoreBaseFragment<FragmentSecretariatRegionBinding>(
     }
 
 
-    override fun setOnClickLister(text: String) {
+    override fun setOnClickLister(item: Info) {
 
     }
 }

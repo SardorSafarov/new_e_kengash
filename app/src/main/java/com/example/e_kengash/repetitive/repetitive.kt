@@ -11,6 +11,10 @@ fun tosatShort(context:Context,message:String)
 {
     Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
 }
+fun tosatLong(context:Context,message:String)
+{
+    Toast.makeText(context, message, Toast.LENGTH_LONG).show()
+}
 
 fun Activity.statusbarcolor(color: Int)
 {

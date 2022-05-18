@@ -23,7 +23,7 @@ class AboutSenatorActivity : AppCompatActivity() {
             position.text = intent.getStringExtra("position")
             specialization.text = intent.getStringExtra("specialization")
             education.text = intent.getStringExtra("education")
-            nationName.text = intent.getStringExtra("nation__name")
+            nationName.text = intent.getStringExtra("nation")
             status.text =intent.getStringExtra("status")
             Glide.with(this@AboutSenatorActivity).load(intent.getStringExtra("image")).into(image)
         }

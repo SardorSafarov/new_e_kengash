@@ -9,6 +9,7 @@ import com.example.e_kengash.main.activity.moreInActivity.MoreBaseFragment
 import com.example.e_kengash.network.entity.more.youth.deputat.Info
 import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.invisible
+import com.example.e_kengash.repetitive.tosatLong
 import com.example.e_kengash.repetitive.visible
 
 class YouthRegion :
@@ -44,10 +45,13 @@ class YouthRegion :
             youthViewModel.changeDeputatData(item.id.toString()){
                 when(it.isSuccessful){
                     true->{
+                        binding.progressBar.invisible()
                         aboutSenator(it.body()!!.info[0])
                     }
                     else->{
-
+                        binding.progressBar.invisible()
+                        tosatLong(requireContext(),"Serverda xatolik!!!")
+                        D("YouthRegion changeDeputatData ".plus(it.errorBody()!!.string()))
                     }
                 }
             }
@@ -58,7 +62,7 @@ class YouthRegion :
         intent.putExtra("full_name",info.full_name)
         intent.putExtra("position",info.position)
         intent.putExtra("image",sharePereferenseHelper.getAccessDomen2().plus(info.image))
-        intent.putExtra("nation__name",info.nation__name)
+        intent.putExtra("nation",info.nation__name)
         intent.putExtra("education",info.education)
         intent.putExtra("specialization",info.specialization)
         intent.putExtra("status",info.status)
