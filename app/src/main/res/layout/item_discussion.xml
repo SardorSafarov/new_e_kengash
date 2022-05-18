@@ -69,6 +69,7 @@
                 android:orientation="horizontal"
                 >
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/like"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="@dimen/margin_padding_16"
@@ -80,7 +81,7 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:padding="@dimen/margin_padding_4">
+                        android:padding="@dimen/margin_padding_6">
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -101,6 +102,7 @@
                     </androidx.appcompat.widget.LinearLayoutCompat>
                 </com.google.android.material.card.MaterialCardView>
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/dislike"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/margin_padding_6"
@@ -115,7 +117,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:padding="@dimen/margin_padding_4">
+                        android:padding="@dimen/margin_padding_6">
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

@@ -10,8 +10,8 @@ import com.example.e_kengash.repetitive.invisible
 import com.example.e_kengash.repetitive.tosatLong
 
 
-class DiscussionOffer : MoreBaseFragment<FragmentDiscussionOfferBinding>(FragmentDiscussionOfferBinding::inflate) {
-    private val adapter:DiscussinOffertAdapter by lazy { DiscussinOffertAdapter() }
+class DiscussionOffer : MoreBaseFragment<FragmentDiscussionOfferBinding>(FragmentDiscussionOfferBinding::inflate),DiscussinOffertAdapter.likeDislikeSetOnClickListener {
+    private val adapter:DiscussinOffertAdapter by lazy { DiscussinOffertAdapter(this) }
     override fun onViewCreate() {
         moreViewModel.discussionOfferList{
             when(it.isSuccessful)
@@ -34,6 +34,10 @@ class DiscussionOffer : MoreBaseFragment<FragmentDiscussionOfferBinding>(Fragmen
             recList.adapter = adapter
         }
         adapter.setData(results)
+    }
+
+    override fun onClickListener(boolean: Boolean) {
+        D(boolean.toString())
     }
 
 }

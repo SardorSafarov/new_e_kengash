@@ -9,10 +9,13 @@ import com.example.e_kengash.databinding.ItemDiscussionBinding
 import com.example.e_kengash.network.entity.more.discussion.offer.Result
 
 
-class DiscussinOffertAdapter() :
+class DiscussinOffertAdapter(private val listener:likeDislikeSetOnClickListener) :
     RecyclerView.Adapter<DiscussinOffertAdapter.ViewHolder>() {
 
     private var list: MutableList<Result> = mutableListOf()
+    interface likeDislikeSetOnClickListener{
+        fun onClickListener(boolean: Boolean)
+    }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val bind = ItemDiscussionBinding.bind(itemView)
@@ -23,7 +26,14 @@ class DiscussinOffertAdapter() :
                 totalComment.text = item.total_comment.toString()
                 totalLike.text = item.total_like.toString()
                 totalDislike.text = item.total_dislike.toString()
+                like.setOnClickListener {
+                    listener.onClickListener(true)
+                }
+                dislike.setOnClickListener {
+                    listener.onClickListener(false)
+                }
             }
+
 
         }
     }
