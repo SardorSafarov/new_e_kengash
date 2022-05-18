@@ -35,6 +35,7 @@ class CouncilDeputatDocument :
         }
     }
 
+
     private fun onResponse(documents: List<Document>) {
         binding.apply {
             progressBar.invisible()
