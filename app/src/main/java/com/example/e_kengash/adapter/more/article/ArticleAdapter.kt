@@ -1,4 +1,4 @@
-package com.example.e_kengash.adapter.article
+package com.example.e_kengash.adapter.more.article
 
 import android.view.LayoutInflater
 import android.view.View

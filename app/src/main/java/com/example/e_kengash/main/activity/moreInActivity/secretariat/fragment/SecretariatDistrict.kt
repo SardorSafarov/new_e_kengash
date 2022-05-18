@@ -1,24 +1,19 @@
 package com.example.e_kengash.main.activity.moreInActivity.secretariat.fragment
 
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.e_kengash.adapter.secretariat.SecretariatRegionAdapter
+import com.example.e_kengash.adapter.more.secretariat.SecretariatRegionAdapter
 import com.example.e_kengash.databinding.FragmentSecretariatDistrictBinding
 import com.example.e_kengash.main.activity.moreInActivity.MoreBaseFragment
 import com.example.e_kengash.network.entity.more.secretariat.region.Info
-import com.example.e_kengash.network.repository.more.MoreRepository
-import com.example.e_kengash.network.viewModel.more.MoreViewModel
-import com.example.e_kengash.network.viewModelFactory.more.MoreViewModelFactory
 import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.invisible
 
 
 class SecretariatDistrict :
     MoreBaseFragment<FragmentSecretariatDistrictBinding>(FragmentSecretariatDistrictBinding::inflate),SecretariatRegionAdapter.onClickListener {
-    private lateinit var moreViewModel: MoreViewModel
-    private val adapterSec: SecretariatRegionAdapter by lazy { SecretariatRegionAdapter(this) }
+
+    private val adapterSec: SecretariatRegionAdapter by lazy { SecretariatRegionAdapter(this,requireContext(),sharePereferenseHelper.getAccessDomen2()) }
     override fun onViewCreate() {
-        setUi()
         getSecDistrictList()
     }
     private fun getSecDistrictList() {
@@ -45,16 +40,7 @@ class SecretariatDistrict :
         }
         adapterSec.setData(info)
     }
-    private fun setUi() {
-        val articleRepository = MoreRepository()
-        val articleViewModelFactory = MoreViewModelFactory(articleRepository)
-        val articleViewModel = ViewModelProvider(
-            this,
-            articleViewModelFactory
-        ).get(MoreViewModel::class.java)
-        this.moreViewModel = articleViewModel
 
-    }
 
     override fun setOnClickLister(text: String) {
 

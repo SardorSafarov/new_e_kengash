@@ -6,10 +6,9 @@ import android.content.Intent
 import android.view.LayoutInflater
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.e_kengash.R
-import com.example.e_kengash.adapter.article.ArticleAdapter
+import com.example.e_kengash.adapter.more.article.ArticleAdapter
 import com.example.e_kengash.databinding.AlertDialogSignUpBinding
 import com.example.e_kengash.databinding.FragmentHomeBinding
 import com.example.e_kengash.main.activity.login.main.LoginActivity

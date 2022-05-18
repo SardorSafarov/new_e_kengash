@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.e_kengash.network.entity.getDomen.GetDomenResponse
 import com.example.e_kengash.network.entity.more.article.ArticleResponse
+import com.example.e_kengash.network.entity.more.secretariat.data.SecretariatDataListResponse
 import com.example.e_kengash.network.entity.more.secretariat.region.SecRegionResponse
 import com.example.e_kengash.network.repository.more.MoreRepository
 import com.example.e_kengash.repetitive.D
@@ -75,6 +76,19 @@ class MoreViewModel(private val moreRepository: MoreRepository): ViewModel() {
             }
         }
     }
+
+    fun secretariatDataList(onResponse:(response:Response<SecretariatDataListResponse>)->Unit)
+    {
+        viewModelScope.launch {
+            try {
+                onResponse(moreRepository.secretariatDataList())
+            }catch (e:Exception)
+            {
+                D("MoreViewModel secretariatDataList  ${e.message}")
+            }
+        }
+    }
+
 
 
 }

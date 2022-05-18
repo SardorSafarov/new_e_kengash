@@ -10,12 +10,15 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.viewbinding.ViewBinding
 import com.example.e_kengash.data.localMemory.SharePereferenseHelper
+import com.example.e_kengash.network.repository.more.MoreRepository
 import com.example.e_kengash.network.repository.more.council.CouncilRepository
 import com.example.e_kengash.network.repository.more.senator.SenatorRepository
 import com.example.e_kengash.network.repository.more.youth.YouthRepository
+import com.example.e_kengash.network.viewModel.more.MoreViewModel
 import com.example.e_kengash.network.viewModel.more.council.CouncilViewModel
 import com.example.e_kengash.network.viewModel.more.senator.SenatorViewModel
 import com.example.e_kengash.network.viewModel.more.youth.YouthViewModel
+import com.example.e_kengash.network.viewModelFactory.more.MoreViewModelFactory
 import com.example.e_kengash.network.viewModelFactory.more.council.CouncilViewModelFactory
 import com.example.e_kengash.network.viewModelFactory.more.senator.SenatorVewModelFactory
 import com.example.e_kengash.network.viewModelFactory.more.youth.YouthViewModelFactory
@@ -33,7 +36,7 @@ abstract class MoreBaseFragment<VB : ViewBinding>(
     lateinit var councilViewModel: CouncilViewModel
     lateinit var youthViewModel: YouthViewModel
     lateinit var senatorViewModel: SenatorViewModel
-
+    lateinit var moreViewModel: MoreViewModel
 
     lateinit var sharePereferenseHelper: SharePereferenseHelper
 
@@ -44,10 +47,21 @@ abstract class MoreBaseFragment<VB : ViewBinding>(
     ): View? {
         sharePereferenseHelper = SharePereferenseHelper(requireContext())
         _binding = inflate.invoke(inflater, container, false)
+        moreSetUi()
         councilSetUi()
         youthSetUi()
         senatorSetUi()
         return binding.root
+    }
+
+    private fun moreSetUi() {
+        val moreRepository = MoreRepository()
+        val moreVewModelFactory = MoreViewModelFactory(moreRepository)
+        val moreViewModel = ViewModelProvider(
+            this,
+            moreVewModelFactory
+        ).get(MoreViewModel::class.java)
+        this.moreViewModel = moreViewModel
     }
 
     private fun senatorSetUi() {

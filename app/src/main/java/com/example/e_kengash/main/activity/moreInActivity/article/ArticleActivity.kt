@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.e_kengash.adapter.article.ArticleAdapter
+import com.example.e_kengash.adapter.more.article.ArticleAdapter
 import com.example.e_kengash.databinding.ActivityArticleBinding
 import com.example.e_kengash.network.entity.more.article.New
 import com.example.e_kengash.network.repository.more.MoreRepository
