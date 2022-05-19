@@ -5,6 +5,7 @@ import com.example.e_kengash.network.entity.more.article.ArticleResponse
 import com.example.e_kengash.network.entity.more.discussion.like.DiscussionLikeDisLikeResponse
 import com.example.e_kengash.network.entity.more.discussion.offer.DiscussionOfferListResponse
 import com.example.e_kengash.network.entity.more.discussion.offerAbout.DiscussionOfferAboutResponse
+import com.example.e_kengash.network.entity.more.discussion.offerAbout.comment.DiscussionOfferCommentsResponse
 import com.example.e_kengash.network.entity.more.secretariat.changeDeputat.SecretariatChangeDeputatDataResponse
 import com.example.e_kengash.network.entity.more.secretariat.data.SecretariatDataListResponse
 import com.example.e_kengash.network.entity.more.secretariat.region.SecRegionResponse
@@ -34,4 +35,6 @@ class MoreRepository {
     suspend fun discussionDisLike(token: String, id: String):Response<DiscussionLikeDisLikeResponse> = RetrofitBuilder().moreApi.discussionDisLike(token,id)
 
     suspend fun discussionOfferAbout( id: String):Response<DiscussionOfferAboutResponse> = RetrofitBuilder().moreApi.discussionOfferAbout(id)
+
+    suspend fun discussionOfferComment( id: String):Response<DiscussionOfferCommentsResponse> = RetrofitBuilder().moreApi.discussionOfferComment(id)
 }

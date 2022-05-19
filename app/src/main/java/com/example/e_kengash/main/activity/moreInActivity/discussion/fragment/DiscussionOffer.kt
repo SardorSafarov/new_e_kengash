@@ -73,15 +73,16 @@ class DiscussionOffer : MoreBaseFragment<FragmentDiscussionOfferBinding>(Fragmen
     }
 
     override fun itemOnclickListener(id: String) {
+        D(id)
             moreViewModel.discussionOfferAbout(id)
             {
                 when(it.isSuccessful)
                 {
                     true->{
-                        D(it.body().toString())
                         it.body()!!.apply {
                             val intent = Intent(requireContext(),DiscussionDiscriptionAbout::class.java)
                             intent.apply {
+                                putExtra("id",id)
                                 putExtra("user",user)
                                 putExtra("modified_date",modified_date)
                                 putExtra("user_image",user_image)

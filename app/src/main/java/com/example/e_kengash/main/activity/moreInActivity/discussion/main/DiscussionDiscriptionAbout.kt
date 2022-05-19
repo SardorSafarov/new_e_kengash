@@ -4,18 +4,30 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.example.e_kengash.adapter.more.discussion.DiscussionCommentAdapter
 import com.example.e_kengash.databinding.ActivityDiscussionDiscriptionAboutBinding
 import com.example.e_kengash.main.activity.notif.NotificationActivity
+import com.example.e_kengash.network.entity.more.discussion.offerAbout.comment.Result
+import com.example.e_kengash.network.repository.more.MoreRepository
+import com.example.e_kengash.network.viewModel.more.MoreViewModel
+import com.example.e_kengash.network.viewModelFactory.more.MoreViewModelFactory
+import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.statusbarcolor
+import com.example.e_kengash.repetitive.tosatLong
 
 class DiscussionDiscriptionAbout : AppCompatActivity() {
+    lateinit var moreViewModel: MoreViewModel
+    private val adapterComment:DiscussionCommentAdapter by lazy { DiscussionCommentAdapter() }
     private lateinit var binding: ActivityDiscussionDiscriptionAboutBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDiscussionDiscriptionAboutBinding.inflate(layoutInflater)
         setContentView(binding.root)
         statusbarcolor(Color.WHITE)
+        moreSetUi()
         back()
         notification()
         binding.apply {
@@ -28,12 +40,35 @@ class DiscussionDiscriptionAbout : AppCompatActivity() {
                 title.text = getStringExtra("title")
                 content.text = getStringExtra("content")
                 views.text = getStringExtra("views")
-                like.text =getStringExtra("like")
+                like.text = getStringExtra("like")
                 dislike.text = getStringExtra("dislike")
             }
         }
+        moreViewModel.discussionOfferComment(intent.getStringExtra("id").toString()) {
+            when (it.isSuccessful) {
+                true -> {
+                    binding.commentCount.text = it.body()!!.count.toString()
+                    adapterComment(it.body()!!.results)
+                }
+                else -> {
+                    tosatLong(this, "Serverda xatolik!!")
+                    D(
+                        "DiscussionDiscriptionAbout discussionOfferComment ".plus(
+                            it.errorBody()!!.string()
+                        )
+                    )
+                }
+            }
+        }
 
+    }
 
+    private fun adapterComment(results: List<Result>) {
+            binding.apply {
+                recListComment.layoutManager = LinearLayoutManager(applicationContext)
+                recListComment.adapter = adapterComment
+            }
+        adapterComment.setData(results)
     }
 
     private fun notification() {
@@ -46,5 +81,15 @@ class DiscussionDiscriptionAbout : AppCompatActivity() {
         binding.back.setOnClickListener {
             finish()
         }
+    }
+
+    private fun moreSetUi() {
+        val moreRepository = MoreRepository()
+        val moreVewModelFactory = MoreViewModelFactory(moreRepository)
+        val moreViewModel = ViewModelProvider(
+            this,
+            moreVewModelFactory
+        ).get(MoreViewModel::class.java)
+        this.moreViewModel = moreViewModel
     }
 }

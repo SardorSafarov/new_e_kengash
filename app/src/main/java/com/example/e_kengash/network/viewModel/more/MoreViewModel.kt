@@ -9,6 +9,7 @@ import com.example.e_kengash.network.entity.more.article.ArticleResponse
 import com.example.e_kengash.network.entity.more.discussion.like.DiscussionLikeDisLikeResponse
 import com.example.e_kengash.network.entity.more.discussion.offer.DiscussionOfferListResponse
 import com.example.e_kengash.network.entity.more.discussion.offerAbout.DiscussionOfferAboutResponse
+import com.example.e_kengash.network.entity.more.discussion.offerAbout.comment.DiscussionOfferCommentsResponse
 import com.example.e_kengash.network.entity.more.secretariat.changeDeputat.SecretariatChangeDeputatDataResponse
 import com.example.e_kengash.network.entity.more.secretariat.data.SecretariatDataListResponse
 import com.example.e_kengash.network.entity.more.secretariat.region.SecRegionResponse
@@ -153,7 +154,19 @@ class MoreViewModel(private val moreRepository: MoreRepository): ViewModel() {
                 onResponse(moreRepository.discussionOfferAbout(id))
             }catch (e:Exception)
             {
-                D("MoreViewModel discussionDisLike  ${e.message}")
+                D("MoreViewModel discussionOfferAbout  ${e.message}")
+            }
+        }
+    }
+
+    fun discussionOfferComment(id:String,onResponse:(response:Response<DiscussionOfferCommentsResponse>)->Unit)
+    {
+        viewModelScope.launch {
+            try {
+                onResponse(moreRepository.discussionOfferComment(id))
+            }catch (e:Exception)
+            {
+                D("MoreViewModel discussionOfferComment  ${e.message}")
             }
         }
     }

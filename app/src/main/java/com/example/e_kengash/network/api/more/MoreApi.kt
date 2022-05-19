@@ -5,6 +5,7 @@ import com.example.e_kengash.network.entity.more.article.ArticleResponse
 import com.example.e_kengash.network.entity.more.discussion.like.DiscussionLikeDisLikeResponse
 import com.example.e_kengash.network.entity.more.discussion.offer.DiscussionOfferListResponse
 import com.example.e_kengash.network.entity.more.discussion.offerAbout.DiscussionOfferAboutResponse
+import com.example.e_kengash.network.entity.more.discussion.offerAbout.comment.DiscussionOfferCommentsResponse
 import com.example.e_kengash.network.entity.more.secretariat.changeDeputat.SecretariatChangeDeputatDataResponse
 import com.example.e_kengash.network.entity.more.secretariat.data.SecretariatDataListResponse
 import com.example.e_kengash.network.entity.more.secretariat.region.SecRegionResponse
@@ -49,5 +50,8 @@ interface MoreApi {
 
     @GET("/api/v1/appeal/{id}/detail/")
     suspend fun discussionOfferAbout(@Path("id")id:String):Response<DiscussionOfferAboutResponse>
+
+    @GET("/api/v1/appeal-comment/{id}/list/")
+    suspend fun discussionOfferComment(@Path("id")id:String):Response<DiscussionOfferCommentsResponse>
 
 }

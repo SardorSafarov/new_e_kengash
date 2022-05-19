@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_marginVertical="@dimen/margin_padding_12"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="@dimen/margin_padding_24"
+        app:cardCornerRadius="100dp"
+        android:layout_gravity="center_vertical"
+        app:cardElevation="@dimen/margin_padding_0"
+        android:layout_height="@dimen/margin_padding_24">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:src="@drawable/ic_person"
+            />
+    </com.google.android.material.card.MaterialCardView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/margin_padding_12"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/f_i_o"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="#7a7a7a"
+            />
+        <TextView
+            android:id="@+id/date"
+            android:text="@string/vaqti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_10"
+            />
+    </LinearLayout>
+</LinearLayout>
+<TextView
+    android:id="@+id/contentt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="asdasdasdasdsa"
+    android:textColor="#565656"
+    />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="@dimen/margin_padding_12"
+        android:background="#999999"
+        />
+</androidx.appcompat.widget.LinearLayoutCompat>
