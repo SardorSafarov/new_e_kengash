@@ -6,6 +6,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.e_kengash.network.entity.getDomen.GetDomenResponse
 import com.example.e_kengash.network.entity.more.article.ArticleResponse
+import com.example.e_kengash.network.entity.more.discussion.commentAdd.DiscussionCommentAddRequest
+import com.example.e_kengash.network.entity.more.discussion.commentAdd.DiscussionCommentAddResponse
 import com.example.e_kengash.network.entity.more.discussion.like.DiscussionLikeDisLikeResponse
 import com.example.e_kengash.network.entity.more.discussion.offer.DiscussionOfferListResponse
 import com.example.e_kengash.network.entity.more.discussion.offerAbout.DiscussionOfferAboutResponse
@@ -167,6 +169,18 @@ class MoreViewModel(private val moreRepository: MoreRepository): ViewModel() {
             }catch (e:Exception)
             {
                 D("MoreViewModel discussionOfferComment  ${e.message}")
+            }
+        }
+    }
+
+    fun discussionOfferCommentAdd(id: String, token:String, body: DiscussionCommentAddRequest, onResponse:(response:Response<DiscussionCommentAddResponse>)->Unit)
+    {
+        viewModelScope.launch {
+            try {
+                onResponse(moreRepository.discussionOfferCommentAdd(id,token,body))
+            }catch (e:Exception)
+            {
+                D("MoreViewModel discussionOfferCommentAdd  ${e.message}")
             }
         }
     }

@@ -387,7 +387,7 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/done"
+                        android:id="@+id/btn_send_comment"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
@@ -398,8 +398,8 @@
                         android:elevation="0dp"
                         android:fontFamily="@font/gotham_pro_medium"
                         android:gravity="center"
-
-                        android:text="@string/keyingisi"
+                        android:text="@string/izohni_yuborish"
+                        android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="@dimen/text_size_14"
                         app:cornerRadius="@dimen/margin_padding_30"

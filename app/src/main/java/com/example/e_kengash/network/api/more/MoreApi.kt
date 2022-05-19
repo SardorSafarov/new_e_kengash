@@ -2,6 +2,8 @@ package com.example.e_kengash.network.api.more
 
 import com.example.e_kengash.network.entity.getDomen.GetDomenResponse
 import com.example.e_kengash.network.entity.more.article.ArticleResponse
+import com.example.e_kengash.network.entity.more.discussion.commentAdd.DiscussionCommentAddRequest
+import com.example.e_kengash.network.entity.more.discussion.commentAdd.DiscussionCommentAddResponse
 import com.example.e_kengash.network.entity.more.discussion.like.DiscussionLikeDisLikeResponse
 import com.example.e_kengash.network.entity.more.discussion.offer.DiscussionOfferListResponse
 import com.example.e_kengash.network.entity.more.discussion.offerAbout.DiscussionOfferAboutResponse
@@ -10,10 +12,7 @@ import com.example.e_kengash.network.entity.more.secretariat.changeDeputat.Secre
 import com.example.e_kengash.network.entity.more.secretariat.data.SecretariatDataListResponse
 import com.example.e_kengash.network.entity.more.secretariat.region.SecRegionResponse
 import retrofit2.Response
-import retrofit2.http.GET
-import retrofit2.http.Header
-import retrofit2.http.POST
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface MoreApi {
 
@@ -53,5 +52,8 @@ interface MoreApi {
 
     @GET("/api/v1/appeal-comment/{id}/list/")
     suspend fun discussionOfferComment(@Path("id")id:String):Response<DiscussionOfferCommentsResponse>
+
+    @POST("api/v1/appeal-comment/{id}/add/")
+    suspend fun discussionOfferCommentAdd(@Path("id")id:String,@Header("Authorization")token:String,@Body body: DiscussionCommentAddRequest):Response<DiscussionCommentAddResponse>
 
 }

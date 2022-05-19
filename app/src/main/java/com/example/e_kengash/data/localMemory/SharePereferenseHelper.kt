@@ -7,6 +7,7 @@ import com.example.e_kengash.data.constants.Constants.APP_LOCAL_MEMORY
 import com.example.e_kengash.data.constants.Constants.PHONE
 
 class SharePereferenseHelper(val context: Context) {
+
     private var preferences: SharedPreferences =
         context.getSharedPreferences(APP_LOCAL_MEMORY, Context.MODE_PRIVATE)
     private lateinit var editor: SharedPreferences.Editor

@@ -2,6 +2,8 @@ package com.example.e_kengash.network.repository.more
 
 import com.example.e_kengash.network.entity.getDomen.GetDomenResponse
 import com.example.e_kengash.network.entity.more.article.ArticleResponse
+import com.example.e_kengash.network.entity.more.discussion.commentAdd.DiscussionCommentAddRequest
+import com.example.e_kengash.network.entity.more.discussion.commentAdd.DiscussionCommentAddResponse
 import com.example.e_kengash.network.entity.more.discussion.like.DiscussionLikeDisLikeResponse
 import com.example.e_kengash.network.entity.more.discussion.offer.DiscussionOfferListResponse
 import com.example.e_kengash.network.entity.more.discussion.offerAbout.DiscussionOfferAboutResponse
@@ -11,6 +13,7 @@ import com.example.e_kengash.network.entity.more.secretariat.data.SecretariatDat
 import com.example.e_kengash.network.entity.more.secretariat.region.SecRegionResponse
 import com.example.e_kengash.network.retrofitBuilder.RetrofitBuilder
 import retrofit2.Response
+import retrofit2.http.Body
 
 class MoreRepository {
 
@@ -37,4 +40,6 @@ class MoreRepository {
     suspend fun discussionOfferAbout( id: String):Response<DiscussionOfferAboutResponse> = RetrofitBuilder().moreApi.discussionOfferAbout(id)
 
     suspend fun discussionOfferComment( id: String):Response<DiscussionOfferCommentsResponse> = RetrofitBuilder().moreApi.discussionOfferComment(id)
+
+    suspend fun discussionOfferCommentAdd(id: String,token:String,body: DiscussionCommentAddRequest):Response<DiscussionCommentAddResponse> = RetrofitBuilder().moreApi.discussionOfferCommentAdd(id,token,body)
 }
