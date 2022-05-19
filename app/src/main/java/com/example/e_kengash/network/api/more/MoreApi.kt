@@ -2,12 +2,15 @@ package com.example.e_kengash.network.api.more
 
 import com.example.e_kengash.network.entity.getDomen.GetDomenResponse
 import com.example.e_kengash.network.entity.more.article.ArticleResponse
+import com.example.e_kengash.network.entity.more.discussion.like.DiscussionLikeDisLikeResponse
 import com.example.e_kengash.network.entity.more.discussion.offer.DiscussionOfferListResponse
 import com.example.e_kengash.network.entity.more.secretariat.changeDeputat.SecretariatChangeDeputatDataResponse
 import com.example.e_kengash.network.entity.more.secretariat.data.SecretariatDataListResponse
 import com.example.e_kengash.network.entity.more.secretariat.region.SecRegionResponse
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Header
+import retrofit2.http.POST
 import retrofit2.http.Path
 
 interface MoreApi {
@@ -36,5 +39,11 @@ interface MoreApi {
 
     @GET("/api/v1/apppeal-comment/")
     suspend fun discussionOfferList():Response<DiscussionOfferListResponse>
+
+    @POST("/api/v1/appeal-comment/{id}/like/")
+    suspend fun discussionLike(@Header("Authorization") token:String,@Path("id")id:String):Response<DiscussionLikeDisLikeResponse>
+
+    @POST("/api/v1/appeal-comment/{id}/dislike/")
+    suspend fun discussionDisLike(@Header("Authorization") token:String,@Path("id")id:String):Response<DiscussionLikeDisLikeResponse>
 
 }

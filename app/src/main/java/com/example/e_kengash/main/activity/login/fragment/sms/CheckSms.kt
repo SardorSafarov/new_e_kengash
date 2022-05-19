@@ -14,6 +14,7 @@ import com.example.e_kengash.network.repository.login.LoginRepository
 import com.example.e_kengash.network.viewModel.login.LoginViewModel
 import com.example.e_kengash.network.viewModelFactory.login.LoginViewModelFactory
 import com.example.e_kengash.repetitive.D
+import com.example.e_kengash.repetitive.tosatLong
 import com.example.e_kengash.repetitive.tosatShort
 
 
@@ -60,6 +61,7 @@ class CheckSms : BaseFragment<FragmentCheckSmsBinding>(FragmentCheckSmsBinding::
                   onResponse(it.body())
                 }else
                 {
+                    tosatLong(requireContext(),"Sms code xato kiritildi!!")
                  D("CheckSms checkSms false ${it.errorBody()!!.string()}")
                 }
             }

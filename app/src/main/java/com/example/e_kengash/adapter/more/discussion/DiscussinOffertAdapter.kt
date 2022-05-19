@@ -14,7 +14,7 @@ class DiscussinOffertAdapter(private val listener:likeDislikeSetOnClickListener)
 
     private var list: MutableList<Result> = mutableListOf()
     interface likeDislikeSetOnClickListener{
-        fun onClickListener(boolean: Boolean)
+        fun onClickListener(boolean: Boolean, id: String)
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -27,10 +27,10 @@ class DiscussinOffertAdapter(private val listener:likeDislikeSetOnClickListener)
                 totalLike.text = item.total_like.toString()
                 totalDislike.text = item.total_dislike.toString()
                 like.setOnClickListener {
-                    listener.onClickListener(true)
+                    listener.onClickListener(true,item.id.toString())
                 }
                 dislike.setOnClickListener {
-                    listener.onClickListener(false)
+                    listener.onClickListener(false,item.id.toString())
                 }
             }
 

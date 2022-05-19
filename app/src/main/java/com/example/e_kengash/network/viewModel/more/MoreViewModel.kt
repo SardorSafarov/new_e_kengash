@@ -1,10 +1,12 @@
 package com.example.e_kengash.network.viewModel.more
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.e_kengash.network.entity.getDomen.GetDomenResponse
 import com.example.e_kengash.network.entity.more.article.ArticleResponse
+import com.example.e_kengash.network.entity.more.discussion.like.DiscussionLikeDisLikeResponse
 import com.example.e_kengash.network.entity.more.discussion.offer.DiscussionOfferListResponse
 import com.example.e_kengash.network.entity.more.secretariat.changeDeputat.SecretariatChangeDeputatDataResponse
 import com.example.e_kengash.network.entity.more.secretariat.data.SecretariatDataListResponse
@@ -102,14 +104,43 @@ class MoreViewModel(private val moreRepository: MoreRepository): ViewModel() {
             }
         }
     }
-    fun discussionOfferList(onResponse:(response:Response<DiscussionOfferListResponse>)->Unit)
+
+    private val _discussionOfferList = MutableLiveData<Response<DiscussionOfferListResponse>>()
+    val discussionOfferList: LiveData<Response<DiscussionOfferListResponse>>
+        get() = _discussionOfferList
+
+    fun discussionOfferList()
     {
         viewModelScope.launch {
             try {
-                onResponse(moreRepository.discussionOfferList())
+              _discussionOfferList.value = moreRepository.discussionOfferList()
             }catch (e:Exception)
             {
                 D("MoreViewModel discussionOfferList  ${e.message}")
+            }
+        }
+    }
+
+    fun discussionLike(token:String,id:String,onResponse:(response:Response<DiscussionLikeDisLikeResponse>)->Unit)
+    {
+        viewModelScope.launch {
+            try {
+                onResponse(moreRepository.discussionLike(token,id))
+            }catch (e:Exception)
+            {
+                D("MoreViewModel discussionLike  ${e.message}")
+            }
+        }
+    }
+
+    fun discussionDisLike(token:String,id:String,onResponse:(response:Response<DiscussionLikeDisLikeResponse>)->Unit)
+    {
+        viewModelScope.launch {
+            try {
+                onResponse(moreRepository.discussionDisLike(token,id))
+            }catch (e:Exception)
+            {
+                D("MoreViewModel discussionDisLike  ${e.message}")
             }
         }
     }
