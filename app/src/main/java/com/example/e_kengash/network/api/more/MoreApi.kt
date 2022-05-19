@@ -4,6 +4,7 @@ import com.example.e_kengash.network.entity.getDomen.GetDomenResponse
 import com.example.e_kengash.network.entity.more.article.ArticleResponse
 import com.example.e_kengash.network.entity.more.discussion.like.DiscussionLikeDisLikeResponse
 import com.example.e_kengash.network.entity.more.discussion.offer.DiscussionOfferListResponse
+import com.example.e_kengash.network.entity.more.discussion.offerAbout.DiscussionOfferAboutResponse
 import com.example.e_kengash.network.entity.more.secretariat.changeDeputat.SecretariatChangeDeputatDataResponse
 import com.example.e_kengash.network.entity.more.secretariat.data.SecretariatDataListResponse
 import com.example.e_kengash.network.entity.more.secretariat.region.SecRegionResponse
@@ -45,5 +46,8 @@ interface MoreApi {
 
     @POST("/api/v1/appeal-comment/{id}/dislike/")
     suspend fun discussionDisLike(@Header("Authorization") token:String,@Path("id")id:String):Response<DiscussionLikeDisLikeResponse>
+
+    @GET("/api/v1/appeal/{id}/detail/")
+    suspend fun discussionOfferAbout(@Path("id")id:String):Response<DiscussionOfferAboutResponse>
 
 }

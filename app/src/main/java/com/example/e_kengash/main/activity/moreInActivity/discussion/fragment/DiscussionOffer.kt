@@ -1,10 +1,12 @@
 package com.example.e_kengash.main.activity.moreInActivity.discussion.fragment
 
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.e_kengash.adapter.more.discussion.DiscussinOffertAdapter
 import com.example.e_kengash.databinding.FragmentDiscussionOfferBinding
 import com.example.e_kengash.main.activity.moreInActivity.MoreBaseFragment
+import com.example.e_kengash.main.activity.moreInActivity.discussion.main.DiscussionDiscriptionAbout
 import com.example.e_kengash.network.entity.more.discussion.offer.Result
 import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.invisible
@@ -38,11 +40,7 @@ class DiscussionOffer : MoreBaseFragment<FragmentDiscussionOfferBinding>(Fragmen
         adapter.setData(results)
     }
 
-    override fun onClickListener(boolean: Boolean, id: String) {
-        D(sharePereferenseHelper.getAccessToken())
-        D(boolean.toString())
-        D(id)
-
+    override fun likeDisLike(boolean: Boolean, id: String) {
       when(boolean)
       {
           true->{
@@ -72,6 +70,38 @@ class DiscussionOffer : MoreBaseFragment<FragmentDiscussionOfferBinding>(Fragmen
               }
           }
       }
+    }
+
+    override fun itemOnclickListener(id: String) {
+            moreViewModel.discussionOfferAbout(id)
+            {
+                when(it.isSuccessful)
+                {
+                    true->{
+                        D(it.body().toString())
+                        it.body()!!.apply {
+                            val intent = Intent(requireContext(),DiscussionDiscriptionAbout::class.java)
+                            intent.apply {
+                                putExtra("user",user)
+                                putExtra("modified_date",modified_date)
+                                putExtra("user_image",user_image)
+                                putExtra("direction",direction)
+                                putExtra("status",status)
+                                putExtra("title",title)
+                                putExtra("content",content)
+                                putExtra("views",views.toString())
+                                putExtra("like",like.toString())
+                                putExtra("dislike",dislike.toString())
+                            }
+                            startActivity(intent)
+                        }
+                    }
+                    else->{
+                        tosatLong(requireContext(),"Serverda xatolik!!!")
+                        D(it.errorBody()!!.string())
+                    }
+                }
+            }
     }
 
 }
