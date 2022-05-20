@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activities_navigation"
+    app:startDestination="@id/activitiesAll">
+
+    <fragment
+        android:id="@+id/activitiesAll"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.activities.fragment.ActivitiesAll"
+        android:label="fragment_activities_all"
+        tools:layout="@layout/fragment_activities_all" />
+    <fragment
+        android:id="@+id/activitiesNews"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.activities.fragment.ActivitiesNews"
+        android:label="fragment_activities_news"
+        tools:layout="@layout/fragment_activities_news" />
+    <fragment
+        android:id="@+id/activitesSessiya"
+        android:name="com.example.e_kengash.main.activity.moreInActivity.activities.fragment.ActivitesSessiya"
+        android:label="fragment_activites_sessiya"
+        tools:layout="@layout/fragment_activites_sessiya" />
+</navigation>

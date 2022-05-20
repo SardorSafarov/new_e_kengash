@@ -9,7 +9,7 @@ import com.example.e_kengash.databinding.FragmentMoreBinding
 import com.example.e_kengash.main.activity.mainActivity.MainActivity
 import com.example.e_kengash.main.activity.moreInActivity.aboutProgramma.main.AboutProgrammaActivity
 import com.example.e_kengash.main.activity.moreInActivity.acceptance.main.AcceptanceActivity
-import com.example.e_kengash.main.activity.moreInActivity.activitys.main.ActivitysActivity
+import com.example.e_kengash.main.activity.moreInActivity.activities.main.ActivitiesActivity
 import com.example.e_kengash.main.activity.moreInActivity.article.ArticleActivity
 import com.example.e_kengash.main.activity.moreInActivity.commission.main.CommissionActivity
 import com.example.e_kengash.main.activity.moreInActivity.council.main.CouncilActivity
@@ -46,7 +46,7 @@ class More : BaseFragment<FragmentMoreBinding>(FragmentMoreBinding::inflate) {
                 startActivity(Intent(requireContext(), DiscussionActivity::class.java))
             }
             activitys.setOnClickListener {
-                startActivity(Intent(requireContext(), ActivitysActivity::class.java))
+                startActivity(Intent(requireContext(), ActivitiesActivity::class.java))
             }
             commission.setOnClickListener {
                 startActivity(Intent(requireContext(), CommissionActivity::class.java))

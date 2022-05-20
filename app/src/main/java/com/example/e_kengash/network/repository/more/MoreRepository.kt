@@ -1,6 +1,7 @@
 package com.example.e_kengash.network.repository.more
 
 import com.example.e_kengash.network.entity.getDomen.GetDomenResponse
+import com.example.e_kengash.network.entity.more.activites.ActivitiesAllResponse
 import com.example.e_kengash.network.entity.more.article.ArticleResponse
 import com.example.e_kengash.network.entity.more.discussion.commentAdd.DiscussionCommentAddRequest
 import com.example.e_kengash.network.entity.more.discussion.commentAdd.DiscussionCommentAddResponse
@@ -42,4 +43,8 @@ class MoreRepository {
     suspend fun discussionOfferComment( id: String):Response<DiscussionOfferCommentsResponse> = RetrofitBuilder().moreApi.discussionOfferComment(id)
 
     suspend fun discussionOfferCommentAdd(id: String,token:String,body: DiscussionCommentAddRequest):Response<DiscussionCommentAddResponse> = RetrofitBuilder().moreApi.discussionOfferCommentAdd(id,token,body)
+
+    suspend fun activitesAllList():Response<ActivitiesAllResponse> = RetrofitBuilder().moreApi.activitesAllList()
+
+    suspend fun activitesNewsList():Response<ActivitiesAllResponse> = RetrofitBuilder().moreApi.activitesNewsList()
 }

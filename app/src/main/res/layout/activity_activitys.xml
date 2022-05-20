@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/main_background"
     android:layout_height="match_parent"
-    tools:context=".main.activity.moreInActivity.activitys.main.ActivitysActivity">
+    android:background="@color/main_background"
+    android:orientation="vertical"
+    tools:context=".main.activity.moreInActivity.activities.main.ActivitiesActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/appbar"
@@ -96,6 +97,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView2"
+        android:layout_marginTop="@dimen/margin_padding_12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_padding_24"
@@ -107,12 +109,11 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/margin_padding_8"
             android:layout_gravity="center_horizontal"
             android:weightSum="3">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/btn_offer"
+                android:id="@+id/btn_all"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_padding_8"
@@ -124,7 +125,7 @@
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/btn_i"
+                android:id="@+id/btn_new"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_padding_8"
@@ -135,7 +136,7 @@
                 android:textColor="@color/gray" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/btn_iq"
+                android:id="@+id/btn_sesiya"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_padding_8"
@@ -147,10 +148,16 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
     </com.google.android.material.card.MaterialCardView>
 
-    <ImageView
+    <fragment
+        android:id="@+id/activities_nav_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:src="@drawable/img_activitys"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/margin_padding_24"
+        android:layout_marginTop="@dimen/margin_padding_12"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView2" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView2"
+        app:navGraph="@navigation/activities_navigation" />
+</LinearLayout>

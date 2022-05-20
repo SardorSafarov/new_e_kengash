@@ -1,4 +1,4 @@
-package com.example.e_kengash.main.activity.moreInActivity.activitys.main
+package com.example.e_kengash.main.activity.moreInActivity.activities.main
 
 import android.content.Intent
 import android.graphics.Color
@@ -11,7 +11,7 @@ import com.example.e_kengash.databinding.ActivityActivitysBinding
 import com.example.e_kengash.main.activity.notif.NotificationActivity
 import com.example.e_kengash.repetitive.statusbarcolor
 
-class ActivitysActivity : AppCompatActivity() {
+class ActivitiesActivity : AppCompatActivity() {
     private lateinit var binding:ActivityActivitysBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,23 +20,24 @@ class ActivitysActivity : AppCompatActivity() {
         statusbarcolor(Color.WHITE)
         back()
         notification()
+        navigationFragment()
     }
-//    private fun navigationFragment() {
-//        binding.apply {
-//            btnData.setOnClickListener {
-//                bgBtn(btnData, btnDk,btnRegulation)
-//                findNavController(R.id.commission_nav_fragment).navigate(R.id.commissionData)
-//            }
-//            btnDk.setOnClickListener {
-//                bgBtn(btnDk, btnData, btnRegulation)
-//                findNavController(R.id.commission_nav_fragment).navigate(R.id.commissionDK)
-//            }
-//            btnRegulation.setOnClickListener {
-//                bgBtn(btnRegulation, btnDk, btnData)
-//                findNavController(R.id.commission_nav_fragment).navigate(R.id.commissionRegulation)
-//            }
-//        }
-//    }
+    private fun navigationFragment() {
+        binding.apply {
+            btnAll.setOnClickListener {
+                bgBtn(btnAll, btnNew,btnSesiya)
+                findNavController(R.id.activities_nav_fragment).navigate(R.id.activitiesAll)
+            }
+            btnNew.setOnClickListener {
+                bgBtn(btnNew, btnAll,btnSesiya)
+                findNavController(R.id.activities_nav_fragment).navigate(R.id.activitiesNews)
+            }
+            btnSesiya.setOnClickListener {
+                bgBtn(btnSesiya,btnNew, btnAll)
+                findNavController(R.id.activities_nav_fragment).navigate(R.id.activitesSessiya)
+            }
+        }
+    }
 
     private fun bgBtn(
         btn1: AppCompatTextView,

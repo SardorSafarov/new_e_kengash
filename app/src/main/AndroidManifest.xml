@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Ekengash"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ActivitiesAbout"
+            android:exported="false" />
+        <activity
             android:name=".main.activity.moreInActivity.AboutSenatorActivity"
             android:exported="false" />
         <activity
@@ -61,7 +64,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".main.activity.moreInActivity.activitys.main.ActivitysActivity"
+            android:name=".main.activity.moreInActivity.activities.main.ActivitiesActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
