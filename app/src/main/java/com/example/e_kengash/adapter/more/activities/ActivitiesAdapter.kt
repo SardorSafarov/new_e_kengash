@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.ItemHomeNewsBinding
-import com.example.e_kengash.network.entity.more.activites.New
+import com.example.e_kengash.network.entity.more.activites.all.New
 
 
 
@@ -17,7 +17,7 @@ class ActivitiesAdapter(private val listener: onClickListener,private val contex
 
     private var list: ArrayList<New> = arrayListOf()
     interface onClickListener{
-        fun itemSetOnClickLister(text: String)
+        fun itemSetOnClickLister(id: String)
     }
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val bind = ItemHomeNewsBinding.bind(itemView)
@@ -26,6 +26,9 @@ class ActivitiesAdapter(private val listener: onClickListener,private val contex
                 title.text = item.title
                 time.text = item.date
                 Glide.with(context).load(domen.plus(item.image)).into(image)
+            }
+            itemView.setOnClickListener {
+                listener.itemSetOnClickLister(item.id.toString())
             }
 
         }

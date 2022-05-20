@@ -1,16 +1,10 @@
 package com.example.e_kengash.main.activity.moreInActivity.activities.fragment
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.e_kengash.R
 import com.example.e_kengash.adapter.more.activities.ActivitiesAdapter
 import com.example.e_kengash.databinding.FragmentActivitesSessiyaBinding
 import com.example.e_kengash.main.activity.moreInActivity.MoreBaseFragment
-import com.example.e_kengash.network.entity.more.activites.New
+import com.example.e_kengash.network.entity.more.activites.all.New
 import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.invisible
 import com.example.e_kengash.repetitive.tosatLong

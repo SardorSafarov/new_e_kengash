@@ -5,7 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.e_kengash.network.entity.getDomen.GetDomenResponse
-import com.example.e_kengash.network.entity.more.activites.ActivitiesAllResponse
+import com.example.e_kengash.network.entity.more.activites.about.ActivitesAboutResponse
+import com.example.e_kengash.network.entity.more.activites.all.ActivitiesAllResponse
 import com.example.e_kengash.network.entity.more.article.ArticleResponse
 import com.example.e_kengash.network.entity.more.discussion.commentAdd.DiscussionCommentAddRequest
 import com.example.e_kengash.network.entity.more.discussion.commentAdd.DiscussionCommentAddResponse
@@ -203,6 +204,18 @@ class MoreViewModel(private val moreRepository: MoreRepository): ViewModel() {
         viewModelScope.launch {
             try {
                 onResponse(moreRepository.activitesNewsList())
+            }catch (e:Exception)
+            {
+                D("MoreViewModel activitesNewsList  ${e.message}")
+            }
+        }
+    }
+
+    fun activitesAbout(id:String,onResponse:(response:Response<ActivitesAboutResponse>)->Unit)
+    {
+        viewModelScope.launch {
+            try {
+                onResponse(moreRepository.activitesAbout(id))
             }catch (e:Exception)
             {
                 D("MoreViewModel activitesNewsList  ${e.message}")

@@ -1,7 +1,8 @@
 package com.example.e_kengash.network.repository.more
 
 import com.example.e_kengash.network.entity.getDomen.GetDomenResponse
-import com.example.e_kengash.network.entity.more.activites.ActivitiesAllResponse
+import com.example.e_kengash.network.entity.more.activites.about.ActivitesAboutResponse
+import com.example.e_kengash.network.entity.more.activites.all.ActivitiesAllResponse
 import com.example.e_kengash.network.entity.more.article.ArticleResponse
 import com.example.e_kengash.network.entity.more.discussion.commentAdd.DiscussionCommentAddRequest
 import com.example.e_kengash.network.entity.more.discussion.commentAdd.DiscussionCommentAddResponse
@@ -14,7 +15,6 @@ import com.example.e_kengash.network.entity.more.secretariat.data.SecretariatDat
 import com.example.e_kengash.network.entity.more.secretariat.region.SecRegionResponse
 import com.example.e_kengash.network.retrofitBuilder.RetrofitBuilder
 import retrofit2.Response
-import retrofit2.http.Body
 
 class MoreRepository {
 
@@ -47,4 +47,6 @@ class MoreRepository {
     suspend fun activitesAllList():Response<ActivitiesAllResponse> = RetrofitBuilder().moreApi.activitesAllList()
 
     suspend fun activitesNewsList():Response<ActivitiesAllResponse> = RetrofitBuilder().moreApi.activitesNewsList()
+
+    suspend fun activitesAbout(id: String):Response<ActivitesAboutResponse> = RetrofitBuilder().moreApi.activitesAbout(id)
 }

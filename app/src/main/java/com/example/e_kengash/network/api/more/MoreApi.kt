@@ -1,7 +1,8 @@
 package com.example.e_kengash.network.api.more
 
 import com.example.e_kengash.network.entity.getDomen.GetDomenResponse
-import com.example.e_kengash.network.entity.more.activites.ActivitiesAllResponse
+import com.example.e_kengash.network.entity.more.activites.about.ActivitesAboutResponse
+import com.example.e_kengash.network.entity.more.activites.all.ActivitiesAllResponse
 import com.example.e_kengash.network.entity.more.article.ArticleResponse
 import com.example.e_kengash.network.entity.more.discussion.commentAdd.DiscussionCommentAddRequest
 import com.example.e_kengash.network.entity.more.discussion.commentAdd.DiscussionCommentAddResponse
@@ -62,5 +63,7 @@ interface MoreApi {
     @GET("/api/v1/summits/")
     suspend fun activitesNewsList():Response<ActivitiesAllResponse>
 
+    @GET("api/v1/event/{id}/detail")
+    suspend fun activitesAbout(@Path("id")id:String):Response<ActivitesAboutResponse>
 
 }

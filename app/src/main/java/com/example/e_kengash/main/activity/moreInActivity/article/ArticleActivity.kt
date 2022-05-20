@@ -14,6 +14,7 @@ import com.example.e_kengash.network.viewModel.more.MoreViewModel
 import com.example.e_kengash.network.viewModelFactory.more.MoreViewModelFactory
 import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.gone
+import com.example.e_kengash.repetitive.invisible
 import com.example.e_kengash.repetitive.statusbarcolor
 
 class ArticleActivity : AppCompatActivity(),ArticleAdapter.onClickListener {
@@ -42,7 +43,6 @@ class ArticleActivity : AppCompatActivity(),ArticleAdapter.onClickListener {
             if(it.isSuccessful)
             {
                 onResponse(it.body()!!.news)
-                binding.progressBar.gone()
             }
             else
             {
@@ -52,6 +52,7 @@ class ArticleActivity : AppCompatActivity(),ArticleAdapter.onClickListener {
     }
 
     private fun onResponse(news: List<New>) {
+        binding.progressBar.invisible()
         binding.recList.apply {
             adapter = adapterArticle
             layoutManager = LinearLayoutManager(this@ArticleActivity)
