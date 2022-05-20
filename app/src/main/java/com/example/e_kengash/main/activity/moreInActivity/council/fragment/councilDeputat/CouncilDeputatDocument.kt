@@ -53,7 +53,6 @@ class CouncilDeputatDocument :
                 .setAllowedOverMetered(true)
         val dm = activity?.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
         dm.enqueue(request)
-
     }
 
 }

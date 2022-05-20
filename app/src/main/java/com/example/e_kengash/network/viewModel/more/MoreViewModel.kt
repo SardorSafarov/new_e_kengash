@@ -14,6 +14,7 @@ import com.example.e_kengash.network.entity.more.discussion.like.DiscussionLikeD
 import com.example.e_kengash.network.entity.more.discussion.offer.DiscussionOfferListResponse
 import com.example.e_kengash.network.entity.more.discussion.offerAbout.DiscussionOfferAboutResponse
 import com.example.e_kengash.network.entity.more.discussion.offerAbout.comment.DiscussionOfferCommentsResponse
+import com.example.e_kengash.network.entity.more.document.DocumentListResponse
 import com.example.e_kengash.network.entity.more.secretariat.changeDeputat.SecretariatChangeDeputatDataResponse
 import com.example.e_kengash.network.entity.more.secretariat.data.SecretariatDataListResponse
 import com.example.e_kengash.network.entity.more.secretariat.region.SecRegionResponse
@@ -218,7 +219,18 @@ class MoreViewModel(private val moreRepository: MoreRepository): ViewModel() {
                 onResponse(moreRepository.activitesAbout(id))
             }catch (e:Exception)
             {
-                D("MoreViewModel activitesNewsList  ${e.message}")
+                D("MoreViewModel activitesAbout  ${e.message}")
+            }
+        }
+    }
+    fun getDocumentList(onResponse:(response:Response<DocumentListResponse>)->Unit)
+    {
+        viewModelScope.launch {
+            try {
+                onResponse(moreRepository.getDocumentList())
+            }catch (e:Exception)
+            {
+                D("MoreViewModel getDocumentList  ${e.message}")
             }
         }
     }

@@ -10,6 +10,7 @@ import com.example.e_kengash.network.entity.more.discussion.like.DiscussionLikeD
 import com.example.e_kengash.network.entity.more.discussion.offer.DiscussionOfferListResponse
 import com.example.e_kengash.network.entity.more.discussion.offerAbout.DiscussionOfferAboutResponse
 import com.example.e_kengash.network.entity.more.discussion.offerAbout.comment.DiscussionOfferCommentsResponse
+import com.example.e_kengash.network.entity.more.document.DocumentListResponse
 import com.example.e_kengash.network.entity.more.secretariat.changeDeputat.SecretariatChangeDeputatDataResponse
 import com.example.e_kengash.network.entity.more.secretariat.data.SecretariatDataListResponse
 import com.example.e_kengash.network.entity.more.secretariat.region.SecRegionResponse
@@ -49,4 +50,6 @@ class MoreRepository {
     suspend fun activitesNewsList():Response<ActivitiesAllResponse> = RetrofitBuilder().moreApi.activitesNewsList()
 
     suspend fun activitesAbout(id: String):Response<ActivitesAboutResponse> = RetrofitBuilder().moreApi.activitesAbout(id)
+
+    suspend fun getDocumentList():Response<DocumentListResponse> = RetrofitBuilder().moreApi.getDocumentList()
 }

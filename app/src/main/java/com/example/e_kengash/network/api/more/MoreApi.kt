@@ -10,6 +10,7 @@ import com.example.e_kengash.network.entity.more.discussion.like.DiscussionLikeD
 import com.example.e_kengash.network.entity.more.discussion.offer.DiscussionOfferListResponse
 import com.example.e_kengash.network.entity.more.discussion.offerAbout.DiscussionOfferAboutResponse
 import com.example.e_kengash.network.entity.more.discussion.offerAbout.comment.DiscussionOfferCommentsResponse
+import com.example.e_kengash.network.entity.more.document.DocumentListResponse
 import com.example.e_kengash.network.entity.more.secretariat.changeDeputat.SecretariatChangeDeputatDataResponse
 import com.example.e_kengash.network.entity.more.secretariat.data.SecretariatDataListResponse
 import com.example.e_kengash.network.entity.more.secretariat.region.SecRegionResponse
@@ -27,6 +28,7 @@ interface MoreApi {
     @GET("/api/v1/news")
     suspend fun newsList():Response<ArticleResponse>
 
+    /*-----------Secretatiat-----------------------*/
     @GET("/api/v1/secretariat-region")
     suspend fun secretariatRegionList():Response<SecRegionResponse>
 
@@ -38,6 +40,8 @@ interface MoreApi {
 
     @GET("/api/v1/secretariat/{id}/info/")
     suspend fun secretariatChangeDeputatData(@Path("id")id:String):Response<SecretariatChangeDeputatDataResponse>
+
+    /*---------------Discussion------------------*/
 
     @GET("/api/v1/apppeal-comment/")
     suspend fun discussionOfferList():Response<DiscussionOfferListResponse>
@@ -57,6 +61,8 @@ interface MoreApi {
     @POST("api/v1/appeal-comment/{id}/add/")
     suspend fun discussionOfferCommentAdd(@Path("id")id:String,@Header("Authorization")token:String,@Body body: DiscussionCommentAddRequest):Response<DiscussionCommentAddResponse>
 
+    /*----------Activities---------------*/
+
     @GET("/api/v1/events/")
     suspend fun activitesAllList():Response<ActivitiesAllResponse>
 
@@ -66,4 +72,7 @@ interface MoreApi {
     @GET("api/v1/event/{id}/detail")
     suspend fun activitesAbout(@Path("id")id:String):Response<ActivitesAboutResponse>
 
+    /*---------Document-----------------------*/
+    @GET("mobile/mobile_law_decision")
+    suspend fun getDocumentList():Response<DocumentListResponse>
 }

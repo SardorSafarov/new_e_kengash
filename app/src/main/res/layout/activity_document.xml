@@ -93,14 +93,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appbar">
 
+        <ProgressBar
+            android:id="@+id/progress_Bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/blue" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_padding_12"
             android:text="@string/hujjatlar"
-            android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="@dimen/text_size_18" />
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
@@ -194,6 +202,13 @@
                 android:text="@string/yo_nalish_nuqtasiz" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_list"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_padding_12"
+            tools:listitem="@layout/item_document_list" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.constraintlayout.widget.ConstraintLayout>
