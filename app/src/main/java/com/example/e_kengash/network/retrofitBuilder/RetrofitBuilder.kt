@@ -2,6 +2,7 @@ package com.example.e_kengash.network.retrofitBuilder
 
 import com.example.e_kengash.data.constants.Constants.BASE_URL
 import com.example.e_kengash.network.api.appealsSend.AppealsSendApi
+import com.example.e_kengash.network.api.chat.ChatApi
 import com.example.e_kengash.network.api.login.LoginApi
 import com.example.e_kengash.network.api.more.MoreApi
 import com.example.e_kengash.network.api.more.concil.CouncilApi
@@ -46,5 +47,9 @@ class RetrofitBuilder {
 
     val senatorApi: SenatorApi by lazy {
         retrofit.create(SenatorApi::class.java)
+    }
+
+    val chatApi: ChatApi by lazy {
+        retrofit.create(ChatApi::class.java)
     }
 }

@@ -1,10 +1,8 @@
 package com.example.e_kengash.main.activity.moreInActivity.youth.fragment
 
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.e_kengash.adapter.more.youth.YouthDataAdapter
 import com.example.e_kengash.databinding.FragmentYouthDataBinding
 import com.example.e_kengash.main.activity.moreInActivity.MoreBaseFragment
-import com.example.e_kengash.network.entity.more.youth.data.Info
 import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.gone
 import com.example.e_kengash.repetitive.invisible

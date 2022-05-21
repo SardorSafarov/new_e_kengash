@@ -3,6 +3,7 @@ package com.example.e_kengash.network.viewModel.more.council
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.e_kengash.network.entity.more.council.CouncilDistrictListResponse
 import com.example.e_kengash.network.entity.more.council.changeDeputat.activity.ChangeDeputatActivityResponse
 import com.example.e_kengash.network.entity.more.council.changeDeputat.article.ChangeDeputatArticleResponse
 import com.example.e_kengash.network.entity.more.council.changeDeputat.doc.ChangeDeputatDocResponse
@@ -85,6 +86,18 @@ class CouncilViewModel(private val councilRepository: CouncilRepository) : ViewM
                 onResponse(councilRepository.changeDeputatDoc(id))
             } catch (e: Exception) {
                 D("CouncilViewModel  changeDeputatDoc  ${e.message}")
+            }
+        }
+    }
+
+    fun getDistrict(
+        onResponse: (response: Response<CouncilDistrictListResponse>) -> Unit
+    ) {
+        viewModelScope.launch {
+            try {
+                onResponse(councilRepository.getDistrict())
+            } catch (e: Exception) {
+                D("CouncilViewModel  getDistrict  ${e.message}")
             }
         }
     }

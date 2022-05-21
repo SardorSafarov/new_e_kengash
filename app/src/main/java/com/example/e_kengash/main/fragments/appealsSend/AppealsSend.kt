@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.e_kengash.R
 import com.example.e_kengash.adapter.appealsSend.bottomSheet.*
+import com.example.e_kengash.adapter.entity.AddressEntity
 import com.example.e_kengash.databinding.BottomSheetDialogAppealsSendBinding
 import com.example.e_kengash.databinding.FragmentAppealsSendBinding
 import com.example.e_kengash.main.activity.myAppealsSendSuccess.MyAppealsSendSuccess
@@ -210,7 +211,11 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
             adapter = mfyAdapter
             layoutManager = LinearLayoutManager(requireContext())
         }
-        mfyAdapter.setData(addresses.addresses)
+        var a = ArrayList<AddressEntity>()
+        addresses.addresses.forEach {
+            a.add(AddressEntity(it.id,it.name))
+        }
+        mfyAdapter.setData(a)
     }
 
 
@@ -239,8 +244,8 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
         bottomSheetDiaolg.dismiss()
     }
 
-    override fun setOnClickListerMFY(item: com.example.e_kengash.network.entity.appealsSend.district.Addresse) {
-        mfy =item.id
+    override fun setOnClickListerMFY(item: AddressEntity) {
+        mfy = item.id
         binding.mfy.text = item.name
         bottomSheetDiaolg.dismiss()
     }

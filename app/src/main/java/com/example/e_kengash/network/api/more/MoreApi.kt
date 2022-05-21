@@ -75,4 +75,7 @@ interface MoreApi {
     /*---------Document-----------------------*/
     @GET("mobile/mobile_law_decision")
     suspend fun getDocumentList():Response<DocumentListResponse>
+
+
+
 }

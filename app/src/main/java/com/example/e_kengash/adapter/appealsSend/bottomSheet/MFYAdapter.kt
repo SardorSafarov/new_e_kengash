@@ -5,19 +5,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.e_kengash.R
+import com.example.e_kengash.adapter.entity.AddressEntity
 import com.example.e_kengash.databinding.ItemBottomSheetDiaolgAppealsBinding
-import com.example.e_kengash.network.entity.appealsSend.district.Addresse
 
 
 class MFYAdapter(private val listener: onClickListener) : RecyclerView.Adapter<MFYAdapter.ViewHolder>() {
 
-    private var list: MutableList<Addresse> = mutableListOf()
+    private var list: MutableList<AddressEntity> = mutableListOf()
     interface onClickListener{
-        fun setOnClickListerMFY(text: Addresse)
+        fun setOnClickListerMFY(text: AddressEntity)
     }
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val bind = ItemBottomSheetDiaolgAppealsBinding.bind(itemView)
-        fun item(item: Addresse) {
+        fun item(item: AddressEntity) {
             bind.title.text = item.name
             itemView.setOnClickListener {
                 listener.setOnClickListerMFY(item)
@@ -38,8 +38,8 @@ class MFYAdapter(private val listener: onClickListener) : RecyclerView.Adapter<M
 
     override fun getItemCount(): Int = list.size
 
-    fun setData(list: List<Addresse>) {
-        this.list = list as MutableList<Addresse>
+    fun setData(list: ArrayList<AddressEntity>) {
+        this.list = list
         notifyDataSetChanged()
     }
 }

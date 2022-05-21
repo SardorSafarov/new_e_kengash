@@ -1,14 +1,9 @@
 package com.example.e_kengash.main.fragments.chat
 
 import android.content.Intent
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import com.example.e_kengash.R
 import com.example.e_kengash.databinding.FragmentChatBinding
 import com.example.e_kengash.main.fragments.baseFragment.BaseFragment
+import com.example.e_kengash.network.viewModel.chat.ChatViewModel
 
 class Chat : BaseFragment<FragmentChatBinding>(FragmentChatBinding::inflate) {
     private val GALLERY_REQUEST = 2
@@ -20,6 +15,6 @@ class Chat : BaseFragment<FragmentChatBinding>(FragmentChatBinding::inflate) {
                 startActivityForResult(intent,GALLERY_REQUEST)
             }
         }
+//        chatViewModel.sendMessage(sharePereferenseHelper.getAccessToken(),)
     }
-
 }

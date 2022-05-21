@@ -20,6 +20,8 @@
         android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_list"
+        tools:listitem="@layout/item_chat_message_send"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1" />

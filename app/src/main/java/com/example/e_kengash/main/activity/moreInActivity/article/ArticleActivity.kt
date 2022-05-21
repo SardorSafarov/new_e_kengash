@@ -13,7 +13,6 @@ import com.example.e_kengash.network.repository.more.MoreRepository
 import com.example.e_kengash.network.viewModel.more.MoreViewModel
 import com.example.e_kengash.network.viewModelFactory.more.MoreViewModelFactory
 import com.example.e_kengash.repetitive.D
-import com.example.e_kengash.repetitive.gone
 import com.example.e_kengash.repetitive.invisible
 import com.example.e_kengash.repetitive.statusbarcolor
 
