@@ -1,5 +1,6 @@
 package com.example.e_kengash.main.activity.moreInActivity.council.main
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -16,7 +17,6 @@ import com.example.e_kengash.repetitive.statusbarcolor
 
 class CouncilDeputatAbout : AppCompatActivity() {
     private lateinit var binding:ActivityCouncilDeputatAboutBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCouncilDeputatAboutBinding.inflate(layoutInflater)
@@ -27,13 +27,14 @@ class CouncilDeputatAbout : AppCompatActivity() {
         navigationFragment()
         deputatData()
     }
-
     private fun deputatData() {
-        Glide.with(applicationContext)
-            .load("http://e-kengash.uz/media/user/anonim_VdwOVaO.jpg")
-            .into(binding.image)
         binding.fullName.text = intent.getStringExtra("full_name")
-
+    }
+    override fun onResume() {
+        super.onResume()
+        Glide.with(baseContext)
+            .load(intent.getStringExtra("image").toString())
+            .into(binding.image)
     }
 
     private fun navigationFragment() {

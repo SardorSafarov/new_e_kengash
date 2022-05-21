@@ -1,25 +1,31 @@
 package com.example.e_kengash.adapter.more.council
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.ItemSecretariatRegionBinding
 import com.example.e_kengash.network.entity.more.council.deputat.Deputy
 
 
-class CouncilDeputatAdapter(private val listener: onClickListener ) : RecyclerView.Adapter<CouncilDeputatAdapter.ViewHolder>() {
+class CouncilDeputatAdapter(private val listener: onClickListener,private val context: Context,private val domen:String) :
+    RecyclerView.Adapter<CouncilDeputatAdapter.ViewHolder>() {
 
     private var list: MutableList<Deputy> = mutableListOf()
-    interface onClickListener{
+
+    interface onClickListener {
         fun setOnClickLister(id: Deputy)
     }
+
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val bind = ItemSecretariatRegionBinding.bind(itemView)
         fun item(item: Deputy) {
             bind.apply {
-              fullName.text = item.full_name
+                Glide.with(context).load(domen.plus(item.image)).into(image)
+                fullName.text = item.full_name
                 position.text = item.position
             }
             itemView.setOnClickListener {
@@ -35,7 +41,7 @@ class CouncilDeputatAdapter(private val listener: onClickListener ) : RecyclerVi
         LayoutInflater.from(parent.context).inflate(R.layout.item_secretariat_region, parent, false)
     )
 
-    override fun onBindViewHolder(holder: CouncilDeputatAdapter.ViewHolder,position: Int) {
+    override fun onBindViewHolder(holder: CouncilDeputatAdapter.ViewHolder, position: Int) {
         holder.item(list[position])
     }
 

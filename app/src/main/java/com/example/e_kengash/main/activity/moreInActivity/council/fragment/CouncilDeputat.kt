@@ -13,7 +13,7 @@ import com.example.e_kengash.repetitive.invisible
 
 class CouncilDeputat : MoreBaseFragment<FragmentCouncilDeputatBinding>(FragmentCouncilDeputatBinding::inflate),CouncilDeputatAdapter.onClickListener {
 
-    private val councilDeputatAdapter:CouncilDeputatAdapter by lazy { CouncilDeputatAdapter(this) }
+    private val councilDeputatAdapter:CouncilDeputatAdapter by lazy { CouncilDeputatAdapter(this,requireContext(),sharePereferenseHelper.getAccessDomen2()) }
     override fun onViewCreate() {
         getDeputatList()
     }
@@ -44,7 +44,7 @@ class CouncilDeputat : MoreBaseFragment<FragmentCouncilDeputatBinding>(FragmentC
           val intent = Intent(requireContext(),CouncilDeputatAbout::class.java)
         sharePereferenseHelper.setAccessDeputatId(item.id.toString())
         intent.putExtra("full_name",item.full_name)
-        intent.putExtra("image",item.image)
+        intent.putExtra("image",sharePereferenseHelper.getAccessDomen2().plus(item.image))
         startActivity(intent)
     }
 }
