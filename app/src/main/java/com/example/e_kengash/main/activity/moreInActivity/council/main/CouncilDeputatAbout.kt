@@ -1,18 +1,15 @@
 package com.example.e_kengash.main.activity.moreInActivity.council.main
 
-import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
 import com.bumptech.glide.Glide
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.ActivityCouncilDeputatAboutBinding
 import com.example.e_kengash.main.activity.notif.NotificationActivity
-import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.statusbarcolor
 
 class CouncilDeputatAbout : AppCompatActivity() {

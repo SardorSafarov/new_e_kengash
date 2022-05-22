@@ -52,4 +52,6 @@ class MoreRepository {
     suspend fun activitesAbout(id: String):Response<ActivitesAboutResponse> = RetrofitBuilder().moreApi.activitesAbout(id)
 
     suspend fun getDocumentList():Response<DocumentListResponse> = RetrofitBuilder().moreApi.getDocumentList()
+
+    suspend fun searchMani(search:String):Response<ArticleResponse> = RetrofitBuilder().moreApi.searchMani(search)
 }

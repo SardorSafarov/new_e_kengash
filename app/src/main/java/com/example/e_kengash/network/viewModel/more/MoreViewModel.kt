@@ -234,4 +234,16 @@ class MoreViewModel(private val moreRepository: MoreRepository): ViewModel() {
             }
         }
     }
+
+    fun searchMani(string: String,onResponse:(response:Response<ArticleResponse>)->Unit)
+    {
+        viewModelScope.launch {
+            try {
+                onResponse(moreRepository.searchMani(string))
+            }catch (e:Exception)
+            {
+                D("MoreViewModel searchMani  ${e.message}")
+            }
+        }
+    }
 }

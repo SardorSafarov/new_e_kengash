@@ -12,6 +12,7 @@ import com.example.e_kengash.adapter.more.article.ArticleAdapter
 import com.example.e_kengash.databinding.AlertDialogSignUpBinding
 import com.example.e_kengash.databinding.FragmentHomeBinding
 import com.example.e_kengash.main.activity.login.main.LoginActivity
+import com.example.e_kengash.main.activity.search.SearchActivity
 import com.example.e_kengash.main.activity.strem.LiveSteamActivity
 import com.example.e_kengash.main.fragments.baseFragment.BaseFragment
 import com.example.e_kengash.network.entity.more.article.New
@@ -30,6 +31,9 @@ class Home :  BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate),Ar
         mainFragments()
         getNiewsList()
         getDomen()
+        binding.searchView.setOnClickListener {
+            startActivity(Intent(requireContext(),SearchActivity::class.java))
+        }
     }
 
     private fun getDomen() {

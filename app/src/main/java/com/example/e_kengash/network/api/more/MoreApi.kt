@@ -76,6 +76,8 @@ interface MoreApi {
     @GET("mobile/mobile_law_decision")
     suspend fun getDocumentList():Response<DocumentListResponse>
 
-
+    /*---------SearchView---------------------------*/
+    @GET("api/v1/events/")
+    suspend fun searchMani(@Query("search")search:String):Response<ArticleResponse>
 
 }
