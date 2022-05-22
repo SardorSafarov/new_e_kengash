@@ -81,7 +81,7 @@
         </com.google.android.material.card.MaterialCardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/main_background"
@@ -92,123 +92,129 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appbar">
-
-        <ProgressBar
-            android:id="@+id/progress_Bar"
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:indeterminate="true"
-            android:indeterminateTint="@color/blue" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_padding_12"
-            android:text="@string/hujjatlar"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size_18"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_padding_12"
-            android:background="@drawable/bg_search"
-            android:backgroundTint="#e9f0ff"
-            android:drawableStart="@drawable/ic_search"
-            android:drawablePadding="@dimen/margin_padding_6"
-            android:padding="@dimen/margin_padding_12"
-            android:text="@string/hujjatlar_bo_ylab_izlash"
-            android:textColor="#8cb3ef" />
-
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/margin_padding_12"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="4dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_radius"
-                android:drawableEnd="@drawable/ic_question"
-                android:drawablePadding="@dimen/margin_padding_6"
-                android:gravity="center"
-                android:padding="@dimen/margin_padding_8"
-                android:text="@string/viloyat" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginHorizontal="@dimen/margin_padding_6"
-                android:layout_weight="1"
-                android:background="@drawable/bg_radius"
-                android:drawableEnd="@drawable/ic_question"
-                android:drawablePadding="@dimen/margin_padding_6"
-                android:gravity="center"
-                android:padding="@dimen/margin_padding_8"
-                android:text="@string/tuman" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:background="@drawable/bg_radius"
-                android:drawableEnd="@drawable/ic_question"
-                android:drawablePadding="@dimen/margin_padding_6"
-                android:gravity="center"
-                android:padding="@dimen/margin_padding_8"
-                android:text="@string/turi" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="4dp"
-                android:background="@drawable/bg_radius"
-                android:drawableEnd="@drawable/ic_question"
-                android:drawablePadding="@dimen/margin_padding_24"
-                android:gravity="center"
-                android:paddingVertical="@dimen/margin_padding_8"
-                android:paddingStart="@dimen/margin_padding_12"
-                android:paddingEnd="@dimen/margin_padding_8"
-                android:text="@string/vaqti" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="@dimen/margin_padding_6"
-                android:layout_weight="1"
-                android:background="@drawable/bg_radius"
-                android:drawableEnd="@drawable/ic_question"
-                android:drawablePadding="@dimen/margin_padding_6"
-                android:gravity="start|center_vertical"
-                android:paddingVertical="@dimen/margin_padding_8"
-                android:paddingStart="@dimen/margin_padding_12"
-                android:paddingEnd="@dimen/margin_padding_8"
-                android:text="@string/yo_nalish_nuqtasiz" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rec_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/margin_padding_12"
-            android:overScrollMode="never"
-            tools:listitem="@layout/item_document_list" />
+            android:orientation="vertical">
+            <ProgressBar
+                android:id="@+id/progress_Bar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/blue" />
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_12"
+                android:text="@string/hujjatlar"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_12"
+                android:background="@drawable/bg_search"
+                android:backgroundTint="#e9f0ff"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="@dimen/margin_padding_6"
+                android:padding="@dimen/margin_padding_12"
+                android:text="@string/hujjatlar_bo_ylab_izlash"
+                android:textColor="#8cb3ef" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_padding_12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_radius"
+                    android:drawableEnd="@drawable/ic_question"
+                    android:drawablePadding="@dimen/margin_padding_6"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_padding_8"
+                    android:text="@string/viloyat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="@dimen/margin_padding_6"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_radius"
+                    android:drawableEnd="@drawable/ic_question"
+                    android:drawablePadding="@dimen/margin_padding_6"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_padding_8"
+                    android:text="@string/tuman" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_radius"
+                    android:drawableEnd="@drawable/ic_question"
+                    android:drawablePadding="@dimen/margin_padding_6"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_padding_8"
+                    android:text="@string/turi" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_radius"
+                    android:drawableEnd="@drawable/ic_question"
+                    android:drawablePadding="@dimen/margin_padding_24"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/margin_padding_8"
+                    android:paddingStart="@dimen/margin_padding_12"
+                    android:paddingEnd="@dimen/margin_padding_8"
+                    android:text="@string/vaqti" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_padding_6"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_radius"
+                    android:drawableEnd="@drawable/ic_question"
+                    android:drawablePadding="@dimen/margin_padding_6"
+                    android:gravity="start|center_vertical"
+                    android:paddingVertical="@dimen/margin_padding_8"
+                    android:paddingStart="@dimen/margin_padding_12"
+                    android:paddingEnd="@dimen/margin_padding_8"
+                    android:text="@string/yo_nalish_nuqtasiz" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_padding_12"
+                android:overScrollMode="never"
+                tools:listitem="@layout/item_document_list" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

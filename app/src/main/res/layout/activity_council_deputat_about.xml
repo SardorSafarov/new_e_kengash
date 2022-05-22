@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:orientation="vertical"
     android:background="@color/main_background"
     tools:context=".main.activity.moreInActivity.council.main.CouncilDeputatAbout">
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
@@ -81,184 +82,195 @@
                 app:srcCompat="@drawable/ic_notification_dot" />
         </com.google.android.material.card.MaterialCardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:paddingHorizontal="@dimen/margin_padding_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appbar">
-
-        <androidx.appcompat.widget.LinearLayoutCompat
+        android:overScrollMode="never"
+        android:layout_height="match_parent">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="@dimen/margin_padding_12"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/full_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Sharif\nIsm Familiya"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_16"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:layout_width="@dimen/margin_padding_32"
-                android:layout_height="@dimen/margin_padding_32"
-                android:layout_gravity="center_vertical"
-                android:background="@drawable/bg_search"
-                android:backgroundTint="#e9f0ff"
-                android:padding="@dimen/margin_padding_6"
-                android:src="@drawable/ic_share"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_16"
-                android:textStyle="bold"
-                app:tint="#91b6ff" />
-
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_padding_12"
-            android:orientation="horizontal">
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:cardElevation="@dimen/margin_padding_0"
-                >
-                <ImageView
-                    android:id="@+id/image"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/img_person_deputat"
-                    android:textColor="@color/black"
-                   />
-            </com.google.android.material.card.MaterialCardView>
-            <View
-                android:layout_width="@dimen/margin_padding_24"
-                android:layout_height="match_parent" />
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#e9f0ff"
-                app:strokeColor="#eaecf0"
-                app:strokeWidth="1dp"
-                app:cardElevation="0dp"
-                app:cardCornerRadius="@dimen/radius_6"
-               >
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/margin_padding_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appbar">
+
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/main_background"
-                    android:orientation="vertical"
-                    >
+                    android:layout_marginTop="@dimen/margin_padding_12"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
                     <TextView
-                        android:id="@+id/btn_data"
-                        android:layout_width="match_parent"
+                        android:id="@+id/full_name"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/ma_lumotlar"
+                        android:layout_weight="1"
+                        android:text="Sharif\nIsm Familiya"
                         android:textColor="@color/black"
-                        android:paddingVertical="@dimen/margin_padding_12"
-                        android:paddingStart="@dimen/margin_padding_12"
-                        android:background="#e9f0ff"
-                        />
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#eaecf0"
-                        />
-                    <TextView
-                        android:id="@+id/btn_appeals_send"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/murojaat_jo_natish"
-                        android:paddingVertical="@dimen/margin_padding_12"
-                        android:paddingStart="@dimen/margin_padding_12"
-                        />
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#eaecf0"
-                        />
-                    <TextView
-                        android:id="@+id/btn_acceptance_write"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/qabulga_yozilish"
-                        android:paddingVertical="@dimen/margin_padding_12"
-                        android:paddingStart="@dimen/margin_padding_12"
-                        />
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#eaecf0"
-                        />
-                    <TextView
-                        android:id="@+id/btn_article"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/maqolalar"
-                        android:paddingVertical="@dimen/margin_padding_12"
-                        android:paddingStart="@dimen/margin_padding_12"
-                        />
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#eaecf0"
-                        />
-                    <TextView
-                        android:id="@+id/btn_activitys"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/tadbirlar"
-                        android:paddingVertical="@dimen/margin_padding_12"
-                        android:paddingStart="@dimen/margin_padding_12"
-                        />
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#eaecf0"
-                        />
-                    <TextView
-                        android:id="@+id/btn_document"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/hujjatlar"
-                        android:paddingVertical="@dimen/margin_padding_12"
-                        android:paddingStart="@dimen/margin_padding_12"
-                        />
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_padding_32"
+                        android:layout_height="@dimen/margin_padding_32"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/bg_search"
+                        android:backgroundTint="#e9f0ff"
+                        android:padding="@dimen/margin_padding_6"
+                        android:src="@drawable/ic_share"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold"
+                        app:tint="#91b6ff" />
+
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
-            </com.google.android.material.card.MaterialCardView>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_padding_12"
+                    android:orientation="horizontal">
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:cardElevation="@dimen/margin_padding_0"
+                        >
+                        <ImageView
+                            android:id="@+id/image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_person_deputat"
+                            android:textColor="@color/black"
+                            />
+                    </com.google.android.material.card.MaterialCardView>
+                    <View
+                        android:layout_width="@dimen/margin_padding_24"
+                        android:layout_height="match_parent" />
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#e9f0ff"
+                        app:strokeColor="#eaecf0"
+                        app:strokeWidth="1dp"
+                        app:cardElevation="0dp"
+                        app:cardCornerRadius="@dimen/radius_6"
+                        >
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/main_background"
+                            android:orientation="vertical"
+                            >
+                            <TextView
+                                android:id="@+id/btn_data"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ma_lumotlar"
+                                android:textColor="@color/black"
+                                android:paddingVertical="@dimen/margin_padding_12"
+                                android:paddingStart="@dimen/margin_padding_12"
+                                android:background="#e9f0ff"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#eaecf0"
+                                />
+                            <TextView
+                                android:id="@+id/btn_appeals_send"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/murojaat_jo_natish"
+                                android:paddingVertical="@dimen/margin_padding_12"
+                                android:paddingStart="@dimen/margin_padding_12"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#eaecf0"
+                                />
+                            <TextView
+                                android:id="@+id/btn_acceptance_write"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/qabulga_yozilish"
+                                android:paddingVertical="@dimen/margin_padding_12"
+                                android:paddingStart="@dimen/margin_padding_12"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#eaecf0"
+                                />
+                            <TextView
+                                android:id="@+id/btn_article"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/maqolalar"
+                                android:paddingVertical="@dimen/margin_padding_12"
+                                android:paddingStart="@dimen/margin_padding_12"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#eaecf0"
+                                />
+                            <TextView
+                                android:id="@+id/btn_activitys"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/tadbirlar"
+                                android:paddingVertical="@dimen/margin_padding_12"
+                                android:paddingStart="@dimen/margin_padding_12"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#eaecf0"
+                                />
+                            <TextView
+                                android:id="@+id/btn_document"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/hujjatlar"
+                                android:paddingVertical="@dimen/margin_padding_12"
+                                android:paddingStart="@dimen/margin_padding_12"
+                                />
 
-        <fragment
-            android:id="@+id/council_deputat_nav_fragment"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/margin_padding_12"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/materialCardView2"
-            app:navGraph="@navigation/council_deputat_about" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
-</androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <fragment
+                    android:id="@+id/council_deputat_nav_fragment"
+                    android:name="androidx.navigation.fragment.NavHostFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_padding_12"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialCardView2"
+                    app:navGraph="@navigation/council_deputat_about" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

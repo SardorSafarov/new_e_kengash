@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:paddingHorizontal="@dimen/margin_padding_24"
+    android:overScrollMode="never"
     android:background="@color/main_background"
     tools:context=".main.activity.moreInActivity.council.fragment.CouncilDistrict">
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
 
 
 
@@ -86,7 +93,6 @@
                 android:layout_margin="@dimen/margin_padding_12"
                 tools:listitem="@layout/item_secretariat_region" />
         </androidx.appcompat.widget.LinearLayoutCompat>
-
-
     </com.google.android.material.card.MaterialCardView>
 </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

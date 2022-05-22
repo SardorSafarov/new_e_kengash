@@ -9,19 +9,17 @@ import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.invisible
 import com.example.e_kengash.repetitive.tosatShort
 
-class SecretariatData : MoreBaseFragment<FragmentSecretariatInfoBinding>(FragmentSecretariatInfoBinding::inflate) {
-    private val adapter:SecretariatDataAdapter by lazy { SecretariatDataAdapter() }
+class SecretariatData :
+    MoreBaseFragment<FragmentSecretariatInfoBinding>(FragmentSecretariatInfoBinding::inflate) {
+    private val adapter: SecretariatDataAdapter by lazy { SecretariatDataAdapter() }
     override fun onViewCreate() {
         moreViewModel.secretariatDataList {
-            when(it.isSuccessful)
-            {
-                true->
-                {
+            when (it.isSuccessful) {
+                true -> {
                     onResponse(it.body()!!.info)
                 }
-                else->
-                {
-                    tosatShort(requireContext(),"Serverda xatolik!!")
+                else -> {
+                    tosatShort(requireContext(), "Serverda xatolik!!")
                     D("SecretariatData secretariatDataList ".plus(it.errorBody()!!.string()))
                 }
             }

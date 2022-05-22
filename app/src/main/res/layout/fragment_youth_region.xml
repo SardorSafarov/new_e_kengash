@@ -1,27 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:paddingHorizontal="@dimen/margin_padding_24"
-    android:background="@color/main_background"
     android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical"
+    android:overScrollMode="never"
+    android:paddingHorizontal="@dimen/margin_padding_24"
     tools:context=".main.activity.moreInActivity.youth.fragment.YouthRegion">
-    <ProgressBar
-        android:id="@+id/progress_Bar"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:indeterminate="true"
-        android:progress="1000"
-        android:indeterminateTint="@color/blue"
-        android:visibility="visible" />
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rec_region_list"
+
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:overScrollMode="never"
-        android:layout_margin="@dimen/margin_padding_12"
-        tools:listitem="@layout/item_secretariat_region" />
+        android:orientation="vertical">
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+        <ProgressBar
+            android:id="@+id/progress_Bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/blue"
+            android:progress="1000"
+            android:visibility="visible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_region_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_padding_12"
+            android:overScrollMode="never"
+            tools:listitem="@layout/item_secretariat_region" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.core.widget.NestedScrollView>
