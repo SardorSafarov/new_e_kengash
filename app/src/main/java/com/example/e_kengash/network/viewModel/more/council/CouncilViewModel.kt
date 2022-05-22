@@ -79,13 +79,14 @@ class CouncilViewModel(private val councilRepository: CouncilRepository) : ViewM
 
     fun changeDeputatDoc(
         id: String,
-        onResponse: (response: Response<ChangeDeputatDocResponse>) -> Unit
+        onResponse: (response: Response<Any>) -> Unit
     ) {
         viewModelScope.launch {
             try {
                 onResponse(councilRepository.changeDeputatDoc(id))
             } catch (e: Exception) {
                 D("CouncilViewModel  changeDeputatDoc  ${e.message}")
+                D("CouncilViewModel  changeDeputatDoc  ${councilRepository.changeDeputatDoc(id).body().toString()}")
             }
         }
     }

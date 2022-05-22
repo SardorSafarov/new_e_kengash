@@ -139,4 +139,11 @@
     <string name="izohlar">Izohlar</string>
     <string name="izohni_yuborish">Izohni yuborish</string>
     <string name="tavsiya_etiladi">Tavsiya etiladi</string>
+    <string name="kengash_nuqtasi_bor">Kengash:</string>
+    <string name="okurugi_nuqtasi_bor">Okurugi:</string>
+    <string name="partiyasi_nuqtasi_bor">Partiyasi:</string>
+    <string name="doimiy_komissiya_nuqtasi_bor">Doimiy Komissiya:</string>
+    <string name="ish_joyi_lavozimi">Ish joyi, lavozimi:</string>
+    <string name="tugatgan_ta_lim_muassasasi">Tugatgan ta\'lim muassasasi:</string>
+    <string name="yashash_manzili">Yashash manzili:</string>
 </resources>

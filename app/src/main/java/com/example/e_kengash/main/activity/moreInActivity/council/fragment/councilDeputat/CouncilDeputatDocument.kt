@@ -7,9 +7,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.e_kengash.adapter.more.council.changeDeputat.ChangeDeputatDocAdapter
 import com.example.e_kengash.databinding.FragmentCouncilDeputatDocumentBinding
 import com.example.e_kengash.main.activity.moreInActivity.MoreBaseFragment
+import com.example.e_kengash.network.entity.more.council.changeDeputat.doc.ChangeDeputatDocResponse
 import com.example.e_kengash.network.entity.more.council.changeDeputat.doc.Document
 import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.invisible
+import com.example.e_kengash.repetitive.tosatLong
 
 
 class CouncilDeputatDocument :
@@ -21,9 +23,21 @@ class CouncilDeputatDocument :
         councilViewModel.changeDeputatDoc(sharePereferenseHelper.getAccessDeputatId()) {
             when (it.isSuccessful) {
                 true -> {
-                    onResponse(it.body()!!.documents)
+                    binding.progressBar.invisible()
+                   when(it.body() is ChangeDeputatDocResponse)
+                   {
+                       true->{
+                           val data = it.body() as ChangeDeputatDocResponse
+                           onResponse(data.documents)
+                       }
+                       else->{
+                           tosatLong(requireContext(),"Deputatga aloqador hujjatlar mavjud emas")
+                       }
+                   }
+                   // onResponse(it.body()!!.documents)
                 }
                 else -> {
+                    binding.progressBar.invisible()
                     D(
                         "CouncilDeputatDocument changeDeputatDoc false ".plus(
                             it.errorBody()!!.string()

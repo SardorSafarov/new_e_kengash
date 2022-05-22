@@ -36,7 +36,7 @@ class LiveSteamActivity : YouTubeBaseActivity() {
                 p1: YouTubePlayer?,
                 p2: Boolean
             ) {
-                p1?.loadVideo("L0WGZSiOZsM")
+                p1?.loadVideo("plXVAzTNnpo")
                 when(p2)
                 {
                     false-> binding.progressBar.invisible()

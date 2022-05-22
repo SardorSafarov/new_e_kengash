@@ -27,7 +27,7 @@ class CouncilRepository {
     suspend fun changeDeputatActivity(id:String): Response<ChangeDeputatActivityResponse> =
         RetrofitBuilder().councilApi.changeDeputatActivity(id)
 
-    suspend fun changeDeputatDoc(id:String): Response<ChangeDeputatDocResponse> =
+    suspend fun changeDeputatDoc(id:String): Response<Any> =
         RetrofitBuilder().councilApi.changeDeputatDoc(id)
 
 

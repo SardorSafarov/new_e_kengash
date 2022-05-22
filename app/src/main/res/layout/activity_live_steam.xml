@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="match_parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/appbar"
             android:layout_width="match_parent"
@@ -57,34 +58,20 @@
                 app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/notification"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|end"
-                app:cardCornerRadius="@dimen/radius_6"
+                android:src="@drawable/ic_notifica"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_service"
-                    android:paddingHorizontal="@dimen/margin_padding_8"
-                    android:paddingVertical="@dimen/margin_padding_8"
-                    app:srcCompat="@drawable/ic_notification" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="top|end"
-                    android:visibility="invisible"
-                    android:layout_marginHorizontal="@dimen/margin_padding_8"
-                    android:layout_marginVertical="@dimen/margin_padding_8"
-                    app:srcCompat="@drawable/ic_notification_dot" />
-            </com.google.android.material.card.MaterialCardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
         <ProgressBar
             android:id="@+id/progress_Bar"
             android:layout_width="match_parent"

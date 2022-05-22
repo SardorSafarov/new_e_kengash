@@ -28,7 +28,7 @@ interface CouncilApi {
     suspend fun changeDeputatActivity(@Path("id") id:String):Response<ChangeDeputatActivityResponse>
 
     @GET("/api/v1/deputy/{id}/docs/")
-    suspend fun changeDeputatDoc(@Path("id") id:String):Response<ChangeDeputatDocResponse>
+    suspend fun changeDeputatDoc(@Path("id") id:String):Response<Any>
 
 
     @GET("api/v1/council-district")
