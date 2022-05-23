@@ -24,17 +24,16 @@ class CouncilDeputatDocument :
             when (it.isSuccessful) {
                 true -> {
                     binding.progressBar.invisible()
-                   when(it.body() is ChangeDeputatDocResponse)
-                   {
-                       true->{
-                           val data = it.body() as ChangeDeputatDocResponse
-                           onResponse(data.documents)
-                       }
-                       else->{
-                           tosatLong(requireContext(),"Deputatga aloqador hujjatlar mavjud emas")
-                       }
-                   }
-                   // onResponse(it.body()!!.documents)
+                    when (it.body() is ChangeDeputatDocResponse) {
+                        true -> {
+                            val data = it.body() as ChangeDeputatDocResponse
+                            onResponse(data.documents)
+                        }
+                        else -> {
+                            tosatLong(requireContext(), "Deputatga aloqador hujjatlar mavjud emas")
+                        }
+                    }
+                    // onResponse(it.body()!!.documents)
                 }
                 else -> {
                     binding.progressBar.invisible()

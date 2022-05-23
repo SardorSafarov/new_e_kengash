@@ -2,10 +2,13 @@ package com.example.e_kengash.main.fragments.more.main
 
 import android.app.AlertDialog
 import android.content.Intent
+import android.view.LayoutInflater
 import android.widget.LinearLayout
 import com.example.e_kengash.R
 import com.example.e_kengash.databinding.AlertDialogExitBinding
+import com.example.e_kengash.databinding.AlertDialogSignUpBinding
 import com.example.e_kengash.databinding.FragmentMoreBinding
+import com.example.e_kengash.main.activity.login.main.LoginActivity
 import com.example.e_kengash.main.activity.mainActivity.MainActivity
 import com.example.e_kengash.main.activity.moreInActivity.aboutProgramma.main.AboutProgrammaActivity
 import com.example.e_kengash.main.activity.moreInActivity.acceptance.main.AcceptanceActivity
@@ -52,7 +55,16 @@ class More : BaseFragment<FragmentMoreBinding>(FragmentMoreBinding::inflate) {
                 startActivity(Intent(requireContext(), CommissionActivity::class.java))
             }
             acceptance.setOnClickListener {
-                startActivity(Intent(requireContext(), AcceptanceActivity::class.java))
+                when(sharePereferenseHelper.getAccessToken()=="empty")
+                {
+                    true->{
+                        signUp()
+                    }
+                    else->{
+                        startActivity(Intent(requireContext(), AcceptanceActivity::class.java))
+                    }
+                }
+
             }
             profil.setOnClickListener {
                 startActivity(Intent(requireContext(), ProfilActivity::class.java))
@@ -73,6 +85,20 @@ class More : BaseFragment<FragmentMoreBinding>(FragmentMoreBinding::inflate) {
                 exitDialog()
 
             }
+        }
+    }
+
+    private fun signUp() {
+        val alertDialog: AlertDialog.Builder =
+            AlertDialog.Builder(requireContext(), R.style.Style_Dialog_Rounded_Corner)
+        val view = LayoutInflater.from(requireContext()).inflate(R.layout.alert_dialog_sign_up, null)
+        val dialogBind = AlertDialogSignUpBinding.bind(view)
+        dialogBind.done.setOnClickListener {
+            startActivity(Intent(requireContext(), LoginActivity::class.java))
+        }
+        alertDialog.apply {
+            setView(view)
+            show()
         }
     }
 

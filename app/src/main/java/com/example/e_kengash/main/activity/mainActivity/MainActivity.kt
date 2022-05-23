@@ -49,7 +49,6 @@ class MainActivity : AppCompatActivity() {
                             signUp()
                         }
                         else -> {
-
                             navController.navigate(R.id.appealsFragment)
                         }
                     }

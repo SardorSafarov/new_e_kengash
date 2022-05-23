@@ -138,17 +138,29 @@
                             android:layout_marginStart="@dimen/margin_padding_6"
                             android:layout_weight="1"
                             android:text="@string/qabulga_yozilish" />
-
-                        <TextView
-                            android:id="@+id/status"
+                        <com.google.android.material.card.MaterialCardView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:background="@drawable/bg_radius"
-                            android:paddingHorizontal="@dimen/margin_padding_12"
-                            android:paddingVertical="4dp"
-                            android:text="Statusasdfas"
-                            android:textSize="@dimen/text_size_10" />
+                            app:cardElevation="@dimen/margin_padding_0"
+                            app:strokeWidth="1dp"
+                            app:cardCornerRadius="@dimen/margin_padding_12"
+                            app:strokeColor="#3632e3"
+                            android:backgroundTint="#d8ebff"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/status"
+                                android:layout_marginHorizontal="@dimen/text_size_12"
+                                android:textColor="#3632e3"
+                                android:layout_marginVertical="@dimen/margin_padding_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="statusss"
+                                android:textSize="@dimen/text_size_12"
+                                />
+                        </com.google.android.material.card.MaterialCardView>
+
+
                     </LinearLayout>
 
                     <androidx.appcompat.widget.LinearLayoutCompat
@@ -170,6 +182,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/margin_padding_32"
+                            android:visibility="invisible"
                             android:drawableStart="@drawable/ic_see"
                             android:drawablePadding="@dimen/margin_padding_12"
                             android:drawableTint="@color/gray"
@@ -327,6 +340,7 @@
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="@dimen/margin_padding_12"
                             android:backgroundTint="#d8ebff"
+                            app:cardElevation="@dimen/margin_padding_0"
                             app:cardCornerRadius="@dimen/margin_padding_16"
                             app:strokeColor="@color/blue"
                             app:strokeWidth="1dp">
@@ -371,6 +385,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         app:cardCornerRadius="@dimen/radius_6"
+                        app:strokeColor="#dce8ff"
+                        app:strokeWidth="1dp"
                         app:cardElevation="@dimen/margin_padding_0">
 
                         <EditText
@@ -383,7 +399,7 @@
                             android:paddingTop="@dimen/margin_padding_6"
                             android:textSize="@dimen/text_size_14"
                             android:inputType="textCapSentences"
-                            android:background="#f3f3f3" />
+                            android:background="@color/transparent" />
                     </com.google.android.material.card.MaterialCardView>
 
                     <androidx.appcompat.widget.AppCompatButton

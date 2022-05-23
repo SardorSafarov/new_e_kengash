@@ -86,7 +86,11 @@ class CouncilViewModel(private val councilRepository: CouncilRepository) : ViewM
                 onResponse(councilRepository.changeDeputatDoc(id))
             } catch (e: Exception) {
                 D("CouncilViewModel  changeDeputatDoc  ${e.message}")
-                D("CouncilViewModel  changeDeputatDoc  ${councilRepository.changeDeputatDoc(id).body().toString()}")
+                D(
+                    "CouncilViewModel  changeDeputatDoc  ${
+                        councilRepository.changeDeputatDoc(id).body().toString()
+                    }"
+                )
             }
         }
     }
