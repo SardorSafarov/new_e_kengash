@@ -102,6 +102,7 @@
             android:textStyle="bold" />
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/language"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_padding_24"
@@ -111,7 +112,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:padding="@dimen/margin_padding_12">
+                android:padding="@dimen/margin_padding_16">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -149,11 +150,15 @@
                     android:text="@string/xabarnoma" />
 
                 <Switch
+                    android:id="@+id/notif"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textColor="@color/black"
-                    android:checked="true"
+                    android:track="@drawable/bg_radius"
+                    android:trackTint="@color/bg_switch"
+                    android:thumbTint="@color/white"
+                    android:checked="false"
                     />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -176,10 +181,14 @@
                     android:layout_weight="1"
                     android:text="@string/keshlash_imkoniyati" />
                 <Switch
+                    android:id="@+id/kesh"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:track="@drawable/bg_radius"
+                    android:trackTint="@color/bg_switch"
+                    android:thumbTint="@color/white"/>
             </androidx.appcompat.widget.LinearLayoutCompat>
 
         </com.google.android.material.card.MaterialCardView>

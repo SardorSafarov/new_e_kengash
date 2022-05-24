@@ -149,10 +149,8 @@
             android:layout_height="100dp"
             android:layout_marginTop="@dimen/margin_padding_12"
             android:background="@drawable/bg_et"
-            android:backgroundTint="#e9f0ff"
             android:gravity="start"
             android:hint="@string/izoh_yozing"
-            android:textColorHint="#8cb3ef"
             android:padding="@dimen/margin_padding_12" />
 
 

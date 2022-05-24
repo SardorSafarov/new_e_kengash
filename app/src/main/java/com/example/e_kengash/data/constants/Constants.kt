@@ -5,4 +5,5 @@ object Constants {
     const val ACCESS_TOKEN = "token"
     const val PHONE = "phone"
     const val BASE_URL = "http://e-kengash.uz/"
+    const val LANGUAGE = "language"
 }
