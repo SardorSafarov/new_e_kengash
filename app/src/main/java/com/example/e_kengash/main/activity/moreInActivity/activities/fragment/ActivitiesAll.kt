@@ -6,6 +6,7 @@ import com.example.e_kengash.adapter.more.activities.ActivitiesAdapter
 import com.example.e_kengash.databinding.FragmentActivitiesAllBinding
 import com.example.e_kengash.main.activity.moreInActivity.MoreBaseFragment
 import com.example.e_kengash.main.activity.moreInActivity.activities.main.ActivitiesAbout
+import com.example.e_kengash.network.entity.more.activites.about.Recommended
 import com.example.e_kengash.network.entity.more.activites.all.New
 import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.invisible
@@ -49,7 +50,7 @@ class ActivitiesAll :
         moreViewModel.activitesAbout(id) {
             when (it.isSuccessful) {
                 true -> {
-                    activitesAbout(it.body()!!.news)
+                    activitesAbout(it.body()!!.news,it.body()!!.recommended)
                 }
                 else -> {
                     tosatLong(requireContext(), "Serverda xatolik!!")
@@ -59,12 +60,16 @@ class ActivitiesAll :
         }
     }
 
-    private fun activitesAbout(news: List<com.example.e_kengash.network.entity.more.activites.about.New>) {
+    private fun activitesAbout(
+        news: List<com.example.e_kengash.network.entity.more.activites.about.New>,
+        recommended: List<Recommended>
+        ) {
         val intent = Intent(requireContext(), ActivitiesAbout::class.java)
         intent.apply {
             news[0].apply {
+                putExtra("id", id.toString())
                 putExtra("content", content)
-                putExtra("image", image)
+                putExtra("image", sharePereferenseHelper.getAccessDomen2().plus(image))
                 putExtra("title", title)
                 putExtra("date", date)
             }

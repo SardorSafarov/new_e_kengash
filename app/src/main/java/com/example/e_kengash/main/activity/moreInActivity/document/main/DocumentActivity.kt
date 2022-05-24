@@ -38,6 +38,13 @@ class DocumentActivity : AppCompatActivity(),DocumentAdapter.ItemClick {
         back()
         notification()
         getDocumentList()
+        documentSearch()
+    }
+
+    private fun documentSearch() {
+        binding.search.setOnClickListener {
+            startActivity(Intent(this,DocumentSearchActivity::class.java))
+        }
     }
 
     private fun getDocumentList() {

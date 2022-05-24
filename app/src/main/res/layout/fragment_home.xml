@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:overScrollMode="never"
     android:layout_height="match_parent"
     android:background="@color/main_background"
     android:paddingHorizontal="@dimen/margin_padding_24"
@@ -207,8 +208,9 @@
             android:overScrollMode="never"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_padding_16"
-            android:layout_marginBottom="@dimen/margin_padding_16"
+            android:layout_marginBottom="@dimen/margin_padding_55"
             android:orientation="vertical"
+
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_home_news" />
 
