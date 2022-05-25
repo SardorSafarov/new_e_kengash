@@ -15,6 +15,7 @@ import com.example.e_kengash.network.viewModelFactory.notif.NotifViewModelFactor
 import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.gone
 import com.example.e_kengash.repetitive.statusbarcolor
+import com.example.e_kengash.repetitive.tosatLong
 
 class NotificationActivity : AppCompatActivity(),NotifAdapter.onClickListener {
     private lateinit var binding:ActivityNotificationBinding
@@ -43,6 +44,8 @@ class NotificationActivity : AppCompatActivity(),NotifAdapter.onClickListener {
                setData(it.body()!!.results)
             }else
             {
+                binding.progressBar.gone()
+                tosatLong(this,"Authentication credentials were not provided")
                 D("NotificationActivity notif  ${it.errorBody()!!.string()}  ")
             }
         }

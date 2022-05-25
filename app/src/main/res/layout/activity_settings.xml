@@ -118,7 +118,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Interfeys tili" />
+                    android:text="@string/interfeys_tili" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -126,7 +126,7 @@
                     android:drawableEnd="@drawable/ic_question"
                     android:drawablePadding="@dimen/margin_padding_12"
                     android:gravity="center"
-                    android:text="O'zbekcha"
+                    android:text="@string/til"
                     android:textColor="@color/black" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </com.google.android.material.card.MaterialCardView>

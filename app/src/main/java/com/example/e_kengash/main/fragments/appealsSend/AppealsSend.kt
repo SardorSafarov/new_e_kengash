@@ -125,6 +125,10 @@ class AppealsSend : BaseFragment<FragmentAppealsSendBinding>(FragmentAppealsSend
                     intent.putExtra("_id",it.body()!!.user)
                     startActivity(Intent(requireContext(),MyAppealsSendSuccess::class.java))
                 }
+                else->{
+                    binding.progressBar.invisible()
+                    D(it.errorBody()!!.string())
+                }
             }
         }
     }

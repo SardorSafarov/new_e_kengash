@@ -30,6 +30,7 @@ class ActivitiesAll :
                     onResponse(it.body()!!.news)
                 }
                 else -> {
+                    binding.progressBar.invisible()
                     tosatLong(requireContext(), "Serverda xatolik!!")
                     D("ActivitiesAll activitesAllList ".plus(it.errorBody()!!.string()))
                 }

@@ -67,7 +67,16 @@ class More : BaseFragment<FragmentMoreBinding>(FragmentMoreBinding::inflate) {
 
             }
             profil.setOnClickListener {
-                startActivity(Intent(requireContext(), ProfilActivity::class.java))
+                when(sharePereferenseHelper.getAccessToken()=="empty")
+                {
+                    true->{
+                        signUp()
+                    }
+                    else->{
+                        startActivity(Intent(requireContext(), ProfilActivity::class.java))
+                    }
+                }
+
             }
             document.setOnClickListener {
                 startActivity(Intent(requireContext(), DocumentActivity::class.java))

@@ -7,7 +7,7 @@
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="e_kengash_naxborot_portali">E-Kengash \nInformation portal</string>
     <string name="news">News</string>
-    <string name="jonli_nefirlar">Live Broadcasts</string>
+    <string name="jonli_nefirlar">Live\nBroadcasts</string>
     <string name="virtual_nqabulxona">Virtual\nReception</string>
     <string name="qabulga_nyozilish">Sign up for an appointment</string>
     <string name="murojaat_nyuborish">Apply\nSend</string>
@@ -48,7 +48,7 @@
     <string name="rasm_yoki_fayl_biriktirish">Attach an image or file</string>
     <string name="amalni_bajara_olmaysiz">You cannot perform the operation</string>
     <string name="dasturning_imkoniyatlaridan_to_liq_foydalanish_uchun_kirishni_bosing">Click Login to take full advantage of the program!</string>
-    <string name="kirish">Introduction</string>
+    <string name="kirish">Login</string>
     <string name="neww">New</string>
     <string name="biz_sizning_ma_lumotlaringizni_tekshirishimiz_uchun_telefon_raqamingizni_kiriting">Enter your phone number so we can verify your information</string>
     <string name="telefon_raqami">Phone number:</string>
@@ -146,4 +146,7 @@
     <string name="ish_joyi_lavozimi">Workplace, position:</string>
     <string name="tugatgan_ta_lim_muassasasi">Graduated educational institution:</string>
     <string name="yashash_manzili">Residence address:</string>
+    <string name="qonunlar_inson_nfarovonligi_uchun_nishlaydi">Laws work for the good of man</string>
+    <string name="til">English</string>
+    <string name="interfeys_tili">Interface language</string>
 </resources>

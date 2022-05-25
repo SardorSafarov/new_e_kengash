@@ -52,15 +52,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_padding_16"
-            android:background="@drawable/ic_home_top_image"
+            android:background="@drawable/bg_secretariat_data_top_img"
             android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatImageView
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                android:visibility="invisible"
+                android:visibility="visible"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_16"
+                android:lineHeight="@dimen/margin_padding_24"
+                android:layout_marginStart="@dimen/margin_padding_16"
+                android:text="@string/qonunlar_inson_nfarovonligi_uchun_nishlaydi"
                 app:srcCompat="@drawable/home_top_person_imagee" />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -158,7 +165,7 @@
                 android:id="@+id/appleas"
                 android:touchscreenBlocksFocus="true"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:background="@drawable/bg_service"
                 android:orientation="vertical"
@@ -169,12 +176,16 @@
                     android:layout_height="wrap_content"
                     android:lineSpacingExtra="@dimen/margin_padding_8"
                     android:text="@string/murojaat_nyuborish"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end"
+                    android:layout_gravity="end|bottom"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:srcCompat="@drawable/ic_apply" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -207,9 +218,8 @@
             android:overScrollMode="never"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_padding_16"
-            android:layout_marginBottom="@dimen/margin_padding_55"
+            android:layout_marginBottom="@dimen/margin_padding_70"
             android:orientation="vertical"
-
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_home_news" />
 

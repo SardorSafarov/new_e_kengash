@@ -146,4 +146,7 @@
     <string name="ish_joyi_lavozimi">Ish joyi, lavozimi:</string>
     <string name="tugatgan_ta_lim_muassasasi">Tugatgan ta\'lim muassasasi:</string>
     <string name="yashash_manzili">Yashash manzili:</string>
+    <string name="qonunlar_inson_nfarovonligi_uchun_nishlaydi">Qonunlar inson\nfarovonligi uchun\nishlaydi</string>
+    <string name="til">O\'zbekcha</string>
+    <string name="interfeys_tili">Interfeys tili</string>
 </resources>

@@ -10,7 +10,7 @@
     <string name="jonli_nefirlar">Прямые\nтрансляции</string>
     <string name="virtual_nqabulxona">Виртуальный\nприем</string>
     <string name="qabulga_nyozilish">Запишитесь\nна прием</string>
-    <string name="murojaat_nyuborish">Применять</string>
+    <string name="murojaat_nyuborish">Применять\n</string>
     <string name="malumotlar_bo_ylab_izlash">Поиск по данным</string>
     <string name="barcha_xizmatlar">Все услуги</string>
     <string name="kengash">Совет</string>
@@ -78,7 +78,7 @@
     <string name="raqamni_kiriting">Введите число</string>
     <string name="lavozimi">Позиция</string>
     <string name="f_i_o">И.Ф.O</string>
-    <string name="o_zbekiston_respublikasi_deputatlar_nto_g_risidagi_moddalar_jamlanmasi">Сборник статей в список депутатов Республики Узбекистан</string>
+    <string name="o_zbekiston_respublikasi_deputatlar_nto_g_risidagi_moddalar_jamlanmasi">Сборник статей в список\nдепутатов Республики Узбекистан</string>
     <string name="tuman_shaharlar_ni_tanlang">Выберите район (город)</string>
     <string name="umumiy">Общий</string>
     <string name="umumiy_kotibiyat_a_zolari">Члены Генерального секретариата</string>
@@ -146,5 +146,8 @@
     <string name="ish_joyi_lavozimi">Рабочее место, должность:</string>
     <string name="tugatgan_ta_lim_muassasasi">Окончил учебное заведение:</string>
     <string name="yashash_manzili">Адрес проживания:</string>
+    <string name="qonunlar_inson_nfarovonligi_uchun_nishlaydi">Законы работают на благо человека</string>
+    <string name="til">Русский</string>
+    <string name="interfeys_tili">Язык интерфейса</string>
 
 </resources>

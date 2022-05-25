@@ -36,9 +36,6 @@ class SettingsActivity : AppCompatActivity() {
         kesh()
         language()
     }
-
-
-
     private fun kesh() {
         when (binding.kesh.isChecked) {
             true -> {
@@ -48,7 +45,6 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
     }
-
     private fun notif() {
         when (binding.notif.isChecked) {
             true -> {
