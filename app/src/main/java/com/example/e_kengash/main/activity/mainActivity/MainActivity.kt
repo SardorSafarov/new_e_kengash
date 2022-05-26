@@ -1,22 +1,26 @@
 package com.example.e_kengash.main.activity.mainActivity
 
+import MyAppealsBEntity
 import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI.setupWithNavController
-import androidx.navigation.ui.navigateUp
 import com.example.e_kengash.R
 import com.example.e_kengash.data.localMemory.SharePereferenseHelper
 import com.example.e_kengash.databinding.ActivityMainBinding
 import com.example.e_kengash.databinding.AlertDialogSignUpBinding
 import com.example.e_kengash.main.activity.login.main.LoginActivity
+import com.example.e_kengash.main.activity.myAppeals.MyAppealsB
+import com.example.e_kengash.main.activity.myAppeals.viewModel.MyViewModelB
 import com.example.e_kengash.main.activity.notif.NotificationActivity
+import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.statusbarcolor
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     private lateinit var navController: NavController
+
 
     lateinit var sharePereferenseHelper: SharePereferenseHelper
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -82,6 +87,9 @@ class MainActivity : AppCompatActivity() {
         }
         notification()
     }
+
+
+
     private fun signUp() {
         val alertDialog: AlertDialog.Builder =
             AlertDialog.Builder(this, R.style.Style_Dialog_Rounded_Corner)

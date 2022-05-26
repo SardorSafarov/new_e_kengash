@@ -83,7 +83,7 @@ class SettingsActivity : AppCompatActivity() {
                     finishAffinity()
                 }
                 ru.setOnClickListener {
-                    setApplicationLanguage("ru")
+                    sharedPreferences.setAccessLanguage("ru")
                     setApplicationLanguage("ru")
                     bottomSheetDiaolg.dismiss()
                     startActivity(Intent(this@SettingsActivity,MainActivity::class.java))

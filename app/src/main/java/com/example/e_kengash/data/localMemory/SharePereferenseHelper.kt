@@ -28,7 +28,7 @@ class SharePereferenseHelper(val context: Context) {
         editor.apply()
     }
 
-    fun getAccessLenguage() = preferences.getString(LANGUAGE, "uz").toString()
+    fun getAccessLenguage() = preferences.getString(LANGUAGE, "default").toString()
 
 
 

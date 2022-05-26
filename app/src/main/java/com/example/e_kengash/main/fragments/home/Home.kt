@@ -4,7 +4,9 @@ package com.example.e_kengash.main.fragments.home
 import android.app.AlertDialog
 import android.content.Intent
 import android.view.LayoutInflater
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.e_kengash.R
 import com.example.e_kengash.adapter.more.activities.ActivitiesAdapter
@@ -12,6 +14,8 @@ import com.example.e_kengash.databinding.AlertDialogSignUpBinding
 import com.example.e_kengash.databinding.FragmentHomeBinding
 import com.example.e_kengash.main.activity.login.main.LoginActivity
 import com.example.e_kengash.main.activity.moreInActivity.activities.main.ActivitiesAbout
+import com.example.e_kengash.main.activity.myAppeals.MyAppealsB
+import com.example.e_kengash.main.activity.myAppeals.viewModel.MyViewModelB
 import com.example.e_kengash.main.activity.search.SearchActivity
 import com.example.e_kengash.main.activity.strem.LiveSteamActivity
 import com.example.e_kengash.main.fragments.baseFragment.BaseFragment
@@ -35,12 +39,17 @@ class Home : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate),
             sharePereferenseHelper.getAccessDomen2()
         )
     }
+    private val myAppealsB: MyViewModelB by lazy {
+        ViewModelProviders.of(this).get(MyViewModelB::class.java)
+    }
 
     override fun onViewCreate() {
         setUi()
         mainFragments()
         getNiewsList()
         getDomen()
+        myAppealsBViewModel()
+        D(sharePereferenseHelper.getAccessLenguage())
         binding.searchView.setOnClickListener {
             startActivity(Intent(requireContext(), SearchActivity::class.java))
         }
@@ -113,7 +122,25 @@ class Home : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate),
             }
         }
     }
+    private fun myAppealsBViewModel() {
+        myAppealsB.readLocation()
+        myAppealsB.blok.observe(this, Observer {
+            try {
+                D(it[0].blok.toString())
+                if (it[0].blok) {
+                } else {
+                    var intent = Intent(requireContext(), MyAppealsB::class.java)
+                    D(it[0].text)
+                    intent.putExtra("message", it[0].text)
+                    startActivity(intent)
+                    activity?.finish()
 
+                }
+            } catch (e: Exception) {
+
+            }
+        })
+    }
 
 
     private fun signUp() {
