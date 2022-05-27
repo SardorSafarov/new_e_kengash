@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
 
 
-    lateinit var sharePereferenseHelper: SharePereferenseHelper
+   private lateinit var sharePereferenseHelper: SharePereferenseHelper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -40,13 +40,18 @@ class MainActivity : AppCompatActivity() {
         navController = findNavController(R.id.main_nav_fragment)
         setupWithNavController(binding.bottomNavigationView, navController)
         sharePereferenseHelper = SharePereferenseHelper(this)
+        navigationFragment()
+        notification()
+    }
+
+    private fun navigationFragment() {
         binding.bottomNavigationView.setOnItemSelectedListener {
-            when(it.itemId){
-                R.id.homeFragment ->{
+            when (it.itemId) {
+                R.id.homeFragment -> {
                     navController.navigate(R.id.homeFragment)
                     true
                 }
-                R.id.appealsFragment->{
+                R.id.appealsFragment -> {
                     when (sharePereferenseHelper.getAccessToken()) {
                         "empty" -> {
                             it.setCheckable(false)
@@ -59,7 +64,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     true
                 }
-                R.id.appealsSendFragment ->{
+                R.id.appealsSendFragment -> {
                     when (sharePereferenseHelper.getAccessToken()) {
                         "empty" -> {
                             it.setCheckable(false)
@@ -72,23 +77,33 @@ class MainActivity : AppCompatActivity() {
                     }
                     true
                 }
-                R.id.chatFragment ->{
+                R.id.chatFragment -> {
                     navController.navigate(R.id.chatFragment)
                     true
                 }
-                R.id.moreFragment ->{
+                R.id.moreFragment -> {
                     navController.navigate(R.id.moreFragment)
                     true
                 }
-                else->{
+                else -> {
                     true
                 }
             }
         }
-        notification()
     }
+    private fun notification() {
+        binding.notification.setOnClickListener {
+            when (sharePereferenseHelper.getAccessToken()) {
+                "empty" -> {
+                    signUp()
+                }
+                else -> {
+                    startActivity(Intent(this, NotificationActivity::class.java))
+                }
+            }
 
-
+        }
+    }
 
     private fun signUp() {
         val alertDialog: AlertDialog.Builder =
@@ -103,9 +118,6 @@ class MainActivity : AppCompatActivity() {
             show()
         }
     }
-    private fun notification() {
-        binding.notification.setOnClickListener {
-            startActivity(Intent(this, NotificationActivity::class.java))
-        }
-    }
+
+
 }

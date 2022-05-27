@@ -67,7 +67,7 @@
     <string name="bildirishnomalar">Notifications</string>
     <string name="jonli_efirlar">Live broadcasts</string>
     <string name="shuningdek_yana">Also again:</string>
-    <string name="yana">Again</string>
+    <string name="yana">All</string>
     <string name="viloyatlar">Provinces</string>
     <string name="ma_lumotlar">Information</string>
     <string name="tumanlar_shahar">Districts (cities)</string>
@@ -149,4 +149,5 @@
     <string name="qonunlar_inson_nfarovonligi_uchun_nishlaydi">Laws work for the good of man</string>
     <string name="til">English</string>
     <string name="interfeys_tili">Interface language</string>
+    <string name="sizda_hozircha_nxabarlar_yoq">You have no messages for you</string>
 </resources>

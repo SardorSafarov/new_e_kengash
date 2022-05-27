@@ -33,6 +33,8 @@ class SecretariatDistrict :
                     onResponse(it.body()!!.info)
                 }
                 else -> {
+                    binding.progressBar.invisible()
+                    tosatShort(requireContext(), "Serverda xatolik!!")
                     D("SecretariatRegion secDistrictList ${it.errorBody()!!.string()}")
                 }
             }

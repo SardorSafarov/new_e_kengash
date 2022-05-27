@@ -12,10 +12,7 @@ import com.example.e_kengash.network.entity.notif.Result
 import com.example.e_kengash.network.repository.notif.NotificationRepository
 import com.example.e_kengash.network.viewModel.notif.NotifViewModel
 import com.example.e_kengash.network.viewModelFactory.notif.NotifViewModelFactory
-import com.example.e_kengash.repetitive.D
-import com.example.e_kengash.repetitive.gone
-import com.example.e_kengash.repetitive.statusbarcolor
-import com.example.e_kengash.repetitive.tosatLong
+import com.example.e_kengash.repetitive.*
 
 class NotificationActivity : AppCompatActivity(),NotifAdapter.onClickListener {
     private lateinit var binding:ActivityNotificationBinding
@@ -45,7 +42,7 @@ class NotificationActivity : AppCompatActivity(),NotifAdapter.onClickListener {
             }else
             {
                 binding.progressBar.gone()
-                tosatLong(this,"Authentication credentials were not provided")
+                binding.listEmpty.visible()
                 D("NotificationActivity notif  ${it.errorBody()!!.string()}  ")
             }
         }

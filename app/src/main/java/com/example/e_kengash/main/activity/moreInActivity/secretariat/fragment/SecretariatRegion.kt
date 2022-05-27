@@ -7,6 +7,8 @@ import com.example.e_kengash.main.activity.moreInActivity.MoreBaseFragment
 import com.example.e_kengash.network.entity.more.secretariat.region.Info
 import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.gone
+import com.example.e_kengash.repetitive.invisible
+import com.example.e_kengash.repetitive.tosatShort
 
 class SecretariatRegion : MoreBaseFragment<FragmentSecretariatRegionBinding>(
     FragmentSecretariatRegionBinding::inflate
@@ -32,6 +34,8 @@ class SecretariatRegion : MoreBaseFragment<FragmentSecretariatRegionBinding>(
                     onResponse(it.body()!!.info)
                 }
                 else -> {
+                    binding.progressBar.invisible()
+                    tosatShort(requireContext(), "Serverda xatolik!!")
                     D("SecretariatRegion secRegionList ${it.errorBody()!!.string()}")
                 }
             }

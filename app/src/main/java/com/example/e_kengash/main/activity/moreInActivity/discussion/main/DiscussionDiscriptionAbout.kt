@@ -1,15 +1,20 @@
 package com.example.e_kengash.main.activity.moreInActivity.discussion.main
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.example.e_kengash.R
 import com.example.e_kengash.adapter.more.discussion.DiscussionCommentAdapter
 import com.example.e_kengash.data.localMemory.SharePereferenseHelper
 import com.example.e_kengash.databinding.ActivityDiscussionDiscriptionAboutBinding
+import com.example.e_kengash.databinding.AlertDialogSignUpBinding
+import com.example.e_kengash.main.activity.login.main.LoginActivity
 import com.example.e_kengash.main.activity.notif.NotificationActivity
 import com.example.e_kengash.network.entity.more.discussion.commentAdd.DiscussionCommentAddRequest
 import com.example.e_kengash.network.entity.more.discussion.offerAbout.comment.Result
@@ -109,7 +114,28 @@ class DiscussionDiscriptionAbout : AppCompatActivity() {
 
     private fun notification() {
         binding.notification.setOnClickListener {
-            startActivity(Intent(this, NotificationActivity::class.java))
+            when ( sharedPreferences.getAccessToken()) {
+                "empty" -> {
+                    signUp()
+                }
+                else -> {
+                    startActivity(Intent(this, NotificationActivity::class.java))
+                }
+            }
+        }
+    }
+
+    private fun signUp() {
+        val alertDialog: AlertDialog.Builder =
+            AlertDialog.Builder(this, R.style.Style_Dialog_Rounded_Corner)
+        val view = LayoutInflater.from(this).inflate(R.layout.alert_dialog_sign_up, null)
+        val dialogBind = AlertDialogSignUpBinding.bind(view)
+        dialogBind.done.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
+        alertDialog.apply {
+            setView(view)
+            show()
         }
     }
 

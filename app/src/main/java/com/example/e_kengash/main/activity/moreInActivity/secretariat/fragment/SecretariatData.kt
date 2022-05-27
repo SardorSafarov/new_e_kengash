@@ -19,6 +19,7 @@ class SecretariatData :
                     onResponse(it.body()!!.info)
                 }
                 else -> {
+                    binding.progressBar.invisible()
                     tosatShort(requireContext(), "Serverda xatolik!!")
                     D("SecretariatData secretariatDataList ".plus(it.errorBody()!!.string()))
                 }

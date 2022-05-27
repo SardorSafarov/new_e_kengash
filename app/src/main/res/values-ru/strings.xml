@@ -67,7 +67,7 @@
     <string name="bildirishnomalar">Уведомления</string>
     <string name="jonli_efirlar">Прямые трансляции</string>
     <string name="shuningdek_yana">Также снова:</string>
-    <string name="yana">Яна</string>
+    <string name="yana">Eще</string>
     <string name="viloyatlar">Провинции</string>
     <string name="ma_lumotlar">Информация</string>
     <string name="tumanlar_shahar">Районы (города)</string>
@@ -149,5 +149,6 @@
     <string name="qonunlar_inson_nfarovonligi_uchun_nishlaydi">Законы работают на благо человека</string>
     <string name="til">Русский</string>
     <string name="interfeys_tili">Язык интерфейса</string>
+    <string name="sizda_hozircha_nxabarlar_yoq">У вас нет сообщений для вас</string>
 
 </resources>

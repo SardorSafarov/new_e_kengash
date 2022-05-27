@@ -64,7 +64,7 @@
         <com.alimuzaffar.lib.pin.PinEntryEditText
             android:id="@+id/txt_sms"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="100dp"
             android:maxLength="4"
             android:inputType="number"
