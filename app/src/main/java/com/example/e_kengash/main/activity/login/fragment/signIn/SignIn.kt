@@ -37,6 +37,9 @@ class SignIn : BaseFragment<FragmentSignInBinding>(FragmentSignInBinding::inflat
                     }
                 }
             }
+            btnChangePassword.setOnClickListener {
+
+            }
         }
     }
 

@@ -150,4 +150,6 @@
     <string name="til">English</string>
     <string name="interfeys_tili">Interface language</string>
     <string name="sizda_hozircha_nxabarlar_yoq">You have no messages for you</string>
+    <string name="parolni_tiklash">Restore password</string>
+    <string name="siz_tizimdan_allaqchon_ro_yatdan_o_tgansiz_parolingizni_kiritish_va_sms_kod_orqali_tasdiqlash_orqali_profilingizga_kirishingiz_mumkin">You have already done a system of system. You can access your profile by entering your password and confirmation through the SMS code.</string>
 </resources>

@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_padding_24"
                 android:lineSpacingExtra="@dimen/margin_padding_4"
-                android:text="@string/biz_sizning_ma_lumotlaringizni_tekshirishimiz_uchun_telefon_raqamingizni_kiriting"
+                android:text="@string/siz_tizimdan_allaqchon_ro_yatdan_o_tgansiz_parolingizni_kiritish_va_sms_kod_orqali_tasdiqlash_orqali_profilingizga_kirishingiz_mumkin"
                 android:textColor="@color/gray"
                 android:textSize="@dimen/text_size_14" />
 
@@ -107,6 +107,15 @@
                     android:backgroundTint="@color/white"
                     android:inputType="textPassword" />
             </com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:id="@+id/btn_change_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/parolni_tiklash"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin_padding_12"
+                />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.core.widget.NestedScrollView>
 
