@@ -227,16 +227,29 @@
             android:textColor="@color/black"
             android:textColorHint="@color/gray"
             android:textSize="@dimen/text_size_14" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginVertical="@dimen/margin_padding_16"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/file"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:background="@drawable/bg_et"
+                android:padding="@dimen/margin_padding_24"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_file" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/margin_padding_16"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                android:layout_height="match_parent"/>
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/file"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
-            android:layout_marginTop="@dimen/margin_padding_16"
-            android:background="@drawable/bg_et"
-            android:padding="@dimen/margin_padding_24"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/ic_file" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
 
 
         <androidx.appcompat.widget.AppCompatTextView
