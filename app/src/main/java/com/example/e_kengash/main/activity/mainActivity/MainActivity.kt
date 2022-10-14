@@ -15,13 +15,13 @@ import com.example.e_kengash.databinding.ActivityMainBinding
 import com.example.e_kengash.databinding.AlertDialogSignUpBinding
 import com.example.e_kengash.main.activity.login.webView.LoginWebActivity
 import com.example.e_kengash.main.activity.notif.NotificationActivity
+import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.statusbarcolor
 
 class MainActivity : AppCompatActivity() {
     //*======لا اله الا الله محمد رسول الله
 
     private lateinit var binding: ActivityMainBinding
-
     private lateinit var navController: NavController
 
 
@@ -66,7 +66,11 @@ class MainActivity : AppCompatActivity() {
                             signUp()
                         }
                         else -> {
-                            navController.navigate(R.id.appealsSendFragment)
+                            try {
+                                navController.navigate(R.id.appealsSendFragment)
+                            }catch (e:Exception){
+                                D(e.message.toString())
+                            }
                         }
                     }
                     true

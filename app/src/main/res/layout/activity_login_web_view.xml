@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,56 +9,96 @@
     android:paddingHorizontal="@dimen/margin_padding_24"
     tools:context=".main.activity.login.webView.LoginWebActivity">
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="@dimen/margin_padding_24"-->
+    <!--        android:lineSpacingExtra="@dimen/margin_padding_6"-->
+    <!--        android:text="E-kengash axborot portaliga xush kelibsiz!"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:textSize="32sp"-->
+    <!--        android:textStyle="bold" />-->
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="@dimen/margin_padding_32"-->
+    <!--        android:layout_weight="1"-->
+    <!--        android:src="@drawable/img_login" />-->
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_weight=".3"-->
+    <!--        android:layout_height="wrap_content">-->
+
+    <!--        <ImageView-->
+    <!--            android:layout_width="@dimen/margin_padding_40"-->
+    <!--            android:layout_height="@dimen/margin_padding_40"-->
+    <!--            android:layout_marginStart="60dp"-->
+    <!--            app:lottie_rawRes="@raw/progresbar"-->
+    <!--            app:lottie_autoPlay="true"-->
+    <!--            app:lottie_loop="true"-->
+    <!--            android:src="@drawable/img_login"-->
+    <!--            android:background="@color/black"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@+id/done"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="@+id/done" />-->
+
+    <!--        <androidx.appcompat.widget.AppCompatButton-->
+    <!--            android:id="@+id/done"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="bottom"-->
+    <!--            android:background="@drawable/bg_button"-->
+    <!--            android:backgroundTint="@color/blue"-->
+    <!--            android:elevation="0dp"-->
+    <!--            android:fontFamily="@font/gotham_pro_medium"-->
+    <!--            android:gravity="center"-->
+    <!--            android:paddingHorizontal="@dimen/margin_padding_16"-->
+    <!--            android:paddingVertical="@dimen/margin_padding_8"-->
+    <!--            android:text="Shaxsiy kabinet"-->
+    <!--            android:textAllCaps="false"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="@dimen/text_size_16"-->
+    <!--            app:layout_constraintBottom_toTopOf="@+id/done1"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
+    <!--        <androidx.appcompat.widget.AppCompatButton-->
+    <!--            android:id="@+id/done1"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="bottom"-->
+    <!--            android:layout_marginBottom="20dp"-->
+    <!--            android:background="@drawable/bg_button"-->
+    <!--            android:backgroundTint="#e0eaff"-->
+    <!--            android:elevation="0dp"-->
+    <!--            android:fontFamily="@font/gotham_pro_medium"-->
+    <!--            android:gravity="center"-->
+    <!--            android:paddingHorizontal="@dimen/margin_padding_16"-->
+    <!--            android:paddingVertical="@dimen/margin_padding_8"-->
+    <!--            android:text="@string/keyingisi"-->
+    <!--            android:textAllCaps="false"-->
+    <!--            android:textColor="@color/blue"-->
+    <!--            android:textSize="@dimen/text_size_16"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+    <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_padding_24"
-        android:lineSpacingExtra="@dimen/margin_padding_6"
-        android:text="E-kengash axborot portaliga xush kelibsiz!"
-        android:textColor="@color/black"
-        android:textSize="32sp"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_padding_32"
-        android:layout_weight="1"
-        android:src="@drawable/img_login" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/done"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="@dimen/margin_padding_24"
-        android:background="@drawable/bg_button"
-        android:backgroundTint="@color/blue"
-        android:elevation="0dp"
-        android:fontFamily="@font/gotham_pro_medium"
-        android:gravity="center"
-        android:paddingHorizontal="@dimen/margin_padding_16"
-        android:paddingVertical="@dimen/margin_padding_8"
-        android:text="Shaxsiy kabinet"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="@dimen/text_size_16" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/done1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="@dimen/margin_padding_24"
-        android:background="@drawable/bg_button"
-        android:backgroundTint="#e0eaff"
-        android:elevation="0dp"
-        android:fontFamily="@font/gotham_pro_medium"
-        android:gravity="center"
-        android:paddingHorizontal="@dimen/margin_padding_16"
-        android:paddingVertical="@dimen/margin_padding_8"
-        android:text="@string/keyingisi"
-        android:textAllCaps="false"
-        android:textColor="@color/blue"
-        android:textSize="@dimen/text_size_16" />
-</androidx.appcompat.widget.LinearLayoutCompat>
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/blue"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

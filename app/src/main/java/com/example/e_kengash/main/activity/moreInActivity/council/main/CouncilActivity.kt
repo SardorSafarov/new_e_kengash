@@ -17,6 +17,7 @@ import com.example.e_kengash.data.localMemory.SharePereferenseHelper
 import com.example.e_kengash.databinding.ActivityCouncilBinding
 import com.example.e_kengash.databinding.AlertDialogSignUpBinding
 import com.example.e_kengash.main.activity.login.main.LoginActivity
+import com.example.e_kengash.main.activity.login.webView.LoginWebActivity
 import com.example.e_kengash.main.activity.notif.NotificationActivity
 import com.example.e_kengash.repetitive.D
 import com.example.e_kengash.repetitive.statusbarcolor
@@ -92,7 +93,7 @@ class CouncilActivity : AppCompatActivity() {
         val view = LayoutInflater.from(this).inflate(R.layout.alert_dialog_sign_up, null)
         val dialogBind = AlertDialogSignUpBinding.bind(view)
         dialogBind.done.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, LoginWebActivity::class.java))
         }
         alertDialog.apply {
             setView(view)

@@ -13,6 +13,7 @@ import com.example.e_kengash.adapter.more.activities.ActivitiesAdapter
 import com.example.e_kengash.databinding.AlertDialogSignUpBinding
 import com.example.e_kengash.databinding.FragmentHomeBinding
 import com.example.e_kengash.main.activity.login.main.LoginActivity
+import com.example.e_kengash.main.activity.login.webView.LoginWebActivity
 import com.example.e_kengash.main.activity.moreInActivity.acceptance.main.AcceptanceActivity
 import com.example.e_kengash.main.activity.moreInActivity.activities.main.ActivitiesAbout
 import com.example.e_kengash.main.activity.myAppeals.MyAppealsB
@@ -152,7 +153,7 @@ class Home : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate),
             LayoutInflater.from(requireContext()).inflate(R.layout.alert_dialog_sign_up, null)
         val dialogBind = AlertDialogSignUpBinding.bind(view)
         dialogBind.done.setOnClickListener {
-            startActivity(Intent(requireContext(), LoginActivity::class.java))
+            startActivity(Intent(requireContext(), LoginWebActivity::class.java))
         }
         alertDialog.apply {
             setView(view)

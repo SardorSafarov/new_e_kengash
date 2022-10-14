@@ -10,6 +10,7 @@ import com.example.e_kengash.adapter.more.discussion.DiscussinOffertAdapter
 import com.example.e_kengash.databinding.AlertDialogSignUpBinding
 import com.example.e_kengash.databinding.FragmentDiscussionOfferBinding
 import com.example.e_kengash.main.activity.login.main.LoginActivity
+import com.example.e_kengash.main.activity.login.webView.LoginWebActivity
 import com.example.e_kengash.main.activity.moreInActivity.MoreBaseFragment
 import com.example.e_kengash.main.activity.moreInActivity.discussion.main.DiscussionDiscriptionAbout
 import com.example.e_kengash.network.entity.more.discussion.offer.Result
@@ -91,7 +92,7 @@ class DiscussionOffer : MoreBaseFragment<FragmentDiscussionOfferBinding>(Fragmen
         val view = LayoutInflater.from(requireContext()).inflate(R.layout.alert_dialog_sign_up, null)
         val dialogBind = AlertDialogSignUpBinding.bind(view)
         dialogBind.done.setOnClickListener {
-            startActivity(Intent(requireContext(), LoginActivity::class.java))
+            startActivity(Intent(requireContext(), LoginWebActivity::class.java))
         }
         alertDialog.apply {
             setView(view)

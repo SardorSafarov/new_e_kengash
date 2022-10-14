@@ -9,6 +9,7 @@ import com.example.e_kengash.databinding.AlertDialogExitBinding
 import com.example.e_kengash.databinding.AlertDialogSignUpBinding
 import com.example.e_kengash.databinding.FragmentMoreBinding
 import com.example.e_kengash.main.activity.login.main.LoginActivity
+import com.example.e_kengash.main.activity.login.webView.LoginWebActivity
 import com.example.e_kengash.main.activity.mainActivity.MainActivity
 import com.example.e_kengash.main.activity.moreInActivity.aboutProgramma.main.AboutProgrammaActivity
 import com.example.e_kengash.main.activity.moreInActivity.acceptance.main.AcceptanceActivity
@@ -103,7 +104,7 @@ class More : BaseFragment<FragmentMoreBinding>(FragmentMoreBinding::inflate) {
         val view = LayoutInflater.from(requireContext()).inflate(R.layout.alert_dialog_sign_up, null)
         val dialogBind = AlertDialogSignUpBinding.bind(view)
         dialogBind.done.setOnClickListener {
-            startActivity(Intent(requireContext(), LoginActivity::class.java))
+            startActivity(Intent(requireContext(), LoginWebActivity::class.java))
         }
         alertDialog.apply {
             setView(view)

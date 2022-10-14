@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.e_kengash.data.LocalVarable.URL_KEY_ID
 import com.example.e_kengash.data.localMemory.SharePereferenseHelper
 import com.example.e_kengash.databinding.ActivityLoginWebViewBinding
+import com.example.e_kengash.main.activity.mainActivity.MainActivity
 import com.example.e_kengash.network.entity.keyId.KeyId
 import com.example.e_kengash.repetitive.D
 import com.google.gson.Gson
@@ -20,11 +21,7 @@ class LoginWebActivity : AppCompatActivity() {
         binding = ActivityLoginWebViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
         window.statusBarColor = Color.parseColor("#ffffff")
-        binding.apply {
-            done.setOnClickListener {
                 startActivity(Intent(this@LoginWebActivity, SignInUpWebViewActivity::class.java))
-            }
-        }
     }
 
     override fun onStart() {
@@ -38,11 +35,12 @@ class LoginWebActivity : AppCompatActivity() {
                     val body = doc.body()
                     builder.append(body.text())
                     var a = Gson().fromJson(builder.toString(), KeyId::class.java)
-                   sharePereferenseHelper.setAccessKeyId(a.key_id)
+                   sharePereferenseHelper.setAccessToken(a.key_id)
+                    startActivity(Intent(this,MainActivity::class.java))
+                    finishAffinity()
                 } catch (e: Exception) {
                     builder.append("Error : ").append(e.message).append("\n")
                 }
-
             }.start()
         }
     }

@@ -152,4 +152,8 @@
     <string name="sizda_hozircha_nxabarlar_yoq">Sizda hozircha\nxabarlar yoq</string>
     <string name="parolni_tiklash">Parolni tiklash</string>
     <string name="siz_tizimdan_allaqchon_ro_yatdan_o_tgansiz_parolingizni_kiritish_va_sms_kod_orqali_tasdiqlash_orqali_profilingizga_kirishingiz_mumkin">Siz tizimdan allaqchon ro’yatdan o’tgansiz. Parolingizni kiritish va sms kod orqali tasdiqlash orqali profilingizga kirishingiz mumkin.</string>
+    <string name="barchasi">Barchasi</string>
+    <string name="korib_chiqilmoqda">Ko\'rib chiqilmoqda</string>
+    <string name="yakunlangan">Yakunlangan</string>
+    <string name="korilmagan">Ko\'rilmagan</string>
 </resources>

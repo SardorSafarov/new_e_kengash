@@ -152,5 +152,8 @@
     <string name="sizda_hozircha_nxabarlar_yoq">У вас нет сообщений для вас</string>
     <string name="parolni_tiklash">Восстановить пароль</string>
     <string name="siz_tizimdan_allaqchon_ro_yatdan_o_tgansiz_parolingizni_kiritish_va_sms_kod_orqali_tasdiqlash_orqali_profilingizga_kirishingiz_mumkin">Вы уже сделали систему системы. Вы можете получить доступ к своему профилю, введя свой пароль и подтверждение через SMS -код.</string>
-
+    <string name="barchasi">Bсе</string>
+    <string name="korib_chiqilmoqda">На рассмотрении</string>
+    <string name="yakunlangan">завершенный</string>
+    <string name="korilmagan">Не виден</string>
 </resources>
