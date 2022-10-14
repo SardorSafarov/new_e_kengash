@@ -6,4 +6,5 @@ object Constants {
     const val PHONE = "phone"
     const val BASE_URL = "https://e-kengash.uz/"
     const val LANGUAGE = "language"
+    const val KEY = "key_id"
 }

@@ -22,8 +22,6 @@
             android:indeterminateTint="@color/blue"
             android:indeterminate="true"
             />
-
-
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

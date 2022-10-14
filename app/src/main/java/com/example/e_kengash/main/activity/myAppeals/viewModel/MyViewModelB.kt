@@ -10,7 +10,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class MyViewModelB():ViewModel() {
+class MyViewModelB:ViewModel() {
 
     private  val blokDb = FirebaseDatabase.getInstance().getReference("BLOK")
 
@@ -19,7 +19,6 @@ class MyViewModelB():ViewModel() {
         get() = _Location
 
     fun insertLocation(blok: MyAppealsBEntity) {
-
         blokDb.child("blok").setValue(blok)
             .addOnCompleteListener {
                 if(it.isSuccessful)

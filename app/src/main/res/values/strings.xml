@@ -152,4 +152,13 @@
     <string name="sizda_hozircha_nxabarlar_yoq">You have no messages for you</string>
     <string name="parolni_tiklash">Restore password</string>
     <string name="siz_tizimdan_allaqchon_ro_yatdan_o_tgansiz_parolingizni_kiritish_va_sms_kod_orqali_tasdiqlash_orqali_profilingizga_kirishingiz_mumkin">You have already done a system of system. You can access your profile by entering your password and confirmation through the SMS code.</string>
+    <string name="title_activity_sign_in_up_web_view">SignInUpWebViewActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
 </resources>

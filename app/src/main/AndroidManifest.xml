@@ -14,30 +14,45 @@
         android:theme="@style/Theme.Ekengash"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".main.activity.login.webView.SignInUpWebViewActivity"
+            android:screenOrientation="portrait"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".main.activity.login.webView.LoginWebActivity"
+            android:screenOrientation="portrait"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".main.activity.myAppeals.MyAppealsB"
             android:exported="false"
-            android:screenOrientation="portrait"/>
-
+            android:screenOrientation="portrait" />
         <activity
             android:name=".main.activity.moreInActivity.document.main.DocumentSearchActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".main.activity.search.SearchActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".main.activity.moreInActivity.activities.main.ActivitiesAbout"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".main.activity.moreInActivity.AboutSenatorActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".main.activity.moreInActivity.discussion.main.DiscussionDiscriptionAbout"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".main.activity.moreInActivity.council.main.CouncilDeputatAbout"
             android:exported="true"
@@ -121,7 +136,6 @@
             android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".splashScreen.SplashScreenActivity"
             android:exported="true"

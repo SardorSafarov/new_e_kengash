@@ -72,6 +72,7 @@ class Home : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate),
             when (it.isSuccessful) {
                 true -> {
                     onResponse(it.body()!!.news)
+                    it.raw().code()
                 }
                 else -> {
                     binding.progressBar.gone()

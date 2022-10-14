@@ -120,7 +120,6 @@ class More : BaseFragment<FragmentMoreBinding>(FragmentMoreBinding::inflate) {
             show()
         }
         dialogBind.exitNo.setOnClickListener {
-            D("keliiii")
             alertDialog.dismiss()
         }
         dialogBind.exitYes.setOnClickListener {

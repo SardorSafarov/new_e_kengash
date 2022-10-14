@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.example.e_kengash.data.constants.Constants.ACCESS_TOKEN
 import com.example.e_kengash.data.constants.Constants.APP_LOCAL_MEMORY
+import com.example.e_kengash.data.constants.Constants.KEY
 import com.example.e_kengash.data.constants.Constants.LANGUAGE
 import com.example.e_kengash.data.constants.Constants.PHONE
 
@@ -21,6 +22,14 @@ class SharePereferenseHelper(val context: Context) {
 
     fun getAccessToken() = preferences.getString(ACCESS_TOKEN, "empty").toString()
 
+
+    fun setAccessKeyId(key: String) {
+        editor = preferences.edit()
+        editor.putString(KEY, key)
+        editor.apply()
+    }
+
+    fun getAccessKeyId() = preferences.getString(KEY, "empty").toString()
 
     fun setAccessLanguage(language: String) {
         editor = preferences.edit()

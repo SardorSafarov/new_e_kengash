@@ -68,13 +68,13 @@
                 android:lineHeight="@dimen/margin_padding_24"
                 android:layout_marginStart="@dimen/margin_padding_16"
                 android:text="@string/qonunlar_inson_nfarovonligi_uchun_nishlaydi"
-                app:srcCompat="@drawable/home_top_person_imagee" />
+                app:srcCompat="@drawable/img_home_top_person_imagee" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                app:srcCompat="@drawable/home_top_person_imagee" />
+                app:srcCompat="@drawable/img_home_top_person_imagee" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

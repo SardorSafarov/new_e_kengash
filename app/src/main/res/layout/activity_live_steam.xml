@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/margin_padding_16"
                 android:layout_marginStart="@dimen/margin_padding_12"
-                android:src="@drawable/gerb"
+                android:src="@drawable/img_gerb"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/back"
                 app:layout_constraintTop_toTopOf="parent" />
